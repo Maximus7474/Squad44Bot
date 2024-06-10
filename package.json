@@ -4,7 +4,7 @@
     "description": "A Squad44 Discord Bot handling player count for various servers ",
     "main": "src/main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "mocha 'test/*.mjs'",
         "start": "node src/main.js"
     },
     "repository": {
@@ -23,8 +23,13 @@
     "homepage": "https://github.com/Maximus7474/SQ44-Bot#readme",
     "dependencies": {
         "assert": "^2.0.0",
+        "chai": "^5.1.1",
         "colors": "^1.4.0",
         "discord.js": "^14.8.0",
-        "dotenv": "^16.0.3"
+        "dotenv": "^16.0.3",
+        "fs": "^0.0.1-security",
+        "mocha": "^10.4.0",
+        "sqlite": "^5.1.1",
+        "sqlite3": "^5.1.7"
     }
 }
