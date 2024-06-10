@@ -1,7 +1,17 @@
-CREATE TABLE IF NOT EXISTS `user-preferences` (
-  `id` int(11) NOT NULL,
-  `clan` tinytext DEFAULT NULL,
-  `friends` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '[]' CHECK (json_valid(`friends`)),
-  `servers` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '[]' CHECK (json_valid(`servers`)),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+CREATE TABLE IF NOT EXISTS "user-preferences" (
+  id INTEGER PRIMARY KEY,
+  clan TEXT DEFAULT NULL,
+  friends TEXT NOT NULL DEFAULT '[]',
+  servers TEXT DEFAULT '[]'
+);
+
+CREATE TABLE IF NOT EXISTS "server-providers" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "tag" TEXT UNIQUE NOT NULL,
+  "fullName" TEXT NOT NULL,
+  "serverInvite" TEXT DEFAULT NULL,
+  "otherLinks" TEXT DEFAULT '[]',
+  "description" TEXT DEFAULT NULL,
+  "clanReps" TEXT DEFAULT '[]',
+  "serverIDs" TEXT DEFAULT '[]' -- Battlemetrics IDs
+);
