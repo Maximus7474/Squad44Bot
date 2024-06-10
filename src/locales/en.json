@@ -1,0 +1,56 @@
+{
+    "commands": {
+        "setup": {
+            "description": "Setup the various permissions",
+            "response": {
+                "updated": "Updated: ",
+                "with": ", with: ",
+                "embed": {
+                    "title": "Setup Command executed"
+                }
+            },
+            "subcommands": {
+                "roles": {
+                    "description": "Setup the roles",
+                    "rolename": "Role to configure",
+                    "role": "Role to be selected, empty removes it"
+                },
+                "channels": {
+                    "description": "Setup the channels",
+                    "channelname": "Channel to configure",
+                    "channel": "Channel to be selected, empty removes it"
+                }
+            },
+            "options": {
+                "channels": {
+                    "joins": "Channel to log arrivals",
+                    "leaves": "Channel to log departures",
+                    "createvoice": "Channel to create temporary voice channels"
+                },
+                "roles": {
+                    "public": "Role given to newcomers",
+                    "whitelisted": "Role given to Whitelisted players",
+                    "blacklisted": "Role given to blacklisted players"
+                }
+            }      
+        }
+    },
+    "events": {
+        "interactioncreate": {
+            "chatinputerror": "Error executing command! Please try again, if error persists please report to a developer",
+            "otherhandlererror": "Interaction handler had issue handling interactionInteraction handler had issue handling interaction"
+        },
+        "joined": {
+            "newmembertitle": "New Member has joined",
+            "memberreturntitle": "A Member has returned",
+            "username": "Username",
+            "createdat": "Created at"
+        },
+        "left": {
+            "title": "A Member has left",
+            "username": "Username",
+            "joinedat": "Joined at",
+            "unknown": "Unknown"
+        }
+    }
+}

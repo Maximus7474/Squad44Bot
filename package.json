@@ -1,0 +1,30 @@
+{
+    "name": "squad44-bot",
+    "version": "0.0.1",
+    "description": "A Squad44 Discord Bot handling player count for various servers ",
+    "main": "src/main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Maximus7474/SQ44-Bot.git"
+    },
+    "keywords": [
+        "Discord",
+        "Discord.js"
+    ],
+    "author": "Furious Feline",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Maximus7474/SQ44-Bot/issues"
+    },
+    "homepage": "https://github.com/Maximus7474/SQ44-Bot#readme",
+    "dependencies": {
+        "assert": "^2.0.0",
+        "colors": "^1.4.0",
+        "discord.js": "^14.8.0",
+        "dotenv": "^16.0.3"
+    }
+}
