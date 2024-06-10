@@ -107,3 +107,7 @@ dist
 
 # Used for Snyk Security 
 .dccache
+
+# Repository Specific ignores
+data.db
+config.json
