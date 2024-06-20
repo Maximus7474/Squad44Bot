@@ -1,0 +1,69 @@
+name: Release on Version Bump
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    if: contains(github.event.head_commit.message, 'bump version')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get last commit message
+        id: last_commit
+        run: echo "::set-output name=message::$(git log -1 --pretty=%B)"
+
+      - name: Check if commit message contains 'bump version'
+        id: check_bump
+        run: |
+          if [[ "${{ steps.last_commit.outputs.message }}" != *"bump version"* ]]; then
+            echo "Commit does not contain 'bump version'."
+            exit 1
+          fi
+
+      - name: Extract release title
+        id: release_title
+        run: |
+          RELEASE_TITLE=$(echo "${{ steps.last_commit.outputs.message }}" | sed -n 's/.*bump version \(.*\)/\1/p')
+          echo "::set-output name=title::$RELEASE_TITLE"
+
+      - name: Create release_assets directory
+        run: mkdir -p release_assets
+
+      - name: Copy src directory
+        run: cp -r src/ release_assets/src/
+
+      - name: Copy and rename .env.Example to .env
+        run: cp .env.Example release_assets/.env
+
+      - name: Copy and rename config.template.json to config.json
+        run: cp config.template.json release_assets/config.json
+
+      - name: Copy package.json
+        run: cp package.json release_assets/
+
+      - name: Copy README.md
+        run: cp README.md release_assets/
+
+      - name: Gather commit messages for release notes
+        id: release_notes
+        run: |
+          NOTES=$(git log --pretty=format:"* %s" --merges --no-merges $(git describe --tags --abbrev=0 @^)..@)
+          echo "::set-output name=notes::$NOTES"
+
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.release_title.outputs.title }}
+          release_name: ${{ steps.release_title.outputs.title }}
+          body: ${{ steps.release_notes.outputs.notes }}
+          draft: true
+          prerelease: false
