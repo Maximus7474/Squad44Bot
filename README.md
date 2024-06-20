@@ -1,6 +1,6 @@
-# RP Discord Bot Handler
+# Squad 44 Bot
 
-This Bot was primarily thought and conceived for FiveM servers in mind, but can be used for any other plateform using a discord server for the community.
+This Bot is a simple test to try integrations out including web queries and sorting data.
 
 Thanks to [FissionFeline](https://github.com/FissionFeline) for the template used to get the bot started.
 You can find it [here](https://github.com/FissionFeline/discord-js-template) to use it yourself and start or continue learning __discord.js__
