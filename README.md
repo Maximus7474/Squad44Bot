@@ -1,5 +1,7 @@
 # Squad 44 Bot
 
+![](https://img.shields.io/github/downloads/Maximus7474/5M-Elevator/total?logo=github)
+
 This Bot is a simple test to try integrations out including web queries and sorting data.
 
 Thanks to [FissionFeline](https://github.com/FissionFeline) for the template used to get the bot started.
