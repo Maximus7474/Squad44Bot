@@ -1,6 +1,6 @@
 # Squad 44 Bot
 
-![](https://img.shields.io/github/downloads/Maximus7474/5M-Elevator/total?logo=github)
+![](https://img.shields.io/github/downloads/Maximus7474/Squad44Bot/total?logo=github)
 
 This Bot is a simple test to try integrations out including web queries and sorting data.
 
