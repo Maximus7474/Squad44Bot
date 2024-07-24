@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS "game-clans" (
   `added_by` TEXT NOT NULL
 );
 
-CREATE TRIGGER update_timestamp
+CREATE TRIGGER IF NOT EXISTS update_timestamp
 AFTER UPDATE ON "game-clans"
 FOR EACH ROW
 BEGIN
