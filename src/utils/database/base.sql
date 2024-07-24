@@ -14,5 +14,8 @@ CREATE TABLE IF NOT EXISTS "game-clans" (
   "description" TEXT DEFAULT NULL,
   "seal" TEXT DEFAULT NULL,
   "clanReps" TEXT DEFAULT '[]',
-  "serverIDs" TEXT DEFAULT '[]' -- Following structure: [{"type": "BMID", "value": "identifier"}]
+  "serverIDs" TEXT DEFAULT '[]', -- Following structure: [{"type": "BMID", "value": "identifier"}]
+  `updated` INTEGER DEFAULT (strftime('%s', 'now')),
+  `added` INTEGER DEFAULT (strftime('%s', 'now')),
+  `added_by` TEXT NOT NULL
 );
