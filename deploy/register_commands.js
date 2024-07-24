@@ -1,10 +1,9 @@
 const { REST, Routes } = require('discord.js');
 const assert = require('assert');
-require('dotenv').config()
+require('dotenv').config();
 
-const log = new require('../logger.js')
-const logger = new log("Command register")
-const { main_guild } = require("../../../config.json");
+const log = new require('../src/utils/logger.js');
+const logger = new log("Command register");
 
 assert(process.env.TOKEN, "A Discord Token for your bot is required ! Please go to your application page to get it! Set your token then as an enviormental variable with the TOKEN variable name!");
 assert(process.env.TOKEN.split('.').length === 3, "The provided TOKEN is incorrectly formed");
@@ -39,7 +38,7 @@ try {
         });
     } else logger.info("No global commands to register");
 
-    if(main_guild && guildStack && guildStack.length > 0) {
+    if(process.env.MAIN_GUILD && guildStack && guildStack.length > 0) {
         rest.put(
             Routes.applicationGuildCommands(userId, main_guild),
             { body: guildStack },
@@ -48,8 +47,8 @@ try {
         }).catch(err => {
             logger.warn(`Unable to load guild commands`, err)
         });
-    } else if (!main_guild) {
-        logger.info("No guild id defined in the config under main_guild")
+    } else if (!process.env.MAIN_GUILD) {
+        logger.info("No guild id defined in the .env under MAIN_GUILD")
     } else {
         logger.info("No guild commands to register")
     }

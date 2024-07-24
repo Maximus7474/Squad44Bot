@@ -6,7 +6,7 @@
     "scripts": {
         "test": "mocha 'test/*.mjs'",
         "start": "node src/main.js",
-        "deploy": "node src/utils/initialisation/register_commands.js"
+        "deploy": "node deploy/register_commands.js"
     },
     "repository": {
         "type": "git",

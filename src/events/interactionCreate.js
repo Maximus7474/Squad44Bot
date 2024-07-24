@@ -10,7 +10,10 @@ module.exports = {
     type: "on",
     async call(client,interaction) {
             if(interaction.isChatInputCommand()) {
-                if(!Object.keys(client.commands).includes(interaction.commandName)) {logger.warn(`Command ${interaction.commandName} not found or loaded`); return interaction.reply({ephemeral: true, content:`Command not found please report this!`})}
+                if(!Object.keys(client.commands).includes(interaction.commandName)) {
+                    logger.warn(`Command ${interaction.commandName} not found or loaded`);
+                    return interaction.reply({ephemeral: true, content:`Command not found please report this!`})
+                }
                 const command = client.commands[interaction.commandName]
                 try{
                     return await command.execute(client,interaction)

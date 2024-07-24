@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const log = new require('../logger.js');
+const log = new require('../src/utils/logger.js');
 const logger = new log("Command loader");
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const path_to_commands = path.join(__dirname, '/../../commands/');
+const path_to_commands = path.join(__dirname, '/../src/commands/');
 
 function getAllJsFiles(dirPath, arrayOfFiles) {
     const files = fs.readdirSync(dirPath);
@@ -46,7 +46,7 @@ module.exports = () => {
             continue;
         }
 
-        if (command_loaded.guild === 'undefined' || typeof command_loaded.guild !== 'boolean' || !command_loaded.guild) {
+        if (command_loaded.guildOnly === 'undefined' || typeof command_loaded.guildOnly !== 'boolean' || !command_loaded.guildOnly) {
             if (Object.keys(globalCommands).includes(command_loaded.register_command.name)) {
                 logger.warning(`Two or more global commands share the name ${command_loaded.register_command.name}`);
                 continue;
