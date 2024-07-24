@@ -73,8 +73,8 @@ module.exports = {
                 const Embed = new EmbedBuilder()
                     .setTitle("New clan added")
                     .setColor(16316405)
-                    .setDescription(`[${tag}] ${name} was added to the database with at index ${index}\nDiscord invite: ${invite}`)
-                    .setFooter("If the image doesn't display as thumbnail the url is incorrect.")
+                    .setDescription(`- [${tag}] ${name} was added to the at the index ${index}\n- Discord invite: ${invite}`)
+                    .setFooter({text: "If the image doesn't display as thumbnail the url is incorrect."})
                     .setThumbnail(image);
 
                 return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
