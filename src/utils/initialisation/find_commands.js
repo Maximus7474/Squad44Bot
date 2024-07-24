@@ -21,11 +21,13 @@ function getAllJsFiles(dirPath, arrayOfFiles) {
     return arrayOfFiles;
 }
 
-module.exports = (client) => {
+module.exports = () => {
     const commandFiles = getAllJsFiles(path_to_commands);
 
-    let stack = [];
-    client.commands = {};
+    let guildCommands = {}
+    let globalCommands = {}
+    let guildStack = [];
+    let globalStack = [];
 
     for (const filePath of commandFiles) {
         const command_loaded = require(filePath);
@@ -44,17 +46,29 @@ module.exports = (client) => {
             continue;
         }
 
-        if (Object.keys(client.commands).includes(command_loaded.register_command.name)) {
-            logger.warning(`Two or more commands share the name ${command_loaded.register_command.name}`);
-            continue;
+        if (command_loaded.guild === 'undefined' || typeof command_loaded.guild !== 'boolean' || !command_loaded.guild) {
+            if (Object.keys(globalCommands).includes(command_loaded.register_command.name)) {
+                logger.warning(`Two or more global commands share the name ${command_loaded.register_command.name}`);
+                continue;
+            }
+
+            globalCommands[command_loaded.register_command.name] = command_loaded;
+            globalStack.push(command_loaded.register_command);
+
+            logger.success(`Successfully loaded ${commandName} (global)`);
+        } else {
+            if (Object.keys(guildCommands).includes(command_loaded.register_command.name)) {
+                logger.warning(`Two or more guild commands share the name ${command_loaded.register_command.name}`);
+                continue;
+            }
+
+            guildCommands[command_loaded.register_command.name] = command_loaded;
+            guildStack.push(command_loaded.register_command);
+
+            logger.success(`Successfully loaded ${commandName} (guild)`);
         }
-
-        client.commands[command_loaded.register_command.name] = command_loaded;
-        stack.push(command_loaded.register_command);
-
-        logger.success(`Successfully loaded ${commandName}`);
     }
 
-    logger.info("Commands loaded");
-    return stack;
+    logger.info(`Commands loaded: Guild (${guildStack.length}), Global (${globalStack.length})`);
+    return { globalStack, guildStack };
 };
