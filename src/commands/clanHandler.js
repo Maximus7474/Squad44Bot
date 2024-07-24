@@ -18,7 +18,7 @@ const cleanInvite = (url) => {
 }
 
 module.exports = {
-    guild: true,
+    guildOnly: true,
     register_command: new SlashCommandBuilder()
         .setName('clan_handler')
         .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator)
