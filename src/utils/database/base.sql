@@ -19,3 +19,10 @@ CREATE TABLE IF NOT EXISTS "game-clans" (
   `added` INTEGER DEFAULT (strftime('%s', 'now')),
   `added_by` TEXT NOT NULL
 );
+
+CREATE TRIGGER update_timestamp
+AFTER UPDATE ON "game-clans"
+FOR EACH ROW
+BEGIN
+  UPDATE "game-clans" SET `updated` = strftime('%s', 'now') WHERE id = OLD.id;
+END;
