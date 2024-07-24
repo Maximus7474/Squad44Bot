@@ -38,6 +38,26 @@ module.exports = {
                 .addStringOption(option => 
                     option.setName('image').setDescription('A direct link to their logo/seal/icon').setRequired(false)
                 )
+        )
+        .addSubcommand(subcommand => 
+            subcommand.setName("add_clanrep")
+                .setDescription("Add a clan Rep to a Clan")
+                .addStringOption(option => 
+                    option.setName('tag').setDescription('The clans game Tag (without brackets)').setRequired(true)
+                )
+                .addUserOption(option => 
+                    option.setName('rep').setDescription('The clan rep to add').setRequired(true)
+                )
+        )
+        .addSubcommand(subcommand => 
+            subcommand.setName("remove_clanrep")
+                .setDescription("Remove a Clan Rep from a clan")
+                .addStringOption(option => 
+                    option.setName('tag').setDescription('The clans game Tag (without brackets)').setRequired(true)
+                )
+                .addUserOption(option => 
+                    option.setName('rep').setDescription('The clan rep to remove').setRequired(true)
+                )
         ),
     async execute(client, interaction) {
         const subcommand = interaction.options._subcommand;
@@ -88,6 +108,66 @@ module.exports = {
 
                 return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
             })
+        } else if (subcommand === 'add_clanrep' || subcommand === 'remove_clanrep') {
+            await interaction.deferReply({ephemeral: true});
+
+            const tag = interaction.options.getString('tag');
+            const rep = interaction.options.getUser('rep');
+
+            const DBdata = await executeQuery('SELECT `id`, `clanReps` FROM `game-clans` WHERE tag = ?;', [tag]);
+
+            if (DBdata === undefined || typeof DBdata.id !== "number") {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Unable to add clan rep")
+                    .setColor(12779520)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                    .setDescription(`There already is no clan with the Tag \`[${tag}]\``);
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: false});
+            }
+
+            let clanReps = JSON.parse(DBdata.clanReps)
+            if (
+                (subcommand === 'add_clanrep' && clanReps.includes(rep.id)) ||
+                (subcommand === 'remove_clanrep' && !clanReps.includes(rep.id))
+            ) {
+                const Embed = new EmbedBuilder()
+                    .setTitle(subcommand === 'add_clanrep' ? "Unable to add clan rep" : "Unable to remove clan rep")
+                    .setColor(12779520)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                    .setDescription(subcommand === 'add_clanrep' ? `<@${rep.id}> is already a representatif of \`[${tag}]\`` : `<@${rep.id}> isn't a representatif of \`[${tag}]\``);
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: false});
+            }
+
+            if (subcommand === 'add_clanrep') clanReps.push(rep.id);
+            if (subcommand === 'remove_clanrep') clanReps.splice(clanReps.indexOf(rep.id), 1);
+
+            executeStatement('UPDATE `game-clans` SET `clanReps` = ? WHERE `id` = ?', [JSON.stringify(clanReps), DBdata.id])
+                .then(result => {
+                    logger.info(`${rep.username} (${rep.id}) has been ${subcommand === 'add_clanrep' ? 'added as clan rep to' : 'removed from' }  ${tag}`, result);
+
+                    const Embed = new EmbedBuilder()
+                        .setTitle("Clan Reps updated")
+                        .setColor(16316405)
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                        .setDescription(
+                            subcommand === 'add_clanrep' ?
+                            `<@${rep.id}> has been added as clan rep to [${tag}]\nCurrent List:\n> ${clanReps.map(id => `<@${id}>`).join(', ')}\n-# Status code: \`${result}\`` :
+                            `<@${rep.id}> has been removed from [${tag}]\nCurrent List:\n> ${clanReps.map(id => `<@${id}>`).join(', ')}\n-# Status code: \`${result}\``
+                        );
+    
+                    return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+                }).catch(err => {
+                    logger.error(`Unable to add ${rep.username} (${rep.id}) as clan rep for [${tag}] to the DB by ${rep.username}`, err)
+    
+                    const Embed = new EmbedBuilder()
+                        .setTitle("ERROR, unable to add clan rep")
+                        .setColor(12779520)
+                        .setDescription(`Error message:\n\`\`\`md\n${err}\n\`\`\``);
+    
+                    return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
+                })
         } else {
             return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
         }
