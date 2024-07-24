@@ -28,6 +28,5 @@ client.login(process.env.TOKEN)
 
 client.once(Discord.Events.ClientReady, (client) => {
     client.runtimeTemporaryData = {}
-    console.log(client.application.commands)
     initializeDatabase()
 })
