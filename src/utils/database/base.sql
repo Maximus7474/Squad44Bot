@@ -5,13 +5,14 @@ CREATE TABLE IF NOT EXISTS "user-preferences" (
   servers TEXT DEFAULT '[]'
 );
 
-CREATE TABLE IF NOT EXISTS "server-providers" (
+CREATE TABLE IF NOT EXISTS "game-clans" (
   "id" INTEGER PRIMARY KEY AUTOINCREMENT,
   "tag" TEXT UNIQUE NOT NULL,
   "fullName" TEXT NOT NULL,
   "serverInvite" TEXT DEFAULT NULL,
   "otherLinks" TEXT DEFAULT '[]',
   "description" TEXT DEFAULT NULL,
+  "seal" TEXT DEFAULT NULL,
   "clanReps" TEXT DEFAULT '[]',
-  "serverIDs" TEXT DEFAULT '[]' -- Battlemetrics IDs
+  "serverIDs" TEXT DEFAULT '[]' -- Following structure: [{"type": "BMID", "value": "identifier"}]
 );
