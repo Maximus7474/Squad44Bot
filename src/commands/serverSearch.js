@@ -64,6 +64,7 @@ module.exports = {
                 .then((data) => {
                     const Embed = new EmbedBuilder()
                         .setTitle("Current Top 10 Servers")
+                        .setColor(16316405)
                         .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                         .addFields(
                             data.data.map(
@@ -100,6 +101,7 @@ module.exports = {
 
                         const Embed = new EmbedBuilder()
                             .setTitle("Current Top 20 Servers")
+                            .setColor(16316405)
                             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                             .setDescription(topRanking);
     
@@ -138,6 +140,7 @@ module.exports = {
 
                                 const Embed = new EmbedBuilder()
                                     .setTitle(data.attributes.name)
+                                    .setColor(16316405)
                                     .setDescription(
                                        `> Status: ${emojiForStatus(data.attributes.status)} ${capitalizeFirstLetter(data.attributes.status)}
                                         > Rank: ${getOrdinalSuffix(data.attributes.rank)}
@@ -161,6 +164,7 @@ module.exports = {
                     } else {
                         const Embed = new EmbedBuilder()
                             .setTitle("Multiple Results")
+                            .setColor(16750336)
                             .setDescription("Please precise your search with the following details or you can open the associated battle metrics page.")
                             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                             .addFields(
