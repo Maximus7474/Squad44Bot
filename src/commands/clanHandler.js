@@ -65,7 +65,7 @@ module.exports = {
             }
 
             executeStatement(
-                'INSERT INTO `game-clans` (tag, fullName, serverInvite, seal, added) VALUES (?, ?, ?, ?, ?);',
+                'INSERT INTO `game-clans` (tag, fullName, serverInvite, seal, added_by) VALUES (?, ?, ?, ?, ?);',
                 [
                     tag, name, invite, image, `${user.username} (${user.id})`
                 ]
