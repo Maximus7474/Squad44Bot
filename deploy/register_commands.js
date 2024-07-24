@@ -2,6 +2,8 @@ const { REST, Routes } = require('discord.js');
 const assert = require('assert');
 require('dotenv').config();
 
+const { main_guild } = require('../config.json');
+
 const log = new require('../src/utils/logger.js');
 const logger = new log("Command register");
 
@@ -38,7 +40,7 @@ try {
         });
     } else logger.info("No global commands to register");
 
-    if(process.env.MAIN_GUILD && guildStack && guildStack.length > 0) {
+    if(main_guild && guildStack && guildStack.length > 0) {
         rest.put(
             Routes.applicationGuildCommands(userId, main_guild),
             { body: guildStack },
@@ -47,7 +49,7 @@ try {
         }).catch(err => {
             logger.warn(`Unable to load guild commands`, err)
         });
-    } else if (!process.env.MAIN_GUILD) {
+    } else if (!main_guild) {
         logger.info("No guild id defined in the .env under MAIN_GUILD")
     } else {
         logger.info("No guild commands to register")
