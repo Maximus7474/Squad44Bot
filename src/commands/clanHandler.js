@@ -59,6 +59,19 @@ module.exports = {
                     option.setName('image').setDescription('A direct link to their logo/seal/icon').setRequired(false)
                 )
         )
+        .addSubcommand(subcommand => 
+            subcommand.setName("delete")
+                .setDescription("Deleta a clan from the Database")
+                .addStringOption(option => 
+                    option.setName('tag').setDescription('The clans game Tag (without brackets, case sensitive)').setRequired(false)
+                )
+                .addStringOption(option => 
+                    option.setName('name').setDescription('The clans full name (case sensitive)').setRequired(false)
+                )
+                .addStringOption(option => 
+                    option.setName('id').setDescription('The DB index of the clan').setRequired(false)
+                )
+        )
         .addSubcommandGroup(group => 
             group
             .setName("clan_rep")
@@ -134,6 +147,52 @@ module.exports = {
 
                 return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
             })
+        } else if (group === null && subcommand === 'delete') {
+
+            const tag = interaction.options.getString('tag');
+            const name = interaction.options.getString('name');
+            const id = interaction.options.getString('id');
+            const { user } = interaction;
+
+            if (tag === null && name === null && id === null) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Unable to delete")
+                    .setColor(12779520)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                    .setDescription("You need to provide at least one argument.");
+
+                return interaction.reply({content:``, embeds: [Embed], ephemeral: true});
+            }
+            await interaction.deferReply({ephemeral: true});
+
+            const result = await executeQuery(`SELECT COUNT(tag) as lines FROM \`game-clans\` WHERE ${tag ? "tag" : name ? "name" : "id"} = ?;`, [tag ? tag : name ? name : id]);
+
+            if (result.lines !== 1) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Unable to delete")
+                    .setColor(12779520)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                    .setDescription(`The given \`${tag ? "tag" : name ? "name" : "id"}\` ${result.lines > 1 ? "gave to many results." : "wasn't found."}`);
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: false});
+            }
+
+            executeStatement(`DELETE FROM \`game-clans\` WHERE ${tag ? "tag" : name ? "name" : "id"} = ?;`, [tag ? tag : name ? name : id])
+                .then(status => {
+                    logger.info(`Delete request for ${tag ? "tag" : name ? "name" : "id"} with value ${tag ? tag : name ? name : id} ${status === 1 ? "succeeded by" : "failed by"} ${user.username} (${user.id})`)
+
+                    const Embed = new EmbedBuilder()
+                        .setTitle(status === 1 ? "Clan Deleted" : "Unable to delete")
+                        .setColor(16316405)
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                        .setDescription(
+                            status === 1 ?
+                            `The clan under the ${tag ? "tag" : name ? "name" : "id"}: \`${tag ? tag : name ? name : id}\` was deleted\n-# Status code: \`${status}\`` :
+                            `Unable to delete the requested clan.\n-# Status code: \`${result}\``
+                        );
+    
+                    return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+                })
         } else if (group === "clan_rep" && (subcommand === 'add' || subcommand === 'remove')) {
             await interaction.deferReply({ephemeral: true});
 
@@ -193,7 +252,7 @@ module.exports = {
                         .setDescription(`Error message:\n\`\`\`md\n${err}\n\`\`\``);
     
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
-                })
+                });
         } else {
             return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
         }
