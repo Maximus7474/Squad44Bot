@@ -23,7 +23,7 @@ module.exports = {
         .setName('clan_handler')
         .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator)
         .setDescription('Handle, Add or Delete clans in the DB')
-        .addSubcommand(subcommand => 
+        .addSubcommand(subcommand => /* Add a Clan */
             subcommand.setName("add")
                 .setDescription("Add a clan to the Database")
                 .addStringOption(option => 
@@ -59,7 +59,7 @@ module.exports = {
                     option.setName('image').setDescription('A direct link to their logo/seal/icon').setRequired(false)
                 )
         )
-        .addSubcommand(subcommand => 
+        .addSubcommand(subcommand => /* Delete a Clan */
             subcommand.setName("delete")
                 .setDescription("Deleta a clan from the Database")
                 .addStringOption(option => 
@@ -72,7 +72,7 @@ module.exports = {
                     option.setName('id').setDescription('The DB index of the clan').setRequired(false)
                 )
         )
-        .addSubcommandGroup(group => 
+        .addSubcommandGroup(group => /* Clan Rep handling Commands */
             group
             .setName("clan_rep")
             .setDescription("Handle Clan Reps")
