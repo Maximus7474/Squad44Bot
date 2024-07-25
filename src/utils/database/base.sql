@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS "game-clans" (
   "otherLinks" TEXT DEFAULT '[]',
   "description" TEXT DEFAULT NULL,
   "seal" TEXT DEFAULT NULL,
+  "language" TEXT DEFAULT "en",
   "clanReps" TEXT DEFAULT '[]',
   "serverIDs" TEXT DEFAULT '[]', -- Following structure: [{"type": "BMID", "value": "identifier"}]
   `updated` INTEGER DEFAULT (strftime('%s', 'now')),

@@ -36,6 +36,26 @@ module.exports = {
                     option.setName('invite').setDescription('Their discord server invite').setRequired(true)
                 )
                 .addStringOption(option => 
+                    option.setName('language')
+                        .setDescription('Main language of the clan')
+                        .setRequired(true)
+                        .setChoices(
+                            {name: "english", value: "en"},
+                            {name: "french", value: "fr"},
+                            {name: "german", value: "de"},
+                            {name: "chinese", value: "cn"},
+                            {name: "spanish", value: "es"},
+                            {name: "russian", value: "ru"},
+                            {name: "arabic", value: "ar"},
+                            {name: "portuguese", value: "pt"},
+                            {name: "hindi", value: "hi"},
+                            {name: "japanese", value: "ja"},
+                            {name: "korean", value: "ko"},
+                            {name: "italian", value: "it"},
+                            {name: "international", value: "intl"}
+                        )
+                )
+                .addStringOption(option => 
                     option.setName('image').setDescription('A direct link to their logo/seal/icon').setRequired(false)
                 )
         )
