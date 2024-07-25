@@ -72,6 +72,158 @@ module.exports = {
                     option.setName('id').setDescription('The DB index of the clan').setRequired(false)
                 )
         )
+        .addSubcommandGroup(group => /* Handle Link Updates */
+            group.setName('update_links')
+                .setDescription('Update a clans secondary links')
+                .addSubcommand(subcommand => /* Add a link */
+                    subcommand.setName('add')
+                        .setDescription('Add a new link to the clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('name')
+                                .setDescription('A name for the link, short text title')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('link')
+                                .setDescription('The link to add')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* View current links */
+                    subcommand.setName('view')
+                        .setDescription('View the current links of a clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* Remove a link */
+                    subcommand.setName('remove')
+                        .setDescription('Remove a link from the clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('name')
+                                .setDescription('The name/title of the link to delete')
+                                .setRequired(false)
+                        )
+                        .addStringOption(option =>
+                            option.setName('id')
+                                .setDescription('The id of the stored link to delete')
+                                .setRequired(false)
+                        )
+                )
+        )
+        .addSubcommandGroup(group => /* Handle Server IDs Updates */
+            group.setName('update_servers')
+                .setDescription('Update a clans server list')
+                .addSubcommand(subcommand => /* Add a server */
+                    subcommand.setName('add')
+                        .setDescription('Add a new link to the clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('name')
+                                .setDescription('A name for the server')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('id')
+                                .setDescription('The battlemetrics ID of the server')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* View current servers */
+                    subcommand.setName('view')
+                        .setDescription('View the current list of servers of a clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* Remove a server */
+                    subcommand.setName('remove')
+                        .setDescription('Remove a server from the clan')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('name')
+                                .setDescription('The name/title of the server to delete')
+                                .setRequired(false)
+                        )
+                        .addStringOption(option =>
+                            option.setName('id')
+                                .setDescription('The id of the stored server to delete')
+                                .setRequired(false)
+                        )
+                )
+        )
+        .addSubcommandGroup(group => /* Update a Clans details */
+            group.setName('update')
+                .setDescription('Update a information on a clan')
+                .addSubcommand(subcommand => /* Update Name */
+                    subcommand.setName('name')
+                        .setDescription('Update a clans name')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('name')
+                                .setDescription('New name of the clan')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* Update Image */
+                    subcommand.setName('image')
+                        .setDescription('Update a clans seal')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('image')
+                                .setDescription('The url of the new image')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* Update Invite */
+                    subcommand.setName('invite')
+                        .setDescription('Update a clans discord invite')
+                        .addStringOption(option =>
+                            option.setName('tag')
+                                .setDescription('The clans Tag (without brackets, case sensitive)')
+                                .setRequired(true)
+                        )
+                        .addStringOption(option =>
+                            option.setName('invite')
+                                .setDescription('The new invite link')
+                                .setRequired(true)
+                        )
+                )
+                .addSubcommand(subcommand => /* Update Description */
+                    subcommand.setName('description')
+                        .setDescription('Update a clans description')
+                )
+        )
         .addSubcommandGroup(group => /* Clan Rep handling Commands */
             group
             .setName("clan_rep")
@@ -100,6 +252,8 @@ module.exports = {
     async execute(client, interaction) {
         const group = interaction.options._group;
         const subcommand = interaction.options._subcommand;
+
+        console.log(interaction.options)
 
         if (group === null && subcommand === 'add') {
             await interaction.deferReply({ephemeral: true});
@@ -253,6 +407,9 @@ module.exports = {
     
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
                 });
+        } else if (group === "update") {
+            if (subcommand === 'name') console.log()
+            return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
         } else {
             return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
         }
