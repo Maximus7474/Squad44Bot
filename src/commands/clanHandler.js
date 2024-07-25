@@ -260,6 +260,7 @@ module.exports = {
 
             const tag = interaction.options.getString('tag');
             const name = interaction.options.getString('name');
+            const language = interaction.options.getString('language');
             const invite = cleanInvite(interaction.options.getString('invite'));
             const image = interaction.options.getString('image') || null;
             const { user } = interaction;
@@ -278,9 +279,9 @@ module.exports = {
             }
 
             executeStatement(
-                'INSERT INTO `game-clans` (tag, fullName, serverInvite, seal, added_by) VALUES (?, ?, ?, ?, ?);',
+                'INSERT INTO `game-clans` (tag, fullName, serverInvite, seal, language, added_by) VALUES (?, ?, ?, ?, ?, ?);',
                 [
-                    tag, name, invite, image, `${user.username} (${user.id})`
+                    tag, name, invite, image, language, `${user.username} (${user.id})`
                 ]
             ).then(index => {
                 const Embed = new EmbedBuilder()
