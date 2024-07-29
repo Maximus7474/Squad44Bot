@@ -701,11 +701,11 @@ module.exports = {
 
                         const Embed = new EmbedBuilder()
                             .setTitle('New Description Added')
-                            .setDescription(`\`\`\`\n${newDescription}\n\`\`\`\n-# Status code: \`${status}\``)
+                            .setDescription(`For the tag: \`${tag}\`\n\`\`\`\n${newDescription}\n\`\`\`\n-# Status code: \`${status}\``)
                             .setColor(16316405)
                             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
 
-                        i.reply({ content: '', embeds: [Embed], ephemeral: true });
+                        i.reply({ content: '', embeds: [Embed], ephemeral: false });
 
                     }).catch(err => {
                         logger.error('Unable to update description for', tag, err)
