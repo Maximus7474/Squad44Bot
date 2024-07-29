@@ -1,0 +1,386 @@
+{
+    "Arnehm": {
+        "Offensive 01": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer IV Ausf. E Tiger": 3,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Stug III Ausf. G": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1
+                },
+                "Recon": {
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 1
+                }
+            },
+            "1st Airborne": null
+        },
+        "Offensive 02": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 1,
+                    "Panzer III Ausf. G": 3,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Panzer 38(t)": 1,
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "1st Airborne": null
+        },
+        "Offensive 03": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 2,
+                    "Stug III Ausf. G": 2,
+                    "Panzer III Ausf. G": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 1,
+                    "Sd. Kfz. 232": 1
+                }
+            },
+            "1st Airborne": null
+        },
+        "RAAS UK": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 1,
+                    "Panzer V Ausf. A Panther": 2,
+                    "Panzer IV Ausf. E Tiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Stug III Ausf. G": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 1
+                }
+            },
+            "1st Airborne": {
+                "Heavy": {
+                    "Churchill Mk. IV": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 2
+                },
+                "Medium": {
+                    "17pdr SP M10C Achilles": 2,
+                    "Cromwell Mk. IV": 2,
+                    "Sherman Mk. V": 3
+                },
+                "Recon": {
+                    "T17 Staghound": 1,
+                    "Stuart VI": 3
+                }
+            }
+        }
+    },
+    "Best": {
+        "Offensive 01": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer IV Ausf. E Tiger": 3,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Stug III Ausf. G": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1
+                },
+                "Recon": {
+                    "Panzer 38(t)": 1,
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "101st Airborne": {
+                "Heavy": {
+                    "Churchill Mk. IV": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 2
+                },
+                "Medium": {
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 4,
+                    "Sherman Mk. V": 1
+                },
+                "Recon": {
+                    "Stuart VI": 1,
+                    "T17 Staghound": 1,
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1
+                }
+            }
+        },
+        "Offensive 02": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 1,
+                    "Panzer III Ausf. G": 3,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 3
+                }
+            },
+            "101st Airborne": {
+                "Heavy": {
+                    "Churchill Mk. IV": 2,
+                    "Churchil Mk. VII": 3,
+                    "Challenger Mk. VIII": 1
+                },
+                "Medium": {
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 4,
+                    "Sherman Mk. V": 1
+                },
+                "Recon": {
+                    "Daimler AC": 1,
+                    "AEC Mk. II Armoured Car": 1,
+                    "Stuart VI": 2
+                }
+            }
+        },
+        "Offensive 03" : {
+            "Wehrmacht": {
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 4,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 2,
+                    "Jagdpanzer 38(t) Hetzer": 1,
+                    "Jagdpanzer IV L70": 1,
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 1,
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "1st Airborne": {
+                "Heavy": {
+                    "Churchill Mk. IV": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 2
+                },
+                "Medium": {
+                    "17pdr SP M10C Achilles": 2,
+                    "Cromwell Mk. IV": 1,
+                    "Valentine Mv. XI": 1,
+                    "Sherman Mk. V": 2
+                },
+                "Recon": {
+                    "Stuart VI": 1,
+                    "AEC Mk. II Armoured Car": 3,
+                    "Daimler AC": 1
+                }
+            }
+        },
+        "Offensive 04": {
+            "Wehrmacht": {
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 4,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G":2,
+                    "Stug III Ausf. G": 2,
+                    "Panzer III Ausf. G": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222":1,
+                    "Sd. Kfz. 232":3,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                }
+            },
+            "1st Airborne": {
+                "Heavy": {
+                    "Challenger Mk. VIII": 2,
+                    "Churchil Mk. VII":1,
+                    "Sherman Mk. VC Firefly":3
+                },
+                "Medium": {
+                    "Sherman Mk. V": 6
+                },
+                "Recon": {
+                    "Daimler AC": 2,
+                    "AEC Mk. II Armoured Car": 2
+                }
+            }
+        },
+        "RAAS UK": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer IV Ausf. E Tiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 4,
+                    "Stug III Ausf. G":2
+                },
+                "Recon": {
+                    "Panzer 38(t)":2,
+                    "Sd. Kfz. 222":1,
+                    "Sd. Kfz. 232":1
+                }
+            },
+            "1st Airborne": {
+                "Heavy": {
+                    "Challenger Mk. VIII":2,
+                    "Churchill Mk. IV": 1,
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 2
+                },
+                "Medium": {
+                    "Cromwell Mk. IV": 2,
+                    "17pdr SP M10C Achilles": 2,
+                    "Sherman Mk. V": 3
+                },
+                "Recon": {
+                    "Stuart VI": 1,
+                    "T17 Staghound": 1,
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1
+                }
+            }
+        },
+        "RAAS US": {
+            "9.SS-Panzer": {
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer IV Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Jagdpanzer 38(t) Hetzer": 2,
+                    "Panzer III Ausf. G": 3,
+                    "Panzer IV Ausf. G": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 1
+                }
+            },
+            "101st Airborne": {
+                "Heavy": {
+                    "Churchill Mk. IV": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Sherman Mk. VC Firefly": 1
+                },
+                "Medium": {
+                    "17pdr SP M10C Achilles": 2,
+                    "Cromwell Mk. IV": 1,
+                    "Valentine Mv. XI": 1,
+                    "Sherman Mk. V": 2
+                },
+                "Recon": {
+                    "Stuart VI": 2,
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1
+                }
+            }
+        }
+    },
+    "Carentan": {
+        "Invasion 01": {
+            "6 Fallschirmjaeger Regiment": {
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Stug III Ausf. G": 3,
+                    "Panzer III Ausf. G": 3,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Panzer II Ausf. C": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Panzer 38(t)": 1
+                }
+            },
+            "101st Airborne": {
+                "Heavy": null,
+                "Medium": {
+                    "M4A3 Sherman Wade": 3,
+                    "M10 GMC": 1,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 3
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 1
+                }
+            }
+        },
+        "Offensive 01": {
+            "6 Fallschirmjaeger Regiment": {
+                "Heavy": {
+                    "Panzer IV Ausf. E Tiger": 3
+                },
+                "Medium": {
+                    "Marder 3 Ausf. M": 2,
+                    "Stug III Ausf. G": 2,
+                    "Panzer III Ausf. G": 3
+                },
+                "Recon": {
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "101st Airborne": {
+                "Heavy": null,
+                "Medium": {
+                    "M10 GMC": 2,
+                    "M18 Hellcat":2,
+                    "M4A3 Sherman": 2,
+                    "M4A3 Sherman Wade": 3
+                },
+                "Recon": {
+                    "M5A1 Stuart": 5
+                }
+            }
+        }
+    }
+}
