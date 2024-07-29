@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { PermissionsBitField, EmbedBuilder } = require('discord.js');
+const { PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Embed, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 
 const { executeStatement, executeQuery } = require('../utils/database/sqliteHandler');
 
@@ -15,6 +15,34 @@ const cleanInvite = (url) => {
     if (!(/^[a-zA-Z0-9-_]+$/.test(inviteID))) return false;
 
     return `https://discord.gg/${inviteID}`
+}
+
+const checkLink = (url) => {
+    return url.startsWith('http') ? url : `https://${url}`;
+}
+
+const checkImageUrl = (url) => {
+    const imageExtensions = /\.(jpg|jpeg|png|gif|webp|bmp|tiff|svg|ico)$/i;
+    return imageExtensions.test(url);
+}
+
+async function openDescriptionEditorModal(interaction, defaultText) {
+    const modal = new ModalBuilder()
+        .setCustomId('temp_description_editor')
+        .setTitle('Edit Your Text');
+
+    const textInput = new TextInputBuilder()
+        .setCustomId('text_input')
+        .setLabel('Description')
+        .setStyle(TextInputStyle.Paragraph)
+        .setPlaceholder('Clan Description here...')
+        .setValue(defaultText || '');
+
+    const actionRow = new ActionRowBuilder().addComponents(textInput);
+
+    modal.addComponents(actionRow);
+
+    await interaction.showModal(modal);
 }
 
 module.exports = {
@@ -117,8 +145,8 @@ module.exports = {
                                 .setRequired(false)
                         )
                         .addStringOption(option =>
-                            option.setName('id')
-                                .setDescription('The id of the stored link to delete')
+                            option.setName('link')
+                                .setDescription('The link to delete')
                                 .setRequired(false)
                         )
                 )
@@ -192,7 +220,7 @@ module.exports = {
                         )
                 )
                 .addSubcommand(subcommand => /* Update Image */
-                    subcommand.setName('image')
+                    subcommand.setName('seal')
                         .setDescription('Update a clans seal')
                         .addStringOption(option =>
                             option.setName('tag')
@@ -222,6 +250,10 @@ module.exports = {
                 .addSubcommand(subcommand => /* Update Description */
                     subcommand.setName('description')
                         .setDescription('Update a clans description')
+                        .setDescription("Add a clan Rep to a Clan")
+                        .addStringOption(option => 
+                            option.setName('tag').setDescription('The clans game Tag (without brackets)').setRequired(true)
+                        )
                 )
         )
         .addSubcommandGroup(group => /* Clan Rep handling Commands */
@@ -248,22 +280,29 @@ module.exports = {
                         option.setName('rep').setDescription('The clan rep to remove').setRequired(true)
                     )
             )
+            .addSubcommand(subcommand => 
+                subcommand.setName("view")
+                    .setDescription("View the Clan Reps from a clan")
+                    .addStringOption(option => 
+                        option.setName('tag').setDescription('The clans game Tag (without brackets)').setRequired(true)
+                    )
+            )
         ),
     async execute(client, interaction) {
         const group = interaction.options._group;
         const subcommand = interaction.options._subcommand;
 
-        console.log(interaction.options)
+        const tag = interaction.options.getString('tag');
+        const { user } = interaction;
+
+        if (!(group === "update" && subcommand === 'description')) await interaction.deferReply({ephemeral: true});        
 
         if (group === null && subcommand === 'add') {
-            await interaction.deferReply({ephemeral: true});
 
-            const tag = interaction.options.getString('tag');
             const name = interaction.options.getString('name');
             const language = interaction.options.getString('language');
             const invite = cleanInvite(interaction.options.getString('invite'));
             const image = interaction.options.getString('image') || null;
-            const { user } = interaction;
 
             if (!invite) return interaction.editReply({content:`The provided invitation is incorrect, it must be a valid invitation!`,ephemeral :true});
 
@@ -279,7 +318,7 @@ module.exports = {
             }
 
             executeStatement(
-                'INSERT INTO `game-clans` (tag, fullName, serverInvite, seal, language, added_by) VALUES (?, ?, ?, ?, ?, ?);',
+                'INSERT INTO `game-clans` (tag, name, invite, seal, language, added_by) VALUES (?, ?, ?, ?, ?, ?);',
                 [
                     tag, name, invite, image, language, `${user.username} (${user.id})`
                 ]
@@ -304,7 +343,6 @@ module.exports = {
             })
         } else if (group === null && subcommand === 'delete') {
 
-            const tag = interaction.options.getString('tag');
             const name = interaction.options.getString('name');
             const id = interaction.options.getString('id');
             const { user } = interaction;
@@ -316,9 +354,8 @@ module.exports = {
                     .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                     .setDescription("You need to provide at least one argument.");
 
-                return interaction.reply({content:``, embeds: [Embed], ephemeral: true});
+                return editReply({content:``, embeds: [Embed], ephemeral: true});
             }
-            await interaction.deferReply({ephemeral: true});
 
             const result = await executeQuery(`SELECT COUNT(tag) as lines FROM \`game-clans\` WHERE ${tag ? "tag" : name ? "name" : "id"} = ?;`, [tag ? tag : name ? name : id]);
 
@@ -349,9 +386,7 @@ module.exports = {
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
                 })
         } else if (group === "clan_rep" && (subcommand === 'add' || subcommand === 'remove')) {
-            await interaction.deferReply({ephemeral: true});
 
-            const tag = interaction.options.getString('tag');
             const rep = interaction.options.getUser('rep');
 
             const DBdata = await executeQuery('SELECT `id`, `clanReps` FROM `game-clans` WHERE tag = ?;', [tag]);
@@ -408,11 +443,338 @@ module.exports = {
     
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
                 });
+        } else if (group === "clan_rep" && subcommand === 'view') {
+            
+            const clanReps = await executeQuery('SELECT `clanReps` FROM `game-clans` WHERE tag = ?;', [tag]);
+            let Embed;
+
+            if (clanReps && clanReps.clanReps !== '[]') {
+                Embed = new EmbedBuilder()
+                    .setTitle(`Clan Reps for ${tag}`)
+                    .setDescription(JSON.parse(clanReps.clanReps).map(id => `- <@${id}>\n`).join(', '))
+                    .setColor(16316405)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+            } else if (clanReps && clanReps.clanReps === '[]') {
+                Embed = new EmbedBuilder()
+                    .setTitle(`No Clan Reps for ${tag}`)
+                    .setColor(16316405)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+            } else {
+                Embed = new EmbedBuilder()
+                    .setTitle(`No Clan found for ${tag}`)
+                    .setColor(12779520)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+            }
+
+            await interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
+
+        } else if ((group === "update_links" || group === "update_servers")  && subcommand === 'view') {
+            const links = await executeQuery(`SELECT ${group === "update_links" ? "otherLinks" : "serverIDs"}, name FROM \`game-clans\` WHERE tag = ?;`, [tag])
+
+            if (!links || links.otherLinks === '[]') {
+                const Embed = new EmbedBuilder()
+                    .setTitle(group === "update_links" ? "Clan links" : "Clan Servers")
+                    .setColor(links.otherLinks === '[]' ? 16316405 : 12779520)
+                    .setDescription(links.otherLinks === '[]' ? `[${tag}] Doesn't have any ${group === "update_links" ? "links" : "servers linked"}.` : `[${tag}] Doesn't exist.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+
+            const items = JSON.parse(links.otherLinks);
+            let linkRecap;
+            if (group === "update_links") {
+                items.map(item => `\n- [${item.title}](${item.link})`)
+            } else {
+                items.map(item => `\n- [${item.title}](https://www.battlemetrics.com/servers/postscriptum/${item.id})`)
+            }
+
+            const Embed = new EmbedBuilder()
+                .setTitle(group === "update_links" ? "Clan links" : "Clan Servers")
+                .setColor(16316405)
+                .setDescription(`Links for ${links.name}:${linkRecap.join('')}`)
+                .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+            return interaction.editReply({content:``, embeds: [Embed], ephemeral: true});
+        } else if ((group === "update_links" || group === "update_servers")  && subcommand === 'add') {
+            const newValue = interaction.options.getString('link') || interaction.options.getString('id');
+            const linkTitle = interaction.options.getString('name');
+
+            const links = await executeQuery(`SELECT ${group === "update_links" ? "otherLinks" : "serverIDs"} FROM \`game-clans\` WHERE tag = ?;`, [tag]);
+
+            if (!links) {
+                const Embed = new EmbedBuilder()
+                    .setTitle(group === "update_links" ? "Clan links" : "Clan Servers")
+                    .setColor(12779520)
+                    .setDescription(`[${tag}] Doesn't exist.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+            
+            let parsedLinks = JSON.parse(links.otherLinks)
+
+            const linkExists = parsedLinks.some(element => {
+                if (element.link === newValue || element.id === newValue) {
+                    const Embed = new EmbedBuilder()
+                        .setTitle(group === "update_links" ? "Link already exists" : "Server already exists")
+                        .setColor(12779520)
+                        .setDescription(`[${tag}] already has the ${group === "update_links" ? "link" : "server id"}:\n- ${element.title}\n- ${newValue}`)
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+            
+                    interaction.editReply({ content: '', embeds: [Embed], ephemeral: true });
+                    return true;
+                } else if (element.title === linkTitle) {
+                    const Embed = new EmbedBuilder()
+                        .setTitle(group === "update_links" ? "Link already exists" : "Server already exists")
+                        .setColor(12779520)
+                        .setDescription(`[${tag}] already has a ${group === "update_links" ? "link" : "server id"} with that title:\n- ${element.title}\n- ${group === "update_links" ? element.link : element.id}`)
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+            
+                    interaction.editReply({ content: '', embeds: [Embed], ephemeral: true });
+                    return true;
+                }
+            });
+
+            if (linkExists) return;
+
+            if (group === "update_links") parsedLinks.push({title: linkTitle, link: checkLink(newValue)});
+            if (group === "update_servers") parsedLinks.push({title: linkTitle, id: newValue});
+
+            executeStatement(`UPDATE \`game-clans\` SET ${group === "update_links" ? "otherLinks" : "serverIDs"} = ? WHERE tag = ?;`, [JSON.stringify(parsedLinks), tag])
+                .then(result => {
+                    logger.info(`The ${group === "update_links" ? "link" : "server id"} (${linkTitle}) has been added to ${tag} by ${user}`, result);
+
+                    const Embed = new EmbedBuilder()
+                        .setTitle(group === "update_links" ? "Clan links Updated" : "Clan Servers Updated")
+                        .setColor(result === 1 ? 16316405: 12779520)
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                        .setDescription( 
+                            result === 1 ?
+                            `[${linkTitle}](${group === "update_links" ? checkLink(newValue) : `https://www.battlemetrics.com/servers/postscriptum/${newValue}`}) has been added to [${tag}]\n-# Status code: \`${result}\`` :
+                            `Unable to add the ${group === "update_links" ? "link" : "server id"}.`
+                        );
+
+                    return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+                }).catch(err => {
+                    logger.error(`Unable to add ${linkTitle} to [${tag}] by ${user.username}`, err)
+
+                    const Embed = new EmbedBuilder()
+                        .setTitle("ERROR")
+                        .setColor(12779520)
+                        .setDescription(`Unable to execute the request.\nError message:\n\`\`\`md\n${err}\n\`\`\``);
+
+                    return interaction.editReply({content:``, embeds: [Embed], ephemeral: false})
+                });
+        } else if ((group === "update_links" || group === "update_servers")  && subcommand === 'remove') {
+            const valueToRemove = interaction.options.getString('link') || interaction.options.getString('id') || null;
+            const valueTitleToRemove = interaction.options.getString('name') || null;
+
+            const links = await executeQuery(`SELECT ${group === "update_links" ? "otherLinks" : "serverIDs"}, name FROM \`game-clans\` WHERE tag = ?;`, [tag])
+
+            if (!links || links.otherLinks === '[]') {
+                const Embed = new EmbedBuilder()
+                    .setTitle(group === "update_links" ? "Clan links" : "Clan Servers")
+                    .setColor(links.otherLinks === '[]' ? 16316405 : 12779520)
+                    .setDescription(links.otherLinks === '[]' ? `[${tag}] Doesn't have any ${group === "update_links" ? "links" : "servers linked"}.` : `[${tag}] Doesn't exist.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+
+            const items = JSON.parse(links.otherLinks);
+            const indexTitle = group === "update_links" ? "link" : "id"
+            let indexToRemove = null;
+            items.forEach((element, index) => {
+                if (element.title === valueTitleToRemove) indexToRemove = index;
+                if (element[indexTitle].includes(valueToRemove)) indexToRemove = index;
+            });
+
+            if (typeof indexToRemove !== 'number') {
+                const Embed = new EmbedBuilder()
+                    .setTitle(group === "update_links" ? "Clan link not found" : "Clan Server not found")
+                    .setColor(16316405)
+                    .setDescription("Use the view command to display the current links and titles")
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true});
+            }
+
+            const timeout = 1000 * 30; /* 1s * duration in seconds */
+            const confirmEmbed = new EmbedBuilder()
+                .setTitle("Confirmation Required")
+                .setColor(16316405)
+                .setDescription(`Are you sure you want to remove the ${group === "update_links" ? "link" : "server"} with the following details:\n\n**Value:** ${items[indexToRemove][indexTitle]}`)
+                .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                .setFooter({text: `This command will timeout in ${timeout/1000} seconds`});
+
+            const confirmRow = new ActionRowBuilder()
+                .addComponents(
+                    new ButtonBuilder()
+                        .setCustomId('temp_confirm_delete')
+                        .setLabel('Yes')
+                        .setStyle(ButtonStyle.Danger),
+                    new ButtonBuilder()
+                        .setCustomId('temp_cancel_delete')
+                        .setLabel('No')
+                        .setStyle(ButtonStyle.Secondary),
+                );
+
+            await interaction.editReply({ content: '', embeds: [confirmEmbed], components: [confirmRow], ephemeral: false });
+
+            const filter = (i) => ['temp_confirm_delete', 'temp_cancel_delete'].includes(i.customId) && i.user.id === interaction.user.id;
+            const collector = interaction.channel.createMessageComponentCollector({ filter, time: timeout });
+
+            collector.on('collect', async (i) => {
+                if (i.customId === 'temp_confirm_delete') {
+                    const removedItem = items[indexToRemove];
+                    items.splice(indexToRemove, 1);
+
+                    executeStatement(`UPDATE \`game-clans\` SET ${group === "update_links" ? "otherLinks" : "serverIDs"} = ? WHERE tag = ?;`, [JSON.stringify(items), tag])
+                    .then(result => {
+                        logger.info(`The ${group === "update_links" ? "link" : "server id"} (${removedItem[indexTitle]}) has been removed to ${tag} by ${user}`, result);
+    
+                        const Embed = new EmbedBuilder()
+                            .setTitle(group === "update_links" ? "Clan link Removed" : "Clan Server Removed")
+                            .setColor(16316405)
+                            .setDescription(`The link with the title \`${removedItem.title}\` and with the value of \`${removedItem[indexTitle]}\` was removed`)
+                            .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+    
+                        return i.update({content:``, embeds: [Embed], ephemeral: true})
+                    }).catch(err => {
+                        logger.error(`Unable to remove ${items[indexToRemove][indexTitle]} from [${tag}] by ${user.username}`, err)
+    
+                        const Embed = new EmbedBuilder()
+                            .setTitle("ERROR")
+                            .setColor(12779520)
+                            .setDescription(`Unable to execute the request.\nError message:\n\`\`\`md\n${err}\n\`\`\``);
+    
+                        return i.update({content:``, embeds: [Embed], ephemeral: false})
+                    });
+                } else if (i.customId === 'temp_cancel_delete') {
+                    const cancelEmbed = new EmbedBuilder()
+                        .setTitle("Operation Cancelled")
+                        .setColor(16316405)
+                        .setDescription("The deletion process has been cancelled.")
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                    await i.update({ content: '', embeds: [cancelEmbed], components: [] });
+                }
+            });
+
+            collector.on('end', (collected, reason) => {
+                if (reason === 'time') {
+                    const cancelEmbed = new EmbedBuilder()
+                        .setTitle("Operation Cancelled")
+                        .setColor(12779520)
+                        .setDescription("The deletion process has been cancelled after timing out.")
+                        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                        interaction.editReply({ embeds: [cancelEmbed], components: [] });
+                }
+            });
+
+        } else if (group === "update" && subcommand === 'description') {
+
+            const links = await executeQuery(`SELECT description FROM \`game-clans\` WHERE tag = ?;`, [tag]);
+
+            if (!links) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Impossible, to execute")
+                    .setColor(12779520)
+                    .setDescription(`[${tag}] Doesn't exist.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+
+            openDescriptionEditorModal(interaction, links.description);
+
+            const filter = (i) => i.customId === 'temp_description_editor' && i.user.id === interaction.user.id;
+            interaction.awaitModalSubmit({ filter, time: 180000 })
+            .then(i => {
+                const newDescription = i.fields.getTextInputValue('text_input');
+
+                executeStatement('UPDATE `game-clans` SET description = ? WHERE tag = ?;', [newDescription, tag])
+                    .then(status => {
+                        logger.info('Updated description from', tag, 'by', user.username, user.id)
+
+                        const Embed = new EmbedBuilder()
+                            .setTitle('New Description Added')
+                            .setDescription(`For the tag: \`${tag}\`\n\`\`\`\n${newDescription}\n\`\`\`\n-# Status code: \`${status}\``)
+                            .setColor(16316405)
+                            .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                        i.reply({ content: '', embeds: [Embed], ephemeral: false });
+
+                    }).catch(err => {
+                        logger.error('Unable to update description for', tag, err)
+
+                        i.reply({ content: `Unable to update description of ${tag}\n\`\`\`\n${err}\`\`\``, ephemeral: true });
+                    })
+            })
+            .catch(logger.error);
         } else if (group === "update") {
-            if (subcommand === 'name') console.log()
-            return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
+
+            const name = interaction.options.getString('name');
+            const invite = interaction.options.getString('invite');
+            const image = interaction.options.getString('image');
+
+            const clanData = await executeQuery(`SELECT id, ${subcommand} FROM \`game-clans\` WHERE tag = ?;`, [tag]);
+
+            if (!clanData) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Impossible, to update")
+                    .setColor(12779520)
+                    .setDescription(`[${tag}] Doesn't exist.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+
+            if (subcommand === 'image' && !checkImageUrl(image)) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Invalid Image")
+                    .setColor(12779520)
+                    .setDescription(`The provided link doesn't return an image.`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            } else if (!(name || invite || image)) {
+                const Embed = new EmbedBuilder()
+                    .setTitle("Unknown error")
+                    .setColor(12779520)
+                    .setDescription(`No value has been received...`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+            }
+
+            executeStatement(`UPDATE \`game-clans\` SET ${subcommand} = ? WHERE tag = ?;`, [name || invite || image, tag])
+                .then(status => {
+                    logger.info('Updated', subcommand, 'from', tag, 'by', user.username, user.id, 'with previous data being', clanData[subcommand], 'status code:', status)
+
+                    const Embed = new EmbedBuilder()
+                        .setTitle('Data updated')
+                        .setColor(16316405);
+                    
+                    if (subcommand === 'image') {
+                        Embed.setThumbnail(image);
+                        Embed.setDescription('Image updated, if it doesn\'t show then the link is invalid')
+                    } else {
+                        Embed.setDescription(`The ${subcommand} has been changed from \`${clanData[subcommand]}\` to \`${name || invite}\` \n-# Status code: \`${status}\``);
+                        Embed.setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+                    }
+                    
+                    console.log('Editing the interaction reply')
+                    interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+                })
+                .catch(err => {
+
+                });
+
         } else {
-            return interaction.reply({content:`Haven't build this thing yet!`,ephemeral :true})
+            return editReply({content:`Hmmm, not sure this probably isn't handled!`,ephemeral :true})
         }
     }
 }
