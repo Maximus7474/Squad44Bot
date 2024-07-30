@@ -295,7 +295,7 @@ module.exports = {
 
             if (!invite) return interaction.editReply({content:`The provided invitation is incorrect, it must be a valid invitation!`,ephemeral :true});
 
-            const exists = await executeQuery('SELECT COUNT(tag) AS count FROM `game-clans` WHERE tag = ?;', 'get', [tag]);
+            const exists = await executeQuery('SELECT COUNT(tag) AS count FROM `game-clans` WHERE tag = ?;', [tag], 'get');
             if (exists.count > 0) {
                 const Embed = new EmbedBuilder()
                     .setTitle("Unable to add clan with the same tag")
@@ -378,7 +378,7 @@ module.exports = {
 
             const rep = interaction.options.getUser('rep');
 
-            const DBdata = await executeQuery('SELECT `id`, `clanReps` FROM `game-clans` WHERE tag = ?;', 'get', [tag]);
+            const DBdata = await executeQuery('SELECT `id`, `clanReps` FROM `game-clans` WHERE tag = ?;', [tag], 'get');
 
             if (DBdata === undefined || typeof DBdata.id !== "number") {
                 const Embed = new EmbedBuilder()
@@ -434,7 +434,7 @@ module.exports = {
                 });
         } else if (group === "clan_rep" && subcommand === 'view') {
             
-            const clanReps = await executeQuery('SELECT `clanReps` FROM `game-clans` WHERE tag = ?;', 'get', [tag]);
+            const clanReps = await executeQuery('SELECT `clanReps` FROM `game-clans` WHERE tag = ?;', [tag], 'get');
             let Embed;
 
             if (clanReps && clanReps.clanReps !== '[]') {
