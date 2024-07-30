@@ -6,6 +6,7 @@ class Logger {
     constructor(origin) {
         this.origin = origin
     }
+
     info(...message) {
         console.log(`${colors.gray((new Date()).toLocaleString())} ${(colors.cyan(`[INFO]`)+`    [${colors.blue(this.origin)}]`).padEnd(50, ' ')}`, ...message);
     }
@@ -37,7 +38,8 @@ class Logger {
     }
 
     infolog(interaction, message) {
-        const channel = interaction.client.channels.cache.get(channels.errors);
+        console.log('Logger truong to upload thingu magig')
+        const channel = interaction.client.channels.cache.get(channels.actions);
 
         const Embed = new EmbedBuilder()
             .setTitle('Action log')
