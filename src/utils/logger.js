@@ -38,7 +38,6 @@ class Logger {
     }
 
     infolog(interaction, message) {
-        console.log('Logger truong to upload thingu magig')
         const channel = interaction.client.channels.cache.get(channels.actions);
 
         const Embed = new EmbedBuilder()
