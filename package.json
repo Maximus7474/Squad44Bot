@@ -1,6 +1,6 @@
 {
     "name": "squad44-bot",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "A Squad44 Discord Bot handling player count for various servers ",
     "main": "src/main.js",
     "scripts": {
