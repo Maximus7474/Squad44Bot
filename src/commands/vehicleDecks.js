@@ -1,12 +1,23 @@
 const { SlashCommandBuilder, StringSelectMenuBuilder, ActionRowBuilder, EmbedBuilder, ButtonBuilder } = require('@discordjs/builders');
 const tankDecks = require('../../data/tankDecks.json')
 
-const getEmojiByName = (list, name) => list.fetch(emoji => emoji.name === name) || null;
+const keys = {
+    All: ["Heavy", "Medium", "Recon", "Mechanized", "Specialized"],
+    Tanks: ["Heavy", "Medium", "Recon"],
+    Vehicles: ["Mechanized", "Specialized"]
+}
+
+const DoesLayerHaveDeck = (categories, deck) => {
+    categories.forEach((element, i) => {
+        if (deck[element] !== undefined || deck[element] !== null) return true;
+    })
+    return false;
+}
 
 module.exports = {
     register_command: new SlashCommandBuilder()
         .setName('decks')
-        .setDescription('Displays information about the various tank decks !')
+        .setDescription('Displays information about the various vehicle decks')
         .addStringOption(option =>
             option.setName('map')
                 .setDescription('Map concerned to view the decks')
@@ -26,10 +37,21 @@ module.exports = {
                     {name: 'Axis', value: 'Axis'},
                     {name: 'Allies', value: 'Allies'},
                 )
+        )
+        .addStringOption(option =>
+            option.setName('type')
+                .setDescription('Faction of which to view the deck')
+                .setRequired(false)
+                .addChoices(
+                    {name: 'Tanks', value: 'Tanks'},
+                    {name: 'Vehicles', value: 'Vehicles'},
+                    {name: 'All', value: 'All'},
+                )
         ),
 async execute(client, interaction) {
     const selectedMap = interaction.options.getString('map');
     const selectedFaction = interaction.options.getString('faction');
+    const selectedCategory = keys[interaction.options.getString('type') || 'Tanks'];
     const mapData = tankDecks[selectedMap];
 
     const layerSelectDropDown = new ActionRowBuilder()
@@ -63,14 +85,15 @@ async execute(client, interaction) {
             const Embed = new EmbedBuilder()
                 .setTitle(`(${selectedFaction}) ${selectedMap} - ${selectedKey}`)
                 .setColor(16316405);
-            
-            if (deckInfo.Heavy === null && deckInfo.Medium === null && deckInfo.Recon === null) {
-                Embed.setDescription(`The faction ${deckInfo.faction} doesn't have a tank deck on this layer`);
+                        
+            if (!DoesLayerHaveDeck(selectedCategory, deckInfo)) {
+                Embed.setDescription(`The faction ${deckInfo.Faction} doesn't have ${selectedCategory === 'Tanks' ? 'a Tank deck' : selectedCategory === 'Vehicles' ? 'a Specialized/Mechanized deck' : 'any special vehicles'} on this layer`);
             } else {
                 Embed.setDescription(`Here's the tank deck for ${deckInfo.Faction} on the selected layer:`);
                 
-                Object.keys(deckInfo).forEach(key => {
-                    if (deckInfo[key] !== null && key !== 'Faction') {
+                selectedCategory.forEach((key) => {
+                    console.log(key, deckInfo[key])
+                    if (deckInfo[key] !== null, deckInfo[key] !== undefined) {
                         let fieldValue = '';
                         Object.keys(deckInfo[key]).forEach(nextKey => {
                             fieldValue += `- ${nextKey}: \`${deckInfo[key][nextKey]}\`\n`;
