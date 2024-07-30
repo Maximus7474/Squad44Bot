@@ -1,7 +1,8 @@
 {
     "Arnehm": {
         "Offensive 01": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer IV Ausf. E Tiger": 3,
                     "Panzerjäger Tiger Ausf. B Jagdtiger": 2
@@ -18,10 +19,16 @@
                     "Sd. Kfz. 232": 1
                 }
             },
-            "1st Airborne": null
+            "Allies": {
+                "Faction": "1st Airborne",
+                "Heavy": null,
+                "Medium": null,
+                "Recon": null
+            }
         },
         "Offensive 02": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 2,
                     "Panzer V Ausf. A Panther": 1,
@@ -38,10 +45,16 @@
                     "Sd. Kfz. 232": 2
                 }
             },
-            "1st Airborne": null
+            "Allies": {
+                "Faction": "1st Airborne",
+                "Heavy": null,
+                "Medium": null,
+                "Recon": null
+            }
         },
         "Offensive 03": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 2,
                     "Panzer V Ausf. A Panther": 1,
@@ -59,10 +72,16 @@
                     "Sd. Kfz. 232": 1
                 }
             },
-            "1st Airborne": null
+            "Allies": {
+                "Faction": "1st Airborne",
+                "Heavy": null,
+                "Medium": null,
+                "Recon": null
+            }
         },
         "RAAS UK": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 1,
                     "Panzer V Ausf. A Panther": 2,
@@ -80,7 +99,8 @@
                     "Sd. Kfz. 232": 1
                 }
             },
-            "1st Airborne": {
+            "Allies": {
+                "Faction": "1st Airborne",
                 "Heavy": {
                     "Churchill Mk. IV": 1,
                     "Challenger Mk. VIII": 2,
@@ -101,7 +121,8 @@
     },
     "Best": {
         "Offensive 01": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer IV Ausf. E Tiger": 3,
                     "Panzerjäger Tiger Ausf. B Jagdtiger": 2
@@ -118,7 +139,8 @@
                     "Sd. Kfz. 232": 2
                 }
             },
-            "101st Airborne": {
+            "Allies": {
+                "Faction": "101st Airborne",
                 "Heavy": {
                     "Churchill Mk. IV": 1,
                     "Challenger Mk. VIII": 2,
@@ -139,7 +161,8 @@
             }
         },
         "Offensive 02": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 2,
                     "Panzer V Ausf. A Panther": 1,
@@ -156,7 +179,8 @@
                     "Panzer 38(t)": 3
                 }
             },
-            "101st Airborne": {
+            "Allies": {
+                "Faction": "101st Airborne",
                 "Heavy": {
                     "Churchill Mk. IV": 2,
                     "Churchil Mk. VII": 3,
@@ -175,7 +199,8 @@
             }
         },
         "Offensive 03" : {
-            "Wehrmacht": {
+            "Axis": {
+                "Faction": "Wehrmacht",
                 "Heavy": {
                     "Panzer V Ausf. A Panther": 4,
                     "Panzer IV Ausf. E Tiger": 1
@@ -194,7 +219,8 @@
                     "Sd. Kfz. 232": 2
                 }
             },
-            "1st Airborne": {
+            "Allies": {
+                "Faction": "1st Airborne",
                 "Heavy": {
                     "Churchill Mk. IV": 1,
                     "Challenger Mk. VIII": 2,
@@ -215,7 +241,8 @@
             }
         },
         "Offensive 04": {
-            "Wehrmacht": {
+            "Axis": {
+                "Faction": "Wehrmacht",
                 "Heavy": {
                     "Panzer V Ausf. A Panther": 4,
                     "Panzer IV Ausf. E Tiger": 1
@@ -231,7 +258,8 @@
                     "Sd. Kfz. 234 \"Puma\"": 1
                 }
             },
-            "1st Airborne": {
+            "Allies": {
+                "Faction": "1st Airborne",
                 "Heavy": {
                     "Challenger Mk. VIII": 2,
                     "Churchil Mk. VII":1,
@@ -247,7 +275,8 @@
             }
         },
         "RAAS UK": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 2,
                     "Panzer V Ausf. A Panther": 1,
@@ -263,7 +292,8 @@
                     "Sd. Kfz. 232":1
                 }
             },
-            "1st Airborne": {
+            "Allies": {
+                "Faction": "1st Airborne",
                 "Heavy": {
                     "Challenger Mk. VIII":2,
                     "Churchill Mk. IV": 1,
@@ -284,7 +314,8 @@
             }
         },
         "RAAS US": {
-            "9.SS-Panzer": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
                 "Heavy": {
                     "Panzer VI Ausf. B \"KönigsTiger\"": 2,
                     "Panzer V Ausf. A Panther": 1,
@@ -301,7 +332,8 @@
                     "Panzer 38(t)": 1
                 }
             },
-            "101st Airborne": {
+            "Allies": {
+                "Faction": "101st Airborne",
                 "Heavy": {
                     "Churchill Mk. IV": 1,
                     "Churchil Mk. VII": 2,
@@ -324,7 +356,8 @@
     },
     "Carentan": {
         "Invasion 01": {
-            "6 Fallschirmjaeger Regiment": {
+            "Axis": {
+                "Faction": "6 Fallschirmjaeger Regiment",
                 "Heavy": {
                     "Panzer V Ausf. A Panther": 3
                 },
@@ -341,7 +374,8 @@
                     "Panzer 38(t)": 1
                 }
             },
-            "101st Airborne": {
+            "Allies": {
+                "Faction": "101st Airborne",
                 "Heavy": null,
                 "Medium": {
                     "M4A3 Sherman Wade": 3,
@@ -356,7 +390,8 @@
             }
         },
         "Offensive 01": {
-            "6 Fallschirmjaeger Regiment": {
+            "Axis": {
+                "Faction": "6 Fallschirmjaeger Regiment",
                 "Heavy": {
                     "Panzer IV Ausf. E Tiger": 3
                 },
@@ -369,7 +404,8 @@
                     "Sd. Kfz. 232": 2
                 }
             },
-            "101st Airborne": {
+            "Allies": {
+                "Faction": "101st Airborne",
                 "Heavy": null,
                 "Medium": {
                     "M10 GMC": 2,
