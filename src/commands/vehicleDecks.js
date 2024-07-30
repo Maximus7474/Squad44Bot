@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, StringSelectMenuBuilder, ActionRowBuilder, EmbedBuilder, ButtonBuilder } = require('@discordjs/builders');
-const tankDecks = require('../../data/tankDecks.json')
+const tankDecks = require('../../data/vehicleDecks.json')
 
 const keys = {
     All: ["Heavy", "Medium", "Recon", "Mechanized", "Specialized"],
