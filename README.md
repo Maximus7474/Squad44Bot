@@ -2,10 +2,7 @@
 
 ![](https://img.shields.io/github/v/release/Maximus7474/Squad44Bot?logo=github)
 
-This Bot is a simple test to try integrations out including web queries and sorting data.
-
-Thanks to [FissionFeline](https://github.com/FissionFeline) for the template used to get the bot started.
-You can find it [here](https://github.com/FissionFeline/discord-js-template) to use it yourself and start or continue learning __discord.js__
+If you're willing to contribute to the project please reade the [contribution guide](https://github.com/Maximus7474/Squad44Bot/blob/main/CONTRIBUTING.md).
 
 ## Setup
 1. Rename `.env.example` to `.env` and add in the following details:
@@ -24,3 +21,7 @@ TOKEN=INSERT_YOUR_TOKEN_HERE
 The `.env` file is set to be ignored, the reason being that your discord Bots token is in it and should be kept private.
 Even if Discord has a system in place to change/suspend your token if found on the web don't rely on it, keep it private.
 So don't alter the `.gitignore` as piece of advice for people not knowing how git works.
+
+## Credits
+Thanks to [FissionFeline](https://github.com/FissionFeline) for the template used to get the bot started.
+You can find it [here](https://github.com/FissionFeline/discord-js-template) to use it yourself and start or continue learning __discord.js__
