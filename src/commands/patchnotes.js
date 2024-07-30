@@ -1,11 +1,14 @@
 const { ButtonStyle } = require('discord.js');
 const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ActionRowBuilder } = require('@discordjs/builders');
 const https = require('https');
+const assert = require('assert');
 
 const log = new require('../utils/logger.js');
 const logger = new log("Patchnotes");
 const configManager = require('../utils/configManager');
 const { repository } = configManager.getConfig();
+
+assert((repository !== undefined && repository !== null && repository.includes('github.com/')), "The github Repository has not been defined in the 'config.json'")
 
 function getLatestReleasePatchNotes(callback) {
     const owner = repository.split('github.com/')[1].split('/')[0];
