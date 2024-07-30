@@ -544,6 +544,16 @@
                     "Panzer II Ausf. C": 1,
                     "Sd. Kfz. 232": 1,
                     "Panzer 38(t)": 1
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies": {
@@ -558,6 +568,14 @@
                 "Recon": {
                     "M8 Greyhound": 3,
                     "M5A1 Stuart": 1
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         },
@@ -574,6 +592,16 @@
                 },
                 "Recon": {
                     "Sd. Kfz. 232": 2
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies": {
@@ -587,6 +615,14 @@
                 },
                 "Recon": {
                     "M5A1 Stuart": 5
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         },
@@ -605,6 +641,16 @@
                 },
                 "Recon": {
                     "Sd. Kfz. 232": 2
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies":{
@@ -619,6 +665,14 @@
                 "Recon": {
                     "M8 Greyhound": 1,
                     "M5A1 Stuart": 3
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         },
@@ -639,6 +693,16 @@
                     "Panzer II Ausf. C": 1,
                     "Sd. Kfz. 232": 1,
                     "Panzer 38(t)": 1
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies":{
@@ -652,6 +716,14 @@
                 },
                 "Recon": {
                     "M8 Greyhound": 5
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         },
@@ -671,6 +743,16 @@
                 "Recon": {
                     "Sd. Kfz. 234 \"Puma\"": 2,
                     "Panzer 38(t)": 1
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies":{
@@ -683,6 +765,14 @@
                 },
                 "Recon": {
                     "M8 Greyhound": 5
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         },
@@ -700,6 +790,16 @@
                 },
                 "Recon": {
                     "Sd. Kfz. 232": 2
+                },
+                "Specialized": {
+                    "BMW R75": 1,
+                    "Küblewagen 82 MG42": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 251/22 Pak 40": 1,
+                    "Sd. Kfz. 2 Kettenkrad": 1
                 }
             },
             "Allies":{
@@ -713,6 +813,14 @@
                 },
                 "Recon": {
                     "M5A1 Stuart": 5
+                },
+                "Mechanized": {
+                    "M3 Halftrack .50cal": 3,
+                    "M3 Halftrack": 2
+                },
+                "Specialized": {
+                    "Jeep Willys US M1919a4": 2,
+                    "M20 Armoured Utility Car": 2
                 }
             }
         }
