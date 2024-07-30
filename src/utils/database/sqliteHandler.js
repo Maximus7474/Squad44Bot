@@ -73,10 +73,11 @@ const executeTransaction = (statements) => {
 };
 
 // Execute a simple query and return the wanted data
-const executeQuery = (sql, params = []) => {
+const executeQuery = (sql, type = 'get', params = []) => {
+    if (type !== 'get' && type !== 'all') return logger.warn('Incorrect argument for executeQuery type argument');
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database(`./data.db`);
-        db.get(sql, params, function (err, row) {
+        db[type](sql, params, function (err, row) {
             if (err) {
                 logger.error('Error executing SQL statement:', err);
                 reject(err);
