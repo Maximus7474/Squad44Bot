@@ -89,20 +89,19 @@ async execute(client, interaction) {
                 .setColor(16316405);
                         
             if (!DoesLayerHaveDeck(selectedCategory, deckInfo)) {
-                Embed.setDescription(`The faction ${deckInfo.Faction} doesn't have ${selectedCategory === 'Tanks' ? 'a Tank deck' : selectedCategory === 'Vehicles' ? 'a Specialized/Mechanized deck' : 'any special vehicles'} on this layer`);
-            } else {
                 Embed.setDescription(`Here's the tank deck for ${deckInfo.Faction} on the selected layer:`);
                 
                 selectedCategory.forEach((key) => {
-                    console.log(key, deckInfo[key])
                     if (deckInfo[key] !== null, deckInfo[key] !== undefined) {
                         let fieldValue = '';
                         Object.keys(deckInfo[key]).forEach(nextKey => {
                             fieldValue += `- ${nextKey}: \`${deckInfo[key][nextKey]}\`\n`;
                         });
-                        Embed.addFields({ name: key, value: fieldValue || 'No details available', inline: false });
+                        Embed.addFields({ name: `__**${key}**__`, value: fieldValue || 'No details available', inline: false });
                     }
                 });
+            } else {
+                Embed.setDescription(`The faction ${deckInfo.Faction} doesn't have ${selectedCategory === 'Tanks' ? 'a Tank deck' : selectedCategory === 'Vehicles' ? 'a Specialized/Mechanized deck' : 'any special vehicles'} on this layer`);
             }
 
             await i.update({
