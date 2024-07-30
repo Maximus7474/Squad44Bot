@@ -13,14 +13,6 @@ describe('Configuration Test', () => {
         expect(fileExists).to.be.true;
     });
     
-    it('should check if en.json exists', () => {
-        
-        const configFile = './src/locales/en.json';
-        const fileExists = fs.existsSync(configFile);
-
-        expect(fileExists).to.be.true;
-    });
-    
     it('should check if a token exists', () => {
         const configFile = './.env';
         const fileExists = fs.existsSync(configFile);

@@ -3,8 +3,6 @@ const log = new require('../utils/logger.js')
 const logger = new log("interactionCreate") 
 const interaction_handler = require('../handlers/interaction_handler')
 
-const translations = require('../locales/localeManager.js');
-
 module.exports = {
     event: Discord.Events.InteractionCreate,
     type: "on",
