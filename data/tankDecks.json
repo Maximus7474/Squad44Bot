@@ -544,5 +544,481 @@
                 }
             }
         }
+    },
+    "Colmar": {
+        "Offensive 01": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1,
+                    "Nashorn": 1,
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Flakpanzer IV Ostwind": 1,
+                    "Panzer III Ausf. G": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Jagdpanzer 38(t) Hetzer": 2,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 232": 3,
+                    "Sd. Kfz. 222": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M26 Pershing": 4,
+                    "M4A3E2 Sherman \"Jumbo\"": 2
+                },
+                "Medium": {
+                    "M10 GMC": 2,
+                    "M36 Jackson": 2,
+                    "T34 Calliope": 1,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 2,
+                    "M5A1 Stuart": 2
+                }
+            }
+        },
+        "Offensive 02": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 5
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 2,
+                    "Jagdpanzer IV L70": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Jagdpanzer 38(t) Hetzer": 2,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Stug III Ausf. G": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 234/4 Stummel": 1
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 2,
+                    "M4A3E2 Sherman \"Jumbo\"": 2,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 3,
+                    "M24 Chaffee": 3
+                }
+            }
+        },
+        "Offensive 03": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1,
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Jagdpanzer IV L70": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Stug III Ausf. G": 3,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 234/4 Stummel": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 2,
+                    "M4A3E2 Sherman \"Jumbo\"": 2,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 4,
+                    "M36 Jackson": 3
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 3,
+                    "M24 Chaffee": 3
+                }
+            }
+        },
+        "Offensive 04": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 2,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Jagdpanzer IV L70": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Stug III Ausf. G": 2,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 234/4 Stummel": 1
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 1,
+                    "M4A3E2 Sherman \"Jumbo\"": 3,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "T34 Calliope": 1,
+                    "M10 GMC": 2,
+                    "M36 Jackson": 2,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 2
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M24 Chaffee": 2
+                }
+            }
+        },
+        "Offensive 05": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 5
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 2,
+                    "Sturmhaubitze 42 \"StuH\"": 2,
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Panzer IV Ausf. G": 3,
+                    "Flakpanzer IV Ostwind": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 234/4 Stummel": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 1,
+                    "M4A3E2 Sherman \"Jumbo\"": 3,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "T34 Calliope": 1,
+                    "M10 GMC": 2,
+                    "M36 Jackson": 2,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 2,
+                    "M5A1 Stuart": 2
+                }
+            }
+        },
+        "Offensive 06": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 3,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 1,
+                    "Nashorn": 1
+                },
+                "Medium": {
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Panzer III Ausf. G": 2,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Marder 3 Ausf. M": 2,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 232": 3,
+                    "Sd. Kfz. 222": 2,
+                    "Panzer 38(t)": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 2,
+                    "M4A3E2 Sherman \"Jumbo\"": 2,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 3,
+                    "M24 Chaffee": 3
+                }
+            }
+        },
+        "Offensive 07": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 3,
+                    "Nashorn": 1,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1
+                },
+                "Medium": {
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Panzer IV Ausf. G": 3,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Stug III Ausf. G": 2,
+                    "Sturmhaubitze 42 \"StuH\"": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Sd. Kfz. 232": 3,
+                    "Panzer 38(t)": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 2,
+                    "M26 Pershing": 3
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 3,
+                    "M24 Chaffee": 3
+                }
+            }
+        },
+        "Offensive 08": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 2,
+                    "Jagdpanzer IV L70": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Stug III Ausf. G": 2,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 3,
+                    "Panzer 38(t)": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 1,
+                    "M26 Pershing": 2,
+                    "M4A3E2 Sherman \"Jumbo\"": 3
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 2,
+                    "M5A1 Stuart": 2
+                }
+            }
+        },
+        "Offensive 09": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 5
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 3,
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Stug III Ausf. G": 2,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 2
+                },
+                "Recon": {
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 222": 2,
+                    "Panzer II Ausf. C": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 3,
+                    "M4A3E2 Sherman \"Jumbo\"": 3
+                },
+                "Medium": {
+                    "M10 GMC": 2,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 3,
+                    "M36 Jackson": 2
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M24 Chaffee": 2
+                }
+            }
+        },
+        "Offensive 10": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 2,
+                    "Nashorn": 1,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1,
+                    "Panzer V Ausf. A Panther": 2
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 2,
+                    "Sturmhaubitze 42 \"StuH\"": 2,
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Panzer IV Ausf. G": 3,
+                    "Flakpanzer IV Ostwind": 1
+                },
+                "Recon": {
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 1,
+                    "M4A3E2 Sherman \"Jumbo\"": 3,
+                    "M26 Pershing": 2
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 3,
+                    "M5A1 Stuart": 2
+                }
+            }
+        },
+        "Offensive 11": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer VI Ausf. E Tiger": 3,
+                    "Nashorn": 1,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Stug III Ausf. G": 2,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Jagdpanzer IV L70": 2,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3 (76) W HVSS Sherman": 2,
+                    "M4A3E2 Sherman \"Jumbo\"": 1,
+                    "M26 Pershing": 3
+                },
+                "Medium": {
+                    "M4A3 Sherman": 6,
+                    "T34 Calliope": 3
+                },
+                "Recon": {
+                    "M8 Greyhound": 2,
+                    "M5A1 Stuart": 2,
+                    "M24 Chaffee": 1
+                }
+            }
+        },
+        "Offensive 12": {
+            "Axis":{
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Nashorn": 1,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1,
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 4,
+                    "Jagdpanzer IV L70": 2,
+                    "Flakpanzer IV Ostwind": 1,
+                    "Stug III Ausf. G": 2,
+                    "Jagdpanzer 38(t) Hetzer": 2,
+                    "Sturmhaubitze 42 \"StuH\"": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 234/4 Stummel": 2,
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 2,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                }
+            },
+            "Allies":{
+                "Faction": "1re Armée",
+                "Heavy": {
+                    "M4A3E2 Sherman \"Jumbo\"": 2,
+                    "M26 Pershing": 4
+                },
+                "Medium": {
+                    "M10 GMC": 3,
+                    "M18 Hellcat": 3,
+                    "M4A3 Sherman": 4
+                },
+                "Recon": {
+                    "M8 Greyhound": 2,
+                    "M5A1 Stuart": 2,
+                    "M24 Chaffee": 1
+                }
+            }
+        }
     }
 }
