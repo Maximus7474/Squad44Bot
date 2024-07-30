@@ -683,7 +683,7 @@ module.exports = {
                     .setDescription(`[${tag}] Doesn't exist.`)
                     .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
 
-                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
+                return interaction.reply({content:``, embeds: [Embed], ephemeral: true})
             }
 
             openDescriptionEditorModal(interaction, links.description);
@@ -776,7 +776,7 @@ module.exports = {
                 });
 
         } else {
-            return editReply({content:`Hmmm, not sure this probably isn't handled!`,ephemeral :true})
+            return editReply({content:`Hmmm, not sure this seems to not be handled!`,ephemeral :true})
         }
     }
 }
