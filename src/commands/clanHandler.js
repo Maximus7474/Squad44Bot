@@ -500,8 +500,7 @@ module.exports = {
 
                 return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
             }
-            
-            let parsedLinks = JSON.parse(links.otherLinks)
+            let parsedLinks = JSON.parse(links[group === "update_links" ? "otherLinks" : "serverIDs"])
 
             const linkExists = parsedLinks.some(element => {
                 if (element.link === newValue || element.id === newValue) {
