@@ -213,6 +213,15 @@
                     "Panzer 38(t)": 1,
                     "Sd. Kfz. 222": 2,
                     "Sd. Kfz. 232": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfger 42": 1,
+                    "Sd. Kfz. 251": 2
                 }
             },
             "Allies": {
@@ -233,6 +242,16 @@
                     "T17 Staghound": 1,
                     "AEC Mk. II Armoured Car": 1,
                     "Daimler AC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
                 }
             }
         },
@@ -253,6 +272,15 @@
                     "Sd. Kfz. 234 \"Puma\"": 1,
                     "Sd. Kfz. 222": 1,
                     "Panzer 38(t)": 3
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfger 42": 1,
+                    "Sd. Kfz. 251": 2
                 }
             },
             "Allies": {
@@ -271,6 +299,16 @@
                     "Daimler AC": 1,
                     "AEC Mk. II Armoured Car": 1,
                     "Stuart VI": 2
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
                 }
             }
         },
@@ -293,6 +331,15 @@
                     "Sd. Kfz. 222": 1,
                     "Panzer 38(t)": 1,
                     "Sd. Kfz. 232": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfger 42": 1,
+                    "Sd. Kfz. 251": 2
                 }
             },
             "Allies": {
@@ -313,6 +360,16 @@
                     "Stuart VI": 1,
                     "AEC Mk. II Armoured Car": 3,
                     "Daimler AC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
                 }
             }
         },
@@ -332,6 +389,15 @@
                     "Sd. Kfz. 222":1,
                     "Sd. Kfz. 232":3,
                     "Sd. Kfz. 234 \"Puma\"": 1
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfger 42": 1,
+                    "Sd. Kfz. 251": 2
                 }
             },
             "Allies": {
@@ -347,6 +413,16 @@
                 "Recon": {
                     "Daimler AC": 2,
                     "AEC Mk. II Armoured Car": 2
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
                 }
             }
         },
@@ -366,7 +442,12 @@
                     "Panzer 38(t)":2,
                     "Sd. Kfz. 222":1,
                     "Sd. Kfz. 232":1
-                }
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": null
             },
             "Allies": {
                 "Faction": "1st Airborne",
@@ -386,7 +467,12 @@
                     "T17 Staghound": 1,
                     "AEC Mk. II Armoured Car": 1,
                     "Daimler AC": 1
-                }
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                },
+                "Mechanized": null
             }
         },
         "RAAS US": {
@@ -406,7 +492,12 @@
                     "Sd. Kfz. 234 \"Puma\"": 2,
                     "Sd. Kfz. 222": 1,
                     "Panzer 38(t)": 1
-                }
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                },
+                "Mechanized": null
             },
             "Allies": {
                 "Faction": "101st Airborne",
@@ -427,7 +518,12 @@
                     "AEC Mk. II Armoured Car": 1,
                     "Daimler AC": 1
                 }
-            }
+            },
+            "Specialized": {
+                "Jeep Willys AB Vickers K": 2,
+                "Morris C8": 1
+            },
+            "Mechanized": null
         }
     },
     "Carentan": {
