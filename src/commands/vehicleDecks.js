@@ -70,7 +70,9 @@ async execute(client, interaction) {
     const Embed = new EmbedBuilder()
         .setTitle(`Tank Decks for ${selectedMap}`)
         .setColor(16316405)
-        .setDescription('Select the wanted layer from the following list');
+        .setDescription('Select the wanted layer from the following list')
+        .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+        .setFooter({text: 'ℹ️ This command is unfinished, not all layers are available'});
     
     await interaction.reply({content: '', embeds: [Embed], components: [layerSelectDropDown], ephemeral: false})
 
@@ -117,7 +119,7 @@ async execute(client, interaction) {
     collector.on('end', collected => {
         if (collected.size === 0) {
             interaction.editReply({
-                content: 'You did not select any option.',
+                content: 'You did not select a layer.',
                 embeds: [],
                 components: [],
                 ephemeral: true
