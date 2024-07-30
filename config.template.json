@@ -2,6 +2,11 @@
     "repository": "https://github.com/Maximus7474/Squad44Bot",
     "main_guild": "",
     "language" :"en",
+    "channels": {
+        "errors": "channel_id",
+        "actions": "channel_id",
+        "joinsleaves": "channel_id"
+    },
     "locales": [
         {"name": "english", "value": "en"},
         {"name": "french", "value": "fr"},
