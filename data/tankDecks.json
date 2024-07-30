@@ -417,6 +417,132 @@
                     "M5A1 Stuart": 5
                 }
             }
+        },
+        "Offensive 02": {
+            "Axis":{
+                "Faction": "6 Fallschirmjaeger Regiment",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1,
+                    "Panzer IV Ausf. G": 2,
+                    "Panzer IV Ausf. H": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "Allies":{
+                "Faction": "101st Airborne",
+                "Heavy": null,
+                "Medium": {
+                    "M10 GMC": 2,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 2,
+                    "M4A3 Sherman Wade": 3
+                },
+                "Recon": {
+                    "M8 Greyhound": 1,
+                    "M5A1 Stuart": 3
+                }
+            }
+        },
+        "Offensive 03": {
+            "Axis":{
+                "Faction": "6 Fallschirmjaeger Regiment",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 3
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 2,
+                    "Marder 3 Ausf. M": 1,
+                    "Panzer III Ausf. G": 3,
+                    "Panzer IV Ausf. H": 3
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Panzer II Ausf. C": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Panzer 38(t)": 1
+                }
+            },
+            "Allies":{
+                "Faction": "101st Airborne",
+                "Heavy": null,
+                "Medium": {
+                    "M10 GMC": 2,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 2,
+                    "M4A3 Sherman Wade": 3
+                },
+                "Recon": {
+                    "M8 Greyhound": 5
+                }
+            }
+        },
+        "RAAS US": {
+            "Axis":{
+                "Faction": "6 Fallschirmjaeger Regiment",
+                "Heavy": {
+                    "Panzer IV Ausf. E Tiger": 3
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1,
+                    "Panzer IV Ausf. G": 2,
+                    "Panzer IV Ausf. H": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Panzer 38(t)": 1
+                }
+            },
+            "Allies":{
+                "Faction": "101st Airborne",
+                "Heavy": null,
+                "Medium": {
+                    "M10 GMC": 1,
+                    "M4A3 Sherman": 3,
+                    "M4A3 Sherman Wade": 5
+                },
+                "Recon": {
+                    "M8 Greyhound": 5
+                }
+            }
+        },
+        "Supremacy 1944": {
+            "Axis":{
+                "Faction": "6 Fallschirmjaeger Regiment",
+                "Heavy": {
+                    "Panzer IV Ausf. E Tiger": 3
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 2,
+                    "Marder 3 Ausf. M": 1,
+                    "Panzer IV Ausf. H": 3,
+                    "Panzer III Ausf. G": 3
+                },
+                "Recon": {
+                    "Sd. Kfz. 232": 2
+                }
+            },
+            "Allies":{
+                "Faction": "101st Airborne",
+                "Heavy": null,
+                "Medium": {
+                    "M10 GMC": 1,
+                    "M18 Hellcat": 2,
+                    "M4A3 Sherman": 3,
+                    "M4A3 Sherman Wade": 3
+                },
+                "Recon": {
+                    "M5A1 Stuart": 5
+                }
+            }
         }
     }
 }
