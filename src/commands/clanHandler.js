@@ -70,7 +70,7 @@ module.exports = {
                     option.setName('language')
                         .setDescription('Main language of the clan')
                         .setRequired(true)
-                        .setChoices(locales)
+                        .setChoices(...locales)
                 )
                 .addStringOption(option => 
                     option.setName('image').setDescription('A direct link to their logo/seal/icon').setRequired(false)
