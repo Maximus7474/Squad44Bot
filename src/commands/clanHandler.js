@@ -312,6 +312,8 @@ module.exports = {
                     tag, name, invite, image, language, `${user.username} (${user.id})`
                 ]
             ).then(index => {
+                logger.infolog(interaction, `The following clan was added:\n- [${tag}] ${name},\n- Server Invite: ${invite},\n- Language: ${language}`);
+
                 const Embed = new EmbedBuilder()
                     .setTitle("New clan added")
                     .setColor(16316405)
@@ -321,7 +323,8 @@ module.exports = {
 
                 return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
             }).catch(err => {
-                logger.error(`Unable to add [${tag}] to the DB by ${user.username}`, err)
+                logger.error(`Unable to add [${tag}] to the DB by ${user.username}`, err);
+                logger.errorlog(interaction, `Unable to add [${tag}] to the DB by ${user.username}`, err);
 
                 const Embed = new EmbedBuilder()
                     .setTitle("ERROR, unable to add clan")
@@ -360,7 +363,8 @@ module.exports = {
 
             executeStatement(`DELETE FROM \`game-clans\` WHERE ${tag ? "tag" : name ? "name" : "id"} = ?;`, [tag ? tag : name ? name : id])
                 .then(status => {
-                    logger.info(`Delete request for ${tag ? "tag" : name ? "name" : "id"} with value ${tag ? tag : name ? name : id} ${status === 1 ? "succeeded by" : "failed by"} ${user.username} (${user.id})`)
+                    logger.info(`Delete request for ${tag ? "tag" : name ? "name" : "id"} with value ${tag ? tag : name ? name : id} ${status === 1 ? "succeeded by" : "failed by"} ${user.username} (${user.id})`);
+                    logger.infolog(interaction, `Delete request for ${tag ? "tag" : name ? "name" : "id"} with value ${tag ? tag : name ? name : id} ${status === 1 ? "**succeeded**" : "**failed**"}`);
 
                     const Embed = new EmbedBuilder()
                         .setTitle(status === 1 ? "Clan Deleted" : "Unable to delete")
@@ -410,6 +414,7 @@ module.exports = {
             executeStatement('UPDATE `game-clans` SET `clanReps` = ? WHERE `id` = ?', [JSON.stringify(clanReps), DBdata.id])
                 .then(result => {
                     logger.info(`${rep.username} (${rep.id}) has been ${subcommand === 'add' ? 'added as clan rep to' : 'removed from' }  ${tag}`, result);
+                    logger.infolog(interaction, `${rep.username} (${rep.id}) has been ${subcommand === 'add' ? 'added as clan rep to' : 'removed from' }  ${tag}`);
 
                     const Embed = new EmbedBuilder()
                         .setTitle("Clan Reps updated")
@@ -423,7 +428,8 @@ module.exports = {
     
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
                 }).catch(err => {
-                    logger.error(`Unable to add ${rep.username} (${rep.id}) as clan rep for [${tag}] to the DB by ${rep.username}`, err)
+                    logger.error(`Unable to add ${rep.username} (${rep.id}) as clan rep for [${tag}] to the DB by ${rep.username}`, err);
+                    logger.errorlog(interaction, `Unable to add ${rep.username} (${rep.id}) as clan rep for [${tag}] to the DB by ${user.username}`, err);
     
                     const Embed = new EmbedBuilder()
                         .setTitle("ERROR, unable to add clan rep")
@@ -532,6 +538,7 @@ module.exports = {
             executeStatement(`UPDATE \`game-clans\` SET ${group === "update_links" ? "otherLinks" : "serverIDs"} = ? WHERE tag = ?;`, [JSON.stringify(parsedLinks), tag])
                 .then(result => {
                     logger.info(`The ${group === "update_links" ? "link" : "server id"} (${linkTitle}) has been added to ${tag} by ${user}`, result);
+                    logger.infolog(interaction, `The ${group === "update_links" ? "link" : "server id"} '${linkTitle}' (${newValue}) has been added to ${tag}`);
 
                     const Embed = new EmbedBuilder()
                         .setTitle(group === "update_links" ? "Clan links Updated" : "Clan Servers Updated")
@@ -545,7 +552,8 @@ module.exports = {
 
                     return interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
                 }).catch(err => {
-                    logger.error(`Unable to add ${linkTitle} to [${tag}] by ${user.username}`, err)
+                    logger.error(`Unable to add ${linkTitle} to [${tag}] by ${user.username}`, err);
+                    logger.errorlog(interaction, `Unable to add ${linkTitle} (${newValue}) to [${tag}] by ${user.username}`, err);
 
                     const Embed = new EmbedBuilder()
                         .setTitle("ERROR")
@@ -621,7 +629,8 @@ module.exports = {
                     executeStatement(`UPDATE \`game-clans\` SET ${group === "update_links" ? "otherLinks" : "serverIDs"} = ? WHERE tag = ?;`, [JSON.stringify(items), tag])
                     .then(result => {
                         logger.info(`The ${group === "update_links" ? "link" : "server id"} (${removedItem[indexTitle]}) has been removed to ${tag} by ${user}`, result);
-    
+                        logger.infolog(interaction, `The ${group === "update_links" ? "link" : "server id"} (${removedItem[indexTitle]}) has been removed to ${tag}`);
+
                         const Embed = new EmbedBuilder()
                             .setTitle(group === "update_links" ? "Clan link Removed" : "Clan Server Removed")
                             .setColor(16316405)
@@ -630,7 +639,8 @@ module.exports = {
     
                         return i.update({content:``, embeds: [Embed], ephemeral: true})
                     }).catch(err => {
-                        logger.error(`Unable to remove ${items[indexToRemove][indexTitle]} from [${tag}] by ${user.username}`, err)
+                        logger.error(`Unable to remove ${items[indexToRemove][indexTitle]} from [${tag}] by ${user.username}`, err);
+                        logger.errorlog(interaction, `Unable to remove ${items[indexToRemove][indexTitle]} from [${tag}] by ${user.username}`, err);
     
                         const Embed = new EmbedBuilder()
                             .setTitle("ERROR")
@@ -686,6 +696,7 @@ module.exports = {
                 executeStatement('UPDATE `game-clans` SET description = ? WHERE tag = ?;', [newDescription, tag])
                     .then(status => {
                         logger.info('Updated description from', tag, 'by', user.username, user.id)
+                        logger.infolog(interaction, `Updated description from ${tag}`);
 
                         const Embed = new EmbedBuilder()
                             .setTitle('New Description Added')
@@ -696,12 +707,15 @@ module.exports = {
                         i.reply({ content: '', embeds: [Embed], ephemeral: false });
 
                     }).catch(err => {
-                        logger.error('Unable to update description for', tag, err)
+                        logger.error('Unable to update description for', tag, err);
+                        logger.errorlog(interaction, `Unable to update description for ${tag}`, err);
 
                         i.reply({ content: `Unable to update description of ${tag}\n\`\`\`\n${err}\`\`\``, ephemeral: true });
                     })
             })
-            .catch(logger.error);
+            .catch(err => {
+                logger.errorlog(interaction, `Uncaught error (${group} - ${subcommand})`, err)
+            });
         } else if (group === "update") {
 
             const name = interaction.options.getString('name');
@@ -741,6 +755,7 @@ module.exports = {
             executeStatement(`UPDATE \`game-clans\` SET ${subcommand} = ? WHERE tag = ?;`, [name || invite || image, tag])
                 .then(status => {
                     logger.info('Updated', subcommand, 'from', tag, 'by', user.username, user.id, 'with previous data being', clanData[subcommand], 'status code:', status)
+                    logger.infolog(interaction, `Updated ${subcommand} from ${tag} with previous data ${clanData[subcommand]} to ${name || invite || image}`)
 
                     const Embed = new EmbedBuilder()
                         .setTitle('Data updated')
@@ -753,12 +768,11 @@ module.exports = {
                         Embed.setDescription(`The ${subcommand} has been changed from \`${clanData[subcommand]}\` to \`${name || invite}\` \n-# Status code: \`${status}\``);
                         Embed.setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
                     }
-                    
-                    console.log('Editing the interaction reply')
+
                     interaction.editReply({content:``, embeds: [Embed], ephemeral: true})
                 })
                 .catch(err => {
-
+                    logger.errorlog(interaction, `Uncaught error (${group} - ${subcommand})`, err)
                 });
 
         } else {

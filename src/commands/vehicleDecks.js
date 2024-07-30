@@ -1,6 +1,9 @@
 const { SlashCommandBuilder, StringSelectMenuBuilder, ActionRowBuilder, EmbedBuilder, ButtonBuilder } = require('@discordjs/builders');
 const tankDecks = require('../../data/vehicleDecks.json')
 
+const log = require('../utils/logger');
+const logger = new log('Vehicle Decks');
+
 const keys = {
     All: ["Heavy", "Medium", "Recon", "Mechanized", "Specialized"],
     Tanks: ["Heavy", "Medium", "Recon"],
@@ -80,38 +83,43 @@ async execute(client, interaction) {
     const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
 
     collector.on('collect', async i => {
-        if (i.customId === 'temp_tankdeck_layerselect') {
-            const selectedKey = i.values[0];
-            const deckInfo = mapData[selectedKey][selectedFaction];
-
-            const Embed = new EmbedBuilder()
-                .setTitle(`(${selectedFaction}) ${selectedMap} - ${selectedKey}`)
-                .setColor(16316405);
-                        
-            if (!DoesLayerHaveDeck(selectedCategory, deckInfo)) {
-                Embed.setDescription(`Here's the tank deck for ${deckInfo.Faction} on the selected layer:`);
-                
-                selectedCategory.forEach((key) => {
-                    if (deckInfo[key] !== null, deckInfo[key] !== undefined) {
-                        let fieldValue = '';
-                        Object.keys(deckInfo[key]).forEach(nextKey => {
-                            fieldValue += `- ${nextKey}: \`${deckInfo[key][nextKey]}\`\n`;
-                        });
-                        Embed.addFields({ name: `__**${key}**__`, value: fieldValue || 'No details available', inline: false });
-                    }
+        try {
+            if (i.customId === 'temp_tankdeck_layerselect') {
+                const selectedKey = i.values[0];
+                const deckInfo = mapData[selectedKey][selectedFaction];
+    
+                const Embed = new EmbedBuilder()
+                    .setTitle(`(${selectedFaction}) ${selectedMap} - ${selectedKey}`)
+                    .setColor(16316405);
+                            
+                if (!DoesLayerHaveDeck(selectedCategory, deckInfo)) {
+                    Embed.setDescription(`Here's the tank deck for ${deckInfo.Faction} on the selected layer:`);
+                    
+                    selectedCategory.forEach((key) => {
+                        if (deckInfo[key] !== null, deckInfo[key] !== undefined) {
+                            let fieldValue = '';
+                            Object.keys(deckInfo[key]).forEach(nextKey => {
+                                fieldValue += `- ${nextKey}: \`${deckInfo[key][nextKey]}\`\n`;
+                            });
+                            Embed.addFields({ name: `__**${key}**__`, value: fieldValue || 'No details available', inline: false });
+                        }
+                    });
+                } else {
+                    Embed.setDescription(`The faction ${deckInfo.Faction} doesn't have ${selectedCategory === 'Tanks' ? 'a Tank deck' : selectedCategory === 'Vehicles' ? 'a Specialized/Mechanized deck' : 'any special vehicles'} on this layer`);
+                }
+    
+                await i.update({
+                    content: ``,
+                    embeds: [Embed],
+                    components: [],
+                    ephemeral: false
                 });
-            } else {
-                Embed.setDescription(`The faction ${deckInfo.Faction} doesn't have ${selectedCategory === 'Tanks' ? 'a Tank deck' : selectedCategory === 'Vehicles' ? 'a Specialized/Mechanized deck' : 'any special vehicles'} on this layer`);
+    
+                collector.stop();
             }
-
-            await i.update({
-                content: ``,
-                embeds: [Embed],
-                components: [],
-                ephemeral: false
-            });
-
-            collector.stop();
+        } catch (err) {
+            logger.error('Issue with the collector', err)
+            logger.errorlog(i, 'Issue with the collector', err)
         }
     });
 
