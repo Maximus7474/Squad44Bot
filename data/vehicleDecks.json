@@ -1510,5 +1510,181 @@
                 "M20 Armoured Utility Car": 2
             }
         }
+    },
+    "Dinant": {
+        "Offensive 01": {
+            "Axis": {
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer IV Ausf. D": 3,
+                    "Stug III A": 2
+                },
+                "Medium": {
+                    "Panzer III Ausf. F": 3,
+                    "Panzer II Ausf. C": 2,
+                    "Panzer (38)t": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 7": 1
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82": 1
+                }
+            },
+            "Allies": {
+                "Faction": "21 Régiment d'Infanterie",
+                "Heavy": {
+                    "Matilda Mk. II": 1,
+                    "Renault Char B1 \"Bis\"": 2
+                },
+                "Medium": {
+                    "Hotchkiss H35/39": 1,
+                    "Renault R35": 2,
+                    "Somua S35": 4
+                },
+                "Recon": {
+                    "Panhard 178": 2
+                },
+                "Mechanized": {
+                    "Laffly W15TCC": 4
+                },
+                "Specialized": null
+            }
+        },
+        "Offensive 02": {
+            "Axis": {
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer IV Ausf. D": 2,
+                    "Stug III A": 3
+                },
+                "Medium": {
+                    "Panzer III Ausf. F": 3,
+                    "Panzer II Ausf. C": 3,
+                    "Panzer (38)t": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 3
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 7": 1
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82": 1
+                }
+            },
+            "Allies": {
+                "Faction": "21 Régiment d'Infanterie",
+                "Heavy": {
+                    "Renault Char B1 \"Bis\"": 2
+                },
+                "Medium": {
+                    "Renault R35": 6,
+                    "Somua S35": 1
+                },
+                "Recon": {
+                    "Panhard 178": 3
+                },
+                "Mechanized": {
+                    "Laffly W15TCC": 4
+                },
+                "Specialized": null
+            }
+        },
+        "Offensive 03": {
+            "Axis": {
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer IV Ausf. D": 3,
+                    "Stug III A": 2
+                },
+                "Medium": {
+                    "Panzer III Ausf. F": 3,
+                    "Panzer II Ausf. C": 2,
+                    "Panzer (38)t": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 3
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 7": 1
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82": 1
+                }
+            },
+            "Allies": {
+                "Faction": "21 Régiment d'Infanterie",
+                "Heavy": {
+                    "Renault Char B1 \"Bis\"": 2
+                },
+                "Medium": {
+                    "Renault R35": 6,
+                    "Somua S35": 1
+                },
+                "Recon": {
+                    "Panhard 178": 3
+                },
+                "Mechanized": {
+                    "Laffly W15TCC": 4
+                },
+                "Specialized": null
+            }
+        },
+        "RAAS": {
+            "Axis": {
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer IV Ausf. D": 3,
+                    "Stug III A": 2
+                },
+                "Medium": {
+                    "Panzer III Ausf. F": 3,
+                    "Panzer II Ausf. C": 2,
+                    "Panzer (38)t": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 3
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 251": 2,
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 7": 1
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82": 1
+                }
+            },
+            "Allies": {
+                "Faction": "21 Régiment d'Infanterie",
+                "Heavy": {
+                    "Renault Char B1 \"Bis\"": 2
+                },
+                "Medium": {
+                    "Renault R35": 6,
+                    "Somua S35": 1
+                },
+                "Recon": {
+                    "Panhard 178": 3
+                },
+                "Mechanized": {
+                    "Laffly W15TCC": 4
+                },
+                "Specialized": null
+            }
+        }
     }
 }
