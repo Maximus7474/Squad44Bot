@@ -1,0 +1,14 @@
+{
+    "Axis": {
+        "9.SS-Panzer": {
+            "Seal": "images/seals/9SSPanzer.png",
+            "Uniforms": "https://cdn.discordapp.com/attachments/1246906037101924462/1246906037706162226/VB_PROMO.0012.png?ex=66abdfbd&is=66aa8e3d&hm=cd596b7e33e7cef190dae873db486674b2dfa02610de55211e86465fa04bd7df&",
+            "Description": "A description"
+        }
+    },
+    "Allies": {
+        "1st Airborne": {
+            "Description": "A description"
+        }
+    }
+}
