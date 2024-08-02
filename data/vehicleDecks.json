@@ -2215,5 +2215,825 @@
                 }
             }
         }
+    },
+    "Driel": {
+        "Frontline 01": {
+            "Axis": {
+                "Faction": "Wehrmacht",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 4,
+                    "Panzer VI Ausf. E Tiger": 2
+                },
+                "Medium": {
+                    "Stug III Ausf. G": 2,
+                    "Panzer III Ausf. G": 2,
+                    "Jagdpanzer 38(t) Hetzer": 1,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 3,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 2,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 2,
+                    "Cromwell Mk. IV": 2
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Daimler AC": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 01": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 1,
+                    "Panzer V Ausf. A Panther": 2,
+                    "Panzer VI Ausf. E Tiger": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 2,
+                    "Panzer III Ausf. G": 1,
+                    "Jagdpanzer IV L70": 1,
+                    "Jagdpanzer IV L48 Late War": 1,
+                    "Jagdpanzer 38(t) Hetzer": 1,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 3,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2,
+                    "Valentine Mv. XI": 1
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Daimler AC": 1,
+                    "T17 Staghound": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 02": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Marder 3 Ausf. M": 1,
+                    "Stug III Ausf. G": 1,
+                    "Sturmhaubitze 42 \"StuH\"": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Panzer 38(t)": 2,
+                    "Sd. Kfz. 232": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2,
+                    "Valentine Mv. XI": 1
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Daimler AC": 1,
+                    "T17 Staghound": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 03": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 4
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 2,
+                    "Stug III Ausf. G": 2,
+                    "Panzer III Ausf. G": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "82nd Airborne",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 2,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2,
+                    "Valentine Mv. XI": 1
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Stuart VI": 1,
+                    "T17 Staghound": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 04": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 4
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Stug III Ausf. G": 1,
+                    "Panzer III Ausf. G": 1,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 1,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 4
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1,
+                    "T17 Staghound": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 05": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 2,
+                    "Stug III Ausf. G": 2,
+                    "Jagdpanzer IV L70": 1,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "101st Airborne",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 2,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2,
+                    "Valentine Mv. XI": 1
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Stuart VI": 1,
+                    "T17 Staghound": 1,
+                    "Daimler AC": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 06": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 1,
+                    "Stug III Ausf. G": 1,
+                    "Panzer III Ausf. G": 1,
+                    "Jagdpanzer IV L70": 1,
+                    "Jagdpanzer 38(t) Hetzer": 1,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 2,
+                    "Cromwell Mk. IV": 2
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Daimler AC": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 07": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 2,
+                    "Stug III Ausf. G": 2,
+                    "Jagdpanzer 38(t) Hetzer": 3
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 3,
+                    "Sd. Kfz. 234 \"Puma\"": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 1,
+                    "Churchil Mk. VII": 2,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2,
+                    "Valentine Mv. XI": 1
+                },
+                "Recon": {
+                    "Stuart VI": 3,
+                    "T17 Staghound": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 08": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 2,
+                    "Panzer VI Ausf. E Tiger": 3
+                },
+                "Medium": {
+                    "Panzer III Ausf. G": 2,
+                    "Marder 3 Ausf. M": 2,
+                    "Jagdpanzer IV L48 Late War": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Sherman Mk. VC Firefly": 3,
+                    "Churchil Mk. VII": 3
+                },
+                "Medium": {
+                    "Sherman Mk. V": 1,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 4
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "Daimler AC": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 09": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 1,
+                    "Panzer III Ausf. G": 3,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Panzer 38(t)": 3
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Churchil Mk. VII": 3,
+                    "Challenger Mk. VIII": 1,
+                    "Churchill Mk. IV": 2
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "17pdr SP M10C Achilles": 1,
+                    "Cromwell Mk. IV": 2
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1,
+                    "T17 Staghound": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Offensive 10": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 1,
+                    "Panzer VI Ausf. B \"KönigsTiger\"": 2,
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 3,
+                    "Stug III Ausf. G": 1,
+                    "Panzer III Ausf. G": 1,
+                    "Marder 3 Ausf. M": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "Cromwell Mk. IV": 2,
+                    "17pdr SP M10C Achilles": 2
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1,
+                    "T17 Staghound": 1
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "RAAS UK 01": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 4,
+                    "Panzer VI Ausf. E Tiger": 1
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 2,
+                    "Stug III Ausf. G": 2,
+                    "Jagdpanzer IV L70": 1,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 1,
+                    "Sd. Kfz. 232": 1,
+                    "Panzer 38(t)": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 4,
+                    "17pdr SP M10C Achilles": 3
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1,
+                    "Stuart VI": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "RAAS UK 02": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzer V Ausf. A Panther": 1,
+                    "Panzer VI Ausf. E Tiger": 4
+                },
+                "Medium": {
+                    "Panzer IV Ausf. G": 1,
+                    "Stug III Ausf. G": 3,
+                    "Jagdpanzer 38(t) Hetzer": 2
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 2,
+                    "Sd. Kfz. 232": 2,
+                    "Panzer 38(t)": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Churchil Mk. VII": 2,
+                    "Sherman Mk. VC Firefly": 1,
+                    "Challenger Mk. VIII": 2,
+                    "Churchill Mk. IV": 1
+                },
+                "Medium": {
+                    "Sherman Mk. V": 3,
+                    "Cromwell Mk. IV": 2,
+                    "17pdr SP M10C Achilles": 1
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 2,
+                    "T17 Staghound": 1,
+                    "Daimler AC": 2,
+                    "Stuart VI": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        },
+        "Supremacy 1944": {
+            "Axis": {
+                "Faction": "9.SS-Panzer",
+                "Heavy": {
+                    "Panzerjäger Tiger Ausf. B Jagdtiger": 2,
+                    "Panzer VI Ausf. E Tiger": 3
+                },
+                "Medium": {
+                    "Panzer IV Ausf. H": 2,
+                    "Jagdpanzer 38(t) Hetzer": 1,
+                    "Jagdpanzer IV L70": 1,
+                    "Jagdpanzer IV L48 Late War": 2,
+                    "Marder 3 Ausf. M": 1
+                },
+                "Recon": {
+                    "Sd. Kfz. 222": 1,
+                    "Sd. Kfz. 234 \"Puma\"": 2,
+                    "Sd. Kfz. 232": 1
+                },
+                "Mechanized": {
+                    "Sd. Kfz. 7 Flak 38": 2,
+                    "Sd. Kfz. 4/1 Panzerwerfer 42": 1,
+                    "Sd. Kfz. 251": 2
+                },
+                "Specialized": {
+                    "BMW R75": 2,
+                    "Küblewagen 82 Camo MG42": 1
+                }
+            },
+            "Allies": {
+                "Faction": "Polish Brigade",
+                "Heavy": {
+                    "Churchil Mk. VII": 1,
+                    "Sherman Mk. VC Firefly": 3,
+                    "Challenger Mk. VIII": 2
+                },
+                "Medium": {
+                    "Sherman Mk. V": 6
+                },
+                "Recon": {
+                    "AEC Mk. II Armoured Car": 1,
+                    "Daimler AC": 1,
+                    "Stuart VI": 2
+                },
+                "Mechanized": {
+                    "Universal Carrier Boys AT": 1,
+                    "Universal Carrier M2 .50cal": 2,
+                    "Universal Carrier Vickers MG": 2,
+                    "M3 GMC": 1
+                },
+                "Specialized": {
+                    "Jeep Willys AB Vickers K": 2,
+                    "Morris C8": 1
+                }
+            }
+        }
     }
 }
