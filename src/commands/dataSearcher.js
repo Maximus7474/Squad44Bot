@@ -16,21 +16,43 @@ const tankDisplayEmbed = (name, tankData) => {
     return Embed
 }
 
-const canonDisplayEmbed = (name, tankData) => {
+const canonDisplayEmbed = (name, canonData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
         .setColor(16316405)
         .setDescription(
-            `Canon Type: \`${tankData.type}\`\nAvailable in Chapters: ${tankData.chapters.join(', ')}\nFactions: ${tankData.factions.join(', ')}`
+            `Canon Type: \`${canonData.type}\`\nAvailable in Chapters: ${canonData.chapters.join(', ')}\nFactions: ${canonData.factions.join(', ')}`
         ).setFields(
-            { name: 'Weaponry:', value: Object.entries(tankData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
+            { name: 'Weaponry:', value: Object.entries(canonData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
         );
     return Embed
 }
 
+const vehicleDisplayEmbed = (name, vehicleData) => {
+    const Embed = new EmbedBuilder()
+        .setTitle(name)
+        .setColor(16316405)
+        .setDescription(
+            `Class: **\`${vehicleData.class}**\`\n` +
+            (vehicleData.class !== undefined ? `Type: ${vehicleData.type}` : '') + '\n' +
+            `Available in Chapters: **\`${vehicleData.chapters.join('`, `')}\`**\n` +
+            `Factions: \n> ${vehicleData.factions.join(', ')}\n` +
+            `Seats: ${vehicleData.seats}`
+        );
+
+    if (vehicleData.weaponry && Object.keys(vehicleData.weaponry).length > 0) {
+        Embed.addFields(
+            { name: 'Weaponry:', value: Object.entries(vehicleData.weaponry).map(([weapon, amount]) => `- ${weapon}${typeof amount === 'number' && amount > 1 ? `: ${amount}` : ''}`).join("\n") }
+        );
+    }
+
+    return Embed;
+};
+
 const functionDistribution = {
     tanks: tankDisplayEmbed,
-    canons: canonDisplayEmbed
+    canons: canonDisplayEmbed,
+    vehicles: vehicleDisplayEmbed
 }
 
 module.exports = {
@@ -53,6 +75,16 @@ module.exports = {
                 .addStringOption(option =>
                     option.setName('name')
                         .setDescription('Canon name')
+                        .setAutocomplete(true)
+                        .setRequired(true)
+                )
+        )
+        .addSubcommand(command =>
+            command.setName('vehicles')
+                .setDescription('Search for a vehicle')
+                .addStringOption(option =>
+                    option.setName('name')
+                        .setDescription('Vehicle name')
                         .setAutocomplete(true)
                         .setRequired(true)
                 )
