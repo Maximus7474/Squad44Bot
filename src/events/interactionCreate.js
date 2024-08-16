@@ -22,6 +22,19 @@ module.exports = {
                     .catch(() => "");
             }
         }
+        else if (interaction.isAutocomplete()) {
+            if(!Object.keys(client.commands).includes(interaction.commandName)) {
+                logger.warn(`Command ${interaction.commandName} not found or loaded`);
+                return interaction.reply({ephemeral: true, content:`Command not found please report this!`})
+            }
+            const command = client.commands[interaction.commandName]
+            try{
+                return await command.auto_complete(client, interaction)
+            }
+            catch(error){
+                logger.error(Object.keys(command),  error);
+            }
+        }
         else if (!interaction.customId.startsWith('temp_')) {
             return interaction_handler(client,interaction)
                 .catch((err) => {
