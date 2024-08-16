@@ -10,10 +10,27 @@ const tankDisplayEmbed = (name, tankData) => {
         .setDescription(
             `Tank Type: \`${tankData.type}\`\nAvailable in Chapters: ${tankData.chapters.join(', ')}\nFactions: ${tankData.factions.join(', ')}`
         ).setFields(
-            { name: 'Équipage:', value: `- Rôles:\n> ${(tankData.details.crew ?? ['?']).sort().join(', ')}\n- Passagers: \`${tankData.details.passengers ?? '0'}\``, inline: false },
+            { name: 'Crewing:', value: `- Rôles:\n> ${(tankData.details.crew ?? ['?']).sort().join(', ')}\n- Passagers: \`${tankData.details.passengers ?? '0'}\``, inline: false },
             { name: 'Weaponry:', value: `- Main Canon: ${tankData.details.caliber ?? '?'}\n- Main Canon Ammunition:\n> ${Object.keys(tankData.details.shells ?? {'?': '?'}).sort().join(', ')}`, inline: false },
         );
     return Embed
+}
+
+const canonDisplayEmbed = (name, tankData) => {
+    const Embed = new EmbedBuilder()
+        .setTitle(name)
+        .setColor(16316405)
+        .setDescription(
+            `Canon Type: \`${tankData.type}\`\nAvailable in Chapters: ${tankData.chapters.join(', ')}\nFactions: ${tankData.factions.join(', ')}`
+        ).setFields(
+            { name: 'Weaponry:', value: Object.entries(tankData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
+        );
+    return Embed
+}
+
+const functionDistribution = {
+    tanks: tankDisplayEmbed,
+    canons: canonDisplayEmbed
 }
 
 module.exports = {
@@ -26,6 +43,16 @@ module.exports = {
                 .addStringOption(option =>
                     option.setName('name')
                         .setDescription('Vehicle name')
+                        .setAutocomplete(true)
+                        .setRequired(true)
+                )
+        )
+        .addSubcommand(command =>
+            command.setName('canons')
+                .setDescription('Search for a emplaced canon')
+                .addStringOption(option =>
+                    option.setName('name')
+                        .setDescription('Canon name')
                         .setAutocomplete(true)
                         .setRequired(true)
                 )
@@ -48,6 +75,6 @@ module.exports = {
 
         const searchedVehicleData = VehicleData[subcommand][name];
 
-        return interaction.reply({embeds: [tankDisplayEmbed(name, searchedVehicleData)], ephemeral :true})
+        return interaction.reply({embeds: [functionDistribution[subcommand](name, searchedVehicleData)], ephemeral :true})
     }
 }
