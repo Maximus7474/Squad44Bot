@@ -1,0 +1,1009 @@
+{
+    "tanks": {
+        "Matilda Mk. II": {
+            "type": "Heavy Tank",
+            "factions": ["ANZAC", "1st Airborne"],
+            "chapter": ["Mercury", "I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "40mm",
+                "shells": {
+                    "AP": "X"
+                }
+            }
+        },
+        "Vickers Mk. VI": {
+            "type": "Medium Tank",
+            "factions": ["ANZAC"],
+            "chapter": ["Mercury"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 3
+            }
+        },
+        "Panhard 178": {
+            "type": "Recon Tank",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4
+            }
+        },
+        "Renault R35": {
+            "type": "Medium Tank",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner"
+                ],
+                "passengers": 5
+            }
+        },
+        "Somua S35": {
+            "type": "Medium Tank",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner"
+                ],
+                "passengers":10
+            }
+        },
+        "Renault Char B1 \"Bis\"": {
+            "type": "Heavy Tank",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner"
+                ],
+                "passengers": 9
+            }
+        },
+        "Sd.Kfz. 222": {
+            "type": "Recon Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 2
+            }
+        },
+        "Sd.Kfz. 232": {
+            "type": "Recon Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4
+            }
+        },
+        "Panzer 38(t)": {
+            "type": "Recon/Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "II", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner"
+                ],
+                "passengers": 4,
+                "caliber": "37mm",
+                "shells": {
+                    "APC-HE": "X",
+                    "APCR": "X"
+                }
+            }
+        },
+        "Panzer II Ausf. C": {
+            "type": "Recon Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "II", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner"
+                ],
+                "passengers": 5,
+                "caliber": "20mm",
+                "shells": {
+                    "API-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Panzer III Ausf. F": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "37mm",
+                "shells": {
+                    "AP-HE-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Panzer III Ausf. G": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "50mm",
+                "shells": {
+                    "APC-HE-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Panzer IV Ausf. D": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Panzer IV Ausf. G": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Panzer IV Ausf. H": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Panzer V Ausf. A \"Panther\"": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Panzerjäger Tiger Ausf. B \"Jagdtiger\"": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "128mm",
+                "shells": {
+                    "APC-HE-T": "X",
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Panzer VI Ausf. B \"KönigsTiger\"": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "88mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Panzer VI Ausf. E \"Tiger\"": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "88mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Sd.Kfz. 234 \"Puma\"": {
+            "type": "Recon Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "50mm",
+                "shells": {
+                    "APC-HE-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Sd.Kfz. 234/4 \"Stummel\"": {
+            "type": "Recon Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Stug III Ausf. G": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Stug III A": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Jagdpanzer IV L48": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Jagdpanzer IV L48 (Late War)": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Jagdpanzer IV L70": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X"
+                }
+            }
+        },
+        "Nashorn": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "88mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Flakpanzer IV Ostwind": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "37mm",
+                "shells": {
+                    "APHE": "X"
+                }
+            }
+        },
+        "Flakpanzer IV OJagdpanzer 38(t) Hetzerstwind": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 3,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "APCR-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Marder III Ausf. M": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 3,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Sturmhaubitze 42 \"StuH\"": {
+            "type": "Medium Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull-Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "105mm",
+                "shells": {
+                    "HEAT": "X",
+                    "HE": "X"
+                }
+            }
+        },
+        "Panzer Selbstfahrlafette \"Sturer Emil\"": {
+            "type": "Heavy Tank",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 9,
+                "caliber": "128mm",
+                "shells": {
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "Stuart VI": {
+            "type": "Recon/Light Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "37mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APC": "X"
+                }
+            }
+        },
+        "Churchill Mk. IV": {
+            "type": "Heavy Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "57mm",
+                "shells": {
+                    "APC": "X",
+                    "APCBC-T": "X",
+                    "APDS": "X"
+                }
+            }
+        },
+        "Churchill Mk. VII": {
+            "type": "Heavy Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "Cromwell Mk. I": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "57mm",
+                "shells": {
+                    "APC-T": "X",
+                    "APCBC-T": "X",
+                    "APDS-T": "X"
+                }
+            }
+        },
+        "Cromwell Mk. IV": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "75mm",
+                "shells": {
+                    "APC-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "Cromwell Mk. IV CS": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "95mm",
+                "shells": {
+                    "HEAT": "X"
+                }
+            }
+        },
+        "Daimler AC": {
+            "type": "Recon Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "40mm",
+                "shells": {
+                    "APCBC": "X"
+                }
+            }
+        },
+        "SP M10": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "76mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APC-HE-T": "X"
+                }
+            }
+        },
+        "17pdr SP M10 Achilles": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "76mm",
+                "shells": {
+                    "APCBC-T": "X",
+                    "APDS": "X"
+                }
+            }
+        },
+        "Sherman Mk. VC Firefly": {
+            "type": "Heavy Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "76mm",
+                "shells": {
+                    "APCBC-T": "X",
+                    "AP-T": "X",
+                    "APC-T": "X"
+                }
+            }
+        },
+        "Sherman Mk. V": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "75mm",
+                "shells": {
+                    "APCBC-HE-T": "X",
+                    "AP-T": "X"
+                }
+            }
+        },
+        "Challenger Mk. VIII": {
+            "type": "Heavy Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 9,
+                "caliber": "76mm",
+                "shells": {
+                    "APCBC-T": "X",
+                    "APDS": "X"
+                }
+            }
+        },
+        "Comet Mk. I (A34)": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 8,
+                "caliber": "77mm",
+                "shells": {
+                    "APCBC-T": "X",
+                    "APDS-T": "X"
+                }
+            }
+        },
+        "Valentine Mk. XI": {
+            "type": "Medium Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "T17 Staghound": {
+            "type": "Recon Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 3,
+                "caliber": "37mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APC": "X"
+                }
+            }
+        },
+        "Tetrarch Mk. VII": {
+            "type": "Recon Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 3,
+                "caliber": "40mm",
+                "shells": {
+                    "APCBC": "X"
+                }
+            }
+        },
+        "Tetrarch Mk. VII \"Littlejohn\"": {
+            "type": "Recon Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 3,
+                "caliber": "40mm",
+                "shells": {
+                    "APCBC": "X"
+                }
+            }
+        },
+        "AEC Mk. II Armoured Car": {
+            "type": "Recon Tank",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 6,
+                "caliber": "57mm",
+                "shells": {
+                    "APCBC-T": "X",
+                    "APC-T": "X"
+                }
+            }
+        }
+    },
+    "Specialized": {
+        "Universal Carrier": {
+            "type": "Specialized Vehicle",
+            "factions": ["ANZAC", "1st Airborne", "Polish Brigade"],
+            "chapter": ["Mercury", "I"],
+            "seats": 6,
+            "weaponry": null
+        },
+        "Universal Carrier Vickers MG": {
+            "type": "Specialized Vehicle",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapter": ["I"],
+            "seats": 5,
+            "weaponry": {
+                "Vickers MG": 1
+            }
+        },
+        "Universal Carrier M2 .50cal": {
+            "type": "Specialized Vehicle",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapter": ["I"],
+            "seats": 6,
+            "weaponry": {
+                "M2 .50cal MG": 1
+            }
+        },
+        "Universal Carrier Boys AT": {
+            "type": "Specialized Vehicle",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapter": ["I"],
+            "seats": 6,
+            "weaponry": {
+                "M2 .50Boys AT Rifle": 1,
+                "Vickers MG": 1
+            }
+        },
+        "Jeep Willys AB Vickers K": {
+            "type": "Specialized Vehicle",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapter": ["I"],
+            "seats": 4,
+            "weaponry": {
+                "Vickers MG": 1
+            }
+        },
+        "Morris C8": {
+            "type": "Specialized Vehicle",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapter": ["I"],
+            "seats": 6,
+            "weaponry": null
+        },
+        "BMW R75": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "seats": 3,
+            "weaponry": {
+                "MG 34": 1
+            }
+        },
+        "Kübelwagen 82 Camo MG42": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "seats": 3,
+            "weaponry": {
+                "MG 34": 1
+            }
+        },
+        "Laffly S20TL Transport": {
+            "factions": ["1ere Armée", "21"],
+            "chapters": ["II"],
+            "seats": 11,
+            "weaponry": null
+        },
+        "Chevrolet G7100 Transport": {
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "seats": 10,
+            "weaponry": null
+        },
+        "Sd.Kfz. 2 Kettenkrad": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "seats": 3,
+            "weaponry": null
+        },
+        "Kübelwagen 82": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "seats": 4,
+            "weaponry": null
+        },
+        "Opel Blitz Transport": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "II", "III", "IV"],
+            "seats": 14,
+            "weaponry": null
+        },
+        "Sd.Kfz. 7": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "seats": 9,
+            "weaponry": null
+        },
+        "Sd.Kfz. 7 Flatbed": {
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "seats": 3,
+            "weaponry": null
+        },
+        "Humber Super Snipe": {
+            "factions": ["1st Airborne"],
+            "chapters": ["I"],
+            "seats": 4,
+            "weaponry": null
+        },
+        "K5 Austin Logistics": {
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I"],
+            "seats": 4,
+            "weaponry": null
+        },
+        "Bedford Transport": {
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I"],
+            "seats": 10,
+            "weaponry": null
+        }
+    },
+    "Mechanized": {
+        "Laffly W15TCC": {
+            "type": "Self-Propelled gun",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "crew": [
+                "Driver", "Gunner", "Passenger"
+            ],
+            "weaponry": {
+                "47mm Mle. 1932": 1,
+                "FM 24/29": 1
+            }
+        },
+        "Sd.Kfz. 7 Flak 38": {
+            "type": "Self-Propelled anti-air gun",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "crew": [
+                "Driver", "Gunner", "Passenger", "Passenger"
+            ],
+            "weaponry": {
+                "20mm": 1
+            }
+        },
+        "Sd.Kfz. 4/1 Panzerwerfer 42": {
+            "type": "Self-Propelled mortar launcher",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "crew": [
+                "Driver", "Gunner"
+            ],
+            "weaponry": {
+                "Roquettes 150mm": 1
+            }
+        },
+        "Sd.Kfz. 251": {
+            "type": "Self-Propelled mortar launcher",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "crew": [
+                "Driver", "Gunner", "Passenger", "Passenger", "Passenger", "Passenger", "Passenger", "Passenger", "Passenger"
+            ],
+            "weaponry": {
+                "MG 42  ": 1
+            }
+        },
+        "Sd.Kfz. 251/22 Pak 40": {
+            "type": "Self-Propelled mortar launcher",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "crew": [
+                "Driver", "Gunner", "Passenger", "Passenger", "Passenger"
+            ],
+            "weaponry": {
+                "75mm Anti Tank Canon": 1
+            }
+        }
+    },
+    "Canons": {
+        "APX 47mm": {
+            "type": "Anti-Tank Canon",
+            "factions": ["1ere Armée"],
+            "chapters": ["II"],
+            "weaponry": {
+                "47mm Canon": 1
+            }
+        },
+        "LG40": {
+            "type": "Heavy Support Weapon",
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "weaponry": {
+                "75mm Canon": 1
+            }
+        },
+        "7.5cm Ie.IG 18": {
+            "type": "Anti-Infantry Gun",
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "weaponry": {
+                "75mm Canon": 1
+            }
+        },
+        "Pak 36": {
+            "type": "Anti-Tank Canon",
+            "factions": ["Wehrmacht"],
+            "chapters": ["II"],
+            "weaponry": {
+                "37mm Canon": 1
+            }
+        },
+        "Pak 38": {
+            "type": "Anti-Tank Canon",
+            "factions": ["Wehrmacht"],
+            "chapters": ["I", "III"],
+            "weaponry": {
+                "50mm Canon": 1
+            }
+        },
+        "Q. 6 Pounder": {
+            "type": "Anti-Tank Canon",
+            "factions": ["1st Airborne", "Polish Brigade"],
+            "chapters": ["I", "III"],
+            "weaponry": {
+                "57mm Canon": 1
+            }
+        }
+    }
+}
