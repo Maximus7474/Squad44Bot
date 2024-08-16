@@ -4,7 +4,7 @@
     "description": "A Squad44 Discord Bot handling player count for various servers ",
     "main": "src/main.js",
     "scripts": {
-        "test": "mocha 'test/*.mjs'",
+        "test": "mocha 'test/*.js'",
         "start": "node src/main.js",
         "deploy": "node deploy/register_commands.js"
     },
