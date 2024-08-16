@@ -110,7 +110,7 @@ module.exports = {
         const filtered = searchValues.filter(choice => choice.toLocaleLowerCase().includes(focusedValue.toLocaleLowerCase()));
 
 		await interaction.respond(
-			filtered.length > 25 ? [{name: "Too Many Options", value: "N/A"}] : filtered.map(choice => ({ name: choice, value: choice })),
+			filtered.length > 25 ? [{name: "Too Many Options", value: "Too Many Options"}] : filtered.map(choice => ({ name: choice, value: choice })),
 		);
     },
     async execute(client, interaction) {
@@ -120,6 +120,19 @@ module.exports = {
 
         const searchedVehicleData = VehicleData[subcommand][name];
 
-        return interaction.reply({embeds: [functionDistribution[subcommand](name, searchedVehicleData)], ephemeral :true})
+        if (searchedVehicleData === undefined) {
+            const embed = new EmbedBuilder()
+                .setTitle('Invalid search parameter')
+                .setDescription(`\`${name}\` isn't a valid name parameter for searching ${subcommand}.`)
+                .setColor(16711680)
+                .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 256 }));
+
+            return interaction.reply({
+                embeds: [embed],
+                ephemeral :true
+            })
+        }
+
+        return interaction.reply({embeds: [functionDistribution[subcommand](name, searchedVehicleData)], ephemeral: false});
     }
 }
