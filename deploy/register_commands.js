@@ -35,7 +35,6 @@ try {
         ).then(response => {
             logger.success(`Successfully registered ${response.length} global application (/) command${response.length > 1?"s":""}.`);
         }).catch(err => {
-            globalData = false;
             logger.warn(`Unable to load global commands`, err)
         });
     } else logger.info("No global commands to register");

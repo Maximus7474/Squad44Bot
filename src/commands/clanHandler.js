@@ -345,7 +345,7 @@ module.exports = {
                     .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                     .setDescription("You need to provide at least one argument.");
 
-                return editReply({content:``, embeds: [Embed], ephemeral: true});
+                return interaction.editReply({content:``, embeds: [Embed], ephemeral: true});
             }
 
             const result = await executeQuery(`SELECT COUNT(tag) as lines FROM \`game-clans\` WHERE ${tag ? "tag" : name ? "name" : "id"} = ?;`, [tag ? tag : name ? name : id]);
@@ -775,7 +775,7 @@ module.exports = {
                 });
 
         } else {
-            return editReply({content:`Hmmm, not sure this seems to not be handled!`,ephemeral :true})
+            return interaction.editReply({content:`Hmmm, not sure this seems to not be handled!`,ephemeral :true})
         }
     }
 }
