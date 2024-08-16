@@ -70,7 +70,7 @@ const functionDistribution = {
 
 module.exports = {
     register_command: new SlashCommandBuilder()
-        .setName('search')
+        .setName('vehicle-search')
         .setDescription('Search for information on different aspects of the game!')
         .addSubcommand(command =>
             command.setName('tanks')
