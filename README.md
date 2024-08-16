@@ -2,7 +2,10 @@
 
 ![](https://img.shields.io/github/v/release/Maximus7474/Squad44Bot?logo=github)
 
-If you're willing to contribute to the project please reade the [contribution guide](https://github.com/Maximus7474/Squad44Bot/blob/main/CONTRIBUTING.md).
+## Contributing
+- The `vehicleInfo.json` is work in progress, data __will__ be inacurate/wrong, PRs are welcome to amend the data as well as Issues for improving data display/storage.
+
+> If you're willing to contribute to the project please reade the [contribution guide](https://github.com/Maximus7474/Squad44Bot/blob/main/CONTRIBUTING.md).
 
 ## Setup
 1. Rename `.env.example` to `.env` and add in the following details:
