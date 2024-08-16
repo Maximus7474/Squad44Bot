@@ -956,7 +956,7 @@
             }
         }
     },
-    "Canons": {
+    "canons": {
         "APX 47mm": {
             "type": "Anti-Tank Canon",
             "factions": ["1ere Armée"],
@@ -997,7 +997,7 @@
                 "50mm Canon": 1
             }
         },
-        "Q. 6 Pounder": {
+        "QF. 6 Pounder": {
             "type": "Anti-Tank Canon",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
