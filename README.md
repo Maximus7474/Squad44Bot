@@ -2,7 +2,8 @@
 
 ![](https://img.shields.io/github/v/release/Maximus7474/Squad44Bot?logo=github)
 
-This Bot is a simple test to try integrations out including web queries and sorting data.
+## Contributing
+- The `vehicleInfo.json` is work in progress, data __will__ be inacurate/wrong, PRs are welcome to amend the data as well as Issues for improving data display/storage.
 
 Thanks to [FissionFeline](https://github.com/FissionFeline) for the template used to get the bot started.
 You can find it [here](https://github.com/FissionFeline/discord-js-template) to use it yourself and start or continue learning __discord.js__
