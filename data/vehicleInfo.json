@@ -156,6 +156,7 @@
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
+            "image": "https://static.wikia.nocookie.net/squad44/images/e/ea/Panzer_III_G.jpg",
             "details": {
                 "crew": [
                     "Driver", "Gunner", "Hull-Gunner", "Commander"
