@@ -19,7 +19,8 @@ const tankDisplayEmbed = (name, tankData) => {
         ).setFields(
             { name: 'Crewing:', value: `- Rôles:\n> ${(tankData.details.crew ?? ['?']).sort().join(', ')}\n- Passagers: \`${tankData.details.passengers ?? '0'}\``, inline: false },
             { name: 'Weaponry:', value: `- Main Canon: ${tankData.details.caliber ?? '?'}\n- Main Canon Ammunition:\n> ${Object.keys(tankData.details.shells ?? {'?': '?'}).sort().join(', ')}`, inline: false },
-        );
+        )
+        .setImage(typeof tankData.image === 'string' ? tankData.image : null);
     return Embed
 }
 
@@ -32,7 +33,8 @@ const canonDisplayEmbed = (name, canonData) => {
             `Side: **${canonData.team}**Canon Type: \`${canonData.type}\`\nAvailable in Chapters: ${canonData.chapters.join(', ')}\nFactions: ${canonData.factions.join(', ')}`
         ).setFields(
             { name: 'Weaponry:', value: Object.entries(canonData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
-        );
+        )
+        .setImage(typeof tankData.image === 'string' ? tankData.image : null);
     return Embed
 }
 
@@ -48,7 +50,8 @@ const vehicleDisplayEmbed = (name, vehicleData) => {
             `Available in Chapters: **\`${vehicleData.chapters.join('`, `')}\`**\n` +
             `Factions: \n> ${vehicleData.factions.join(', ')}\n` +
             `Seats: ${vehicleData.seats}`
-        );
+        )
+        .setImage(typeof tankData.image === 'string' ? tankData.image : null);
 
     if (vehicleData.weaponry && Object.keys(vehicleData.weaponry).length > 0) {
         Embed.addFields(
