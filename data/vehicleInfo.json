@@ -3,7 +3,7 @@
         "Matilda Mk. II": {
             "type": "Heavy Tank",
             "factions": ["ANZAC", "1st Airborne"],
-            "chapter": ["Mercury", "I", "III"],
+            "chapters": ["Mercury", "I", "III"],
             "details": {
                 "crew": [
                     "Driver", "Gunner", "Commander"
@@ -18,7 +18,7 @@
         "Vickers Mk. VI": {
             "type": "Medium Tank",
             "factions": ["ANZAC"],
-            "chapter": ["Mercury"],
+            "chapters": ["Mercury"],
             "details": {
                 "crew": [
                     "Driver", "Gunner", "Commander"
@@ -769,36 +769,40 @@
             }
         }
     },
-    "Specialized": {
+    "vehicles": {
         "Universal Carrier": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["ANZAC", "1st Airborne", "Polish Brigade"],
-            "chapter": ["Mercury", "I"],
+            "chapters": ["Mercury", "I"],
             "seats": 6,
             "weaponry": null
         },
         "Universal Carrier Vickers MG": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
-            "chapter": ["I"],
+            "chapters": ["I"],
             "seats": 5,
             "weaponry": {
                 "Vickers MG": 1
             }
         },
         "Universal Carrier M2 .50cal": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
-            "chapter": ["I"],
+            "chapters": ["I"],
             "seats": 6,
             "weaponry": {
                 "M2 .50cal MG": 1
             }
         },
         "Universal Carrier Boys AT": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
-            "chapter": ["I"],
+            "chapters": ["I"],
             "seats": 6,
             "weaponry": {
                 "M2 .50Boys AT Rifle": 1,
@@ -806,22 +810,26 @@
             }
         },
         "Jeep Willys AB Vickers K": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
-            "chapter": ["I"],
+            "chapters": ["I"],
             "seats": 4,
             "weaponry": {
                 "Vickers MG": 1
             }
         },
         "Morris C8": {
+            "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
-            "chapter": ["I"],
+            "chapters": ["I"],
             "seats": 6,
             "weaponry": null
         },
         "BMW R75": {
+            "class": "Specialized",
+            "type": "transport",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
             "seats": 3,
@@ -830,6 +838,7 @@
             }
         },
         "Kübelwagen 82 Camo MG42": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
             "seats": 3,
@@ -838,68 +847,77 @@
             }
         },
         "Laffly S20TL Transport": {
+            "class": "Specialized",
             "factions": ["1ere Armée", "21"],
             "chapters": ["II"],
             "seats": 11,
             "weaponry": null
         },
         "Chevrolet G7100 Transport": {
+            "class": "Specialized",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
             "seats": 10,
             "weaponry": null
         },
         "Sd.Kfz. 2 Kettenkrad": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
             "seats": 3,
             "weaponry": null
         },
         "Kübelwagen 82": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
             "seats": 4,
             "weaponry": null
         },
         "Opel Blitz Transport": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "II", "III", "IV"],
             "seats": 14,
             "weaponry": null
         },
         "Sd.Kfz. 7": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
             "seats": 9,
             "weaponry": null
         },
         "Sd.Kfz. 7 Flatbed": {
+            "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
             "seats": 3,
             "weaponry": null
         },
         "Humber Super Snipe": {
+            "class": "Specialized",
             "factions": ["1st Airborne"],
             "chapters": ["I"],
             "seats": 4,
             "weaponry": null
         },
         "K5 Austin Logistics": {
+            "class": "Specialized",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I"],
             "seats": 4,
             "weaponry": null
         },
         "Bedford Transport": {
+            "class": "Specialized",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I"],
             "seats": 10,
             "weaponry": null
-        }
-    },
-    "Mechanized": {
+        },
         "Laffly W15TCC": {
+            "class": "Mechanized",
             "type": "Self-Propelled gun",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -912,6 +930,7 @@
             }
         },
         "Sd.Kfz. 7 Flak 38": {
+            "class": "Mechanized",
             "type": "Self-Propelled anti-air gun",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -923,6 +942,7 @@
             }
         },
         "Sd.Kfz. 4/1 Panzerwerfer 42": {
+            "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -934,6 +954,7 @@
             }
         },
         "Sd.Kfz. 251": {
+            "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -945,6 +966,7 @@
             }
         },
         "Sd.Kfz. 251/22 Pak 40": {
+            "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
