@@ -5,7 +5,7 @@ const configManager = require('../utils/configManager.js');
 module.exports = {
     event: Events.GuildMemberAdd,
     type: "on",
-    async call(client, member, ...args) {
+    async call(client, member) {
         
         const { channels, main_guild } = configManager.getConfig();
 
@@ -22,7 +22,7 @@ module.exports = {
             
             try {
                 joinEmbed.setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: 'png', size: 256 }));
-            } catch (error) {
+            } catch {
                 joinEmbed.setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 256 }));
             }
 

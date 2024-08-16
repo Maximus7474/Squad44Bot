@@ -45,7 +45,7 @@ const singleResultEmbed = (result) => {
         .setColor(16316405)
         .setDescription(`Discord Server: ${result.invite}${result.description !== null && result.description !== undefined ?`\n\n${result.description}` : ''}`)
         .addFields(...fields)
-        .setThumbnail(result.seal || interaction.client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+        .setThumbnail(result.seal || null);
 
 }
 
@@ -134,7 +134,7 @@ module.exports = {
                 .then(results => {
                     if (results.length === 1) {
                         return interaction.reply({
-                            embeds: [singleResultEmbed(result[1])],
+                            embeds: [singleResultEmbed(results[1])],
                             ephemeral: true
                         });
                     } else if (results.length > 20) {
@@ -168,7 +168,7 @@ module.exports = {
                 .then(results => {
                     if (results.length === 1) {
                         return interaction.reply({
-                            embeds: [singleResultEmbed(result[1])],
+                            embeds: [singleResultEmbed(results[1])],
                             ephemeral: true
                         })
                     } else if (results.length > 20) {

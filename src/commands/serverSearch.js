@@ -22,12 +22,11 @@ const capitalizeFirstLetter = (string) => {
 }
 
 const emojiForStatus = (status) => {
-    const table = {
-        "online":   ":green_circle:",
-        "offline":  ":red_circle:",
-        "dead":     ":skull:"
-    }
-    return table.hasOwnProperty(status) ? table[status] : ":grey_question:"
+    if (status === "online") return ":green_circle:";
+    if (status === "offline") return ":red_circle:";
+    if (status === "dead") return ":skull:";
+
+    return ":grey_question:"
 }
 
 module.exports = {
@@ -169,7 +168,7 @@ module.exports = {
                             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                             .addFields(
                                 results.map(
-                                    (data, _) => ({
+                                    (data) => ({
                                         name: `${data.attributes.name}`,
                                         value: `>>> Players: ${data.attributes.players}/${data.attributes.maxPlayers}\n[Battlemetrics Page](https://www.battlemetrics.com/servers/postscriptum/${data.id})`,
                                         inline: false

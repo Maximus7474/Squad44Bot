@@ -27,21 +27,21 @@ const tankDisplayEmbed = (name, tankData) => {
 const canonDisplayEmbed = (name, canonData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
-        .setThumbnail(thumbnailImage(tankData.team))
+        .setThumbnail(thumbnailImage(canonData.team))
         .setColor(16316405)
         .setDescription(
             `Side: **${canonData.team}**Canon Type: \`${canonData.type}\`\nAvailable in Chapters: ${canonData.chapters.join(', ')}\nFactions: ${canonData.factions.join(', ')}`
         ).setFields(
-            { name: 'Weaponry:', value: Object.entries(canonData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
+            { name: 'Weaponry:', value: Object.keys(canonData.weaponry).map((weapon) => `- ${weapon}`).join("\n")}
         )
-        .setImage(typeof tankData.image === 'string' ? tankData.image : null);
+        .setImage(typeof canonData.image === 'string' ? canonData.image : null);
     return Embed
 }
 
 const vehicleDisplayEmbed = (name, vehicleData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
-        .setThumbnail(thumbnailImage(tankData.team))
+        .setThumbnail(thumbnailImage(vehicleData.team))
         .setColor(16316405)
         .setDescription(
             `Side: **${vehicleData.team}**\n` +
@@ -51,7 +51,7 @@ const vehicleDisplayEmbed = (name, vehicleData) => {
             `Factions: \n> ${vehicleData.factions.join(', ')}\n` +
             `Seats: ${vehicleData.seats}`
         )
-        .setImage(typeof tankData.image === 'string' ? tankData.image : null);
+        .setImage(typeof vehicleData.image === 'string' ? vehicleData.image : null);
 
     if (vehicleData.weaponry && Object.keys(vehicleData.weaponry).length > 0) {
         Embed.addFields(
