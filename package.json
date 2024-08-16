@@ -5,6 +5,7 @@
     "main": "src/main.js",
     "scripts": {
         "test": "mocha 'test/*.js'",
+        "lint": "eslint src/**/*.js",
         "start": "node src/main.js",
         "deploy": "node deploy/register_commands.js"
     },
@@ -32,5 +33,10 @@
         "mocha": "^10.4.0",
         "sqlite": "^5.1.1",
         "sqlite3": "^5.1.7"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.0",
+        "eslint": "^9.9.0",
+        "globals": "^15.9.0"
     }
 }
