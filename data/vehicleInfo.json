@@ -818,6 +818,214 @@
                     "APC-T": "X"
                 }
             }
+        },
+        "M5A1 Stuart": {
+            "team": "Allies",
+            "type": "Light Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "37mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APC": "X"
+                }
+            }
+        },
+        "M4A3 Sherman": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "T34 Calliope": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 0,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "M4A3E2 Sherman \"Jumbo\"": {
+            "team": "Allies",
+            "type": "HEavy Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "M4A3 Sherman Wade": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "M4A3 (76) HVSS Sherman": {
+            "team": "Allies",
+            "type": "Heavy Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "76mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X",
+                    "HVAP-T": "X"
+                }
+            }
+        },
+        "M10 GMC": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "76mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X",
+                    "HVAP-T": "X"
+                }
+            }
+        },
+        "M18 Hellcat": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "76mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X",
+                    "HVAP-T": "X"
+                }
+            }
+        },
+        "M8 Greyhound": {
+            "team": "Allies",
+            "type": "Recon Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "37mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APC-T": "X"
+                }
+            }
+        },
+        "M24 Chaffee": {
+            "team": "Allies",
+            "type": "Light Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 5,
+                "caliber": "75mm",
+                "shells": {
+                    "AP-T": "X",
+                    "APCBC-HE-T": "X"
+                }
+            }
+        },
+        "M26 Pershing": {
+            "team": "Allies",
+            "type": "Heavy Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Hull Gunner", "Commander"
+                ],
+                "passengers": 7,
+                "caliber": "90mm",
+                "shells": {
+                    "APCBC": "X",
+                    "HVAP": "X",
+                    "APBC-T": "X"
+                }
+            }
+        },
+        "M36 Jackson": {
+            "team": "Allies",
+            "type": "Medium Tank",
+            "factions": ["101st Airborne"],
+            "chapters": ["I", "III"],
+            "details": {
+                "crew": [
+                    "Driver", "Gunner", "Commander"
+                ],
+                "passengers": 4,
+                "caliber": "90mm",
+                "shells": {
+                    "APCBC": "X",
+                    "APCR-T": "X"
+                }
+            }
         }
     },
     "vehicles": {
@@ -1050,6 +1258,47 @@
             "weaponry": {
                 "75mm Anti Tank Canon": 1
             }
+        },
+        "Jeep Willys US M1919a4": {
+            "team": "Allies",
+            "class": "Specialized",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "seats": 4,
+            "weaponry": {
+                "Browning Machine Gun": 1
+            }
+        },
+        "M3 Halftrack": {
+            "team": "Allies",
+            "class": "Specialized",
+            "type": "Transport",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "seats": 11,
+            "weaponry": null
+        },
+        "M3 GMC": {
+            "team": "Allies",
+            "class": "Specialized",
+            "type": "Tank Destroyer",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "seats": 4,
+            "weaponry": {
+                "75mm M1897A4": 1
+            }
+        },
+        "M20 Armoured Utility Car": {
+            "team": "Allies",
+            "class": "Specialized",
+            "type": "Armoured Car",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "seats": 6,
+            "weaponry": {
+                "M2 .50cal": 1
+            }
         }
     },
     "canons": {
@@ -1105,6 +1354,24 @@
             "chapters": ["I", "III"],
             "weaponry": {
                 "57mm Canon": 1
+            }
+        },
+        "M1 Anti-Tank Gun": {
+            "team": "Allies",
+            "type": "Anti-Tank Gun",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "weaponry": {
+                "57mm Canon": 1
+            }
+        },
+        "M3 37mm AT Gun": {
+            "team": "Allies",
+            "type": "Anti-Tank Gun",
+            "factions": ["101st Airborne"],
+            "chapters": ["III"],
+            "weaponry": {
+                "37mm Canon": 1
             }
         }
     }
