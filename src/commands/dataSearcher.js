@@ -3,12 +3,19 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const VehicleData = require('../../data/vehicleInfo.json');
 const { EmbedBuilder } = require('discord.js');
 
+const thumbnailImage = (team) => {
+    if (team === "Allies") return "https://r2.fivemanage.com/pub/ngxgy4wfhtv7.png";
+    if (team === "Axis") return "https://r2.fivemanage.com/pub/tkhmklv1sq92.png";
+    return 'https://assets-prd.ignimgs.com/2023/12/15/squad44-1702600459401.jpg'
+}
+
 const tankDisplayEmbed = (name, tankData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
+        .setThumbnail(thumbnailImage(tankData.team))
         .setColor(16316405)
         .setDescription(
-            `Tank Type: \`${tankData.type}\`\nAvailable in Chapters: ${tankData.chapters.join(', ')}\nFactions: ${tankData.factions.join(', ')}`
+            `Side: **${tankData.team}**\nTank Type: \`${tankData.type}\`\nAvailable in Chapters: ${tankData.chapters.join(', ')}\nFactions: ${tankData.factions.join(', ')}`
         ).setFields(
             { name: 'Crewing:', value: `- Rôles:\n> ${(tankData.details.crew ?? ['?']).sort().join(', ')}\n- Passagers: \`${tankData.details.passengers ?? '0'}\``, inline: false },
             { name: 'Weaponry:', value: `- Main Canon: ${tankData.details.caliber ?? '?'}\n- Main Canon Ammunition:\n> ${Object.keys(tankData.details.shells ?? {'?': '?'}).sort().join(', ')}`, inline: false },
@@ -19,9 +26,10 @@ const tankDisplayEmbed = (name, tankData) => {
 const canonDisplayEmbed = (name, canonData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
+        .setThumbnail(thumbnailImage(tankData.team))
         .setColor(16316405)
         .setDescription(
-            `Canon Type: \`${canonData.type}\`\nAvailable in Chapters: ${canonData.chapters.join(', ')}\nFactions: ${canonData.factions.join(', ')}`
+            `Side: **${canonData.team}**Canon Type: \`${canonData.type}\`\nAvailable in Chapters: ${canonData.chapters.join(', ')}\nFactions: ${canonData.factions.join(', ')}`
         ).setFields(
             { name: 'Weaponry:', value: Object.entries(canonData.weaponry).map(([weapon, amount]) => `- ${weapon}`).join("\n")}
         );
@@ -31,8 +39,10 @@ const canonDisplayEmbed = (name, canonData) => {
 const vehicleDisplayEmbed = (name, vehicleData) => {
     const Embed = new EmbedBuilder()
         .setTitle(name)
+        .setThumbnail(thumbnailImage(tankData.team))
         .setColor(16316405)
         .setDescription(
+            `Side: **${vehicleData.team}**\n` +
             `Class: **\`${vehicleData.class}**\`\n` +
             (vehicleData.class !== undefined ? `Type: ${vehicleData.type}` : '') + '\n' +
             `Available in Chapters: **\`${vehicleData.chapters.join('`, `')}\`**\n` +

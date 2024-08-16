@@ -1,6 +1,7 @@
 {
     "tanks": {
         "Matilda Mk. II": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["ANZAC", "1st Airborne"],
             "chapters": ["Mercury", "I", "III"],
@@ -16,6 +17,7 @@
             }
         },
         "Vickers Mk. VI": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["ANZAC"],
             "chapters": ["Mercury"],
@@ -27,6 +29,7 @@
             }
         },
         "Panhard 178": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -38,6 +41,7 @@
             }
         },
         "Renault R35": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -49,6 +53,7 @@
             }
         },
         "Somua S35": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -60,6 +65,7 @@
             }
         },
         "Renault Char B1 \"Bis\"": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -71,6 +77,7 @@
             }
         },
         "Sd.Kfz. 222": {
+            "team": "Axis",
             "type": "Recon Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -82,6 +89,7 @@
             }
         },
         "Sd.Kfz. 232": {
+            "team": "Axis",
             "type": "Recon Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -93,6 +101,7 @@
             }
         },
         "Panzer 38(t)": {
+            "team": "Axis",
             "type": "Recon/Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "II", "III"],
@@ -109,6 +118,7 @@
             }
         },
         "Panzer II Ausf. C": {
+            "team": "Axis",
             "type": "Recon Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "II", "III"],
@@ -125,6 +135,7 @@
             }
         },
         "Panzer III Ausf. F": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -141,6 +152,7 @@
             }
         },
         "Panzer III Ausf. G": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -157,6 +169,7 @@
             }
         },
         "Panzer IV Ausf. D": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -173,6 +186,7 @@
             }
         },
         "Panzer IV Ausf. G": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -190,6 +204,7 @@
             }
         },
         "Panzer IV Ausf. H": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -207,6 +222,7 @@
             }
         },
         "Panzer V Ausf. A \"Panther\"": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -223,6 +239,7 @@
             }
         },
         "Panzerjäger Tiger Ausf. B \"Jagdtiger\"": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -240,6 +257,7 @@
             }
         },
         "Panzer VI Ausf. B \"KönigsTiger\"": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -256,6 +274,7 @@
             }
         },
         "Panzer VI Ausf. E \"Tiger\"": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -272,6 +291,7 @@
             }
         },
         "Sd.Kfz. 234 \"Puma\"": {
+            "team": "Axis",
             "type": "Recon Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -288,6 +308,7 @@
             }
         },
         "Sd.Kfz. 234/4 \"Stummel\"": {
+            "team": "Axis",
             "type": "Recon Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -304,6 +325,7 @@
             }
         },
         "Stug III Ausf. G": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -321,6 +343,7 @@
             }
         },
         "Stug III A": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -337,6 +360,7 @@
             }
         },
         "Jagdpanzer IV L48": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -354,6 +378,7 @@
             }
         },
         "Jagdpanzer IV L48 (Late War)": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -371,6 +396,7 @@
             }
         },
         "Jagdpanzer IV L70": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -387,6 +413,7 @@
             }
         },
         "Nashorn": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -403,6 +430,7 @@
             }
         },
         "Flakpanzer IV Ostwind": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -418,6 +446,7 @@
             }
         },
         "Flakpanzer IV OJagdpanzer 38(t) Hetzerstwind": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -435,6 +464,7 @@
             }
         },
         "Marder III Ausf. M": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -451,6 +481,7 @@
             }
         },
         "Sturmhaubitze 42 \"StuH\"": {
+            "team": "Axis",
             "type": "Medium Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -467,6 +498,7 @@
             }
         },
         "Panzer Selbstfahrlafette \"Sturer Emil\"": {
+            "team": "Axis",
             "type": "Heavy Tank",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -482,6 +514,7 @@
             }
         },
         "Stuart VI": {
+            "team": "Allies",
             "type": "Recon/Light Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -498,6 +531,7 @@
             }
         },
         "Churchill Mk. IV": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -515,6 +549,7 @@
             }
         },
         "Churchill Mk. VII": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -531,6 +566,7 @@
             }
         },
         "Cromwell Mk. I": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -548,6 +584,7 @@
             }
         },
         "Cromwell Mk. IV": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -564,6 +601,7 @@
             }
         },
         "Cromwell Mk. IV CS": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -579,6 +617,7 @@
             }
         },
         "Daimler AC": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -594,6 +633,7 @@
             }
         },
         "SP M10": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -610,6 +650,7 @@
             }
         },
         "17pdr SP M10 Achilles": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -626,6 +667,7 @@
             }
         },
         "Sherman Mk. VC Firefly": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -643,6 +685,7 @@
             }
         },
         "Sherman Mk. V": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -659,6 +702,7 @@
             }
         },
         "Challenger Mk. VIII": {
+            "team": "Allies",
             "type": "Heavy Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -675,6 +719,7 @@
             }
         },
         "Comet Mk. I (A34)": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -691,6 +736,7 @@
             }
         },
         "Valentine Mk. XI": {
+            "team": "Allies",
             "type": "Medium Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -707,6 +753,7 @@
             }
         },
         "T17 Staghound": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -723,6 +770,7 @@
             }
         },
         "Tetrarch Mk. VII": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -738,6 +786,7 @@
             }
         },
         "Tetrarch Mk. VII \"Littlejohn\"": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -753,6 +802,7 @@
             }
         },
         "AEC Mk. II Armoured Car": {
+            "team": "Allies",
             "type": "Recon Tank",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
@@ -771,6 +821,7 @@
     },
     "vehicles": {
         "Universal Carrier": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["ANZAC", "1st Airborne", "Polish Brigade"],
@@ -779,6 +830,7 @@
             "weaponry": null
         },
         "Universal Carrier Vickers MG": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
@@ -789,6 +841,7 @@
             }
         },
         "Universal Carrier M2 .50cal": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
@@ -799,6 +852,7 @@
             }
         },
         "Universal Carrier Boys AT": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
@@ -810,6 +864,7 @@
             }
         },
         "Jeep Willys AB Vickers K": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
@@ -820,6 +875,7 @@
             }
         },
         "Morris C8": {
+            "team": "Allies",
             "class": "Specialized",
             "type": "Specialized Vehicle",
             "factions": ["1st Airborne", "Polish Brigade"],
@@ -828,6 +884,7 @@
             "weaponry": null
         },
         "BMW R75": {
+            "team": "Axis",
             "class": "Specialized",
             "type": "transport",
             "factions": ["Wehrmacht"],
@@ -838,6 +895,7 @@
             }
         },
         "Kübelwagen 82 Camo MG42": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -847,6 +905,7 @@
             }
         },
         "Laffly S20TL Transport": {
+            "team": "Allies",
             "class": "Specialized",
             "factions": ["1ere Armée", "21"],
             "chapters": ["II"],
@@ -854,6 +913,7 @@
             "weaponry": null
         },
         "Chevrolet G7100 Transport": {
+            "team": "Allies",
             "class": "Specialized",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -861,6 +921,7 @@
             "weaponry": null
         },
         "Sd.Kfz. 2 Kettenkrad": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -868,6 +929,7 @@
             "weaponry": null
         },
         "Kübelwagen 82": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -875,6 +937,7 @@
             "weaponry": null
         },
         "Opel Blitz Transport": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "II", "III", "IV"],
@@ -882,6 +945,7 @@
             "weaponry": null
         },
         "Sd.Kfz. 7": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -889,6 +953,7 @@
             "weaponry": null
         },
         "Sd.Kfz. 7 Flatbed": {
+            "team": "Axis",
             "class": "Specialized",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -896,6 +961,7 @@
             "weaponry": null
         },
         "Humber Super Snipe": {
+            "team": "Allies",
             "class": "Specialized",
             "factions": ["1st Airborne"],
             "chapters": ["I"],
@@ -903,6 +969,7 @@
             "weaponry": null
         },
         "K5 Austin Logistics": {
+            "team": "Allies",
             "class": "Specialized",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I"],
@@ -910,6 +977,7 @@
             "weaponry": null
         },
         "Bedford Transport": {
+            "team": "Allies",
             "class": "Specialized",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I"],
@@ -917,6 +985,7 @@
             "weaponry": null
         },
         "Laffly W15TCC": {
+            "team": "Allies",
             "class": "Mechanized",
             "type": "Self-Propelled gun",
             "factions": ["1ere Armée"],
@@ -930,6 +999,7 @@
             }
         },
         "Sd.Kfz. 7 Flak 38": {
+            "team": "Axis",
             "class": "Mechanized",
             "type": "Self-Propelled anti-air gun",
             "factions": ["Wehrmacht"],
@@ -942,6 +1012,7 @@
             }
         },
         "Sd.Kfz. 4/1 Panzerwerfer 42": {
+            "team": "Axis",
             "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
@@ -954,6 +1025,7 @@
             }
         },
         "Sd.Kfz. 251": {
+            "team": "Axis",
             "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
@@ -966,6 +1038,7 @@
             }
         },
         "Sd.Kfz. 251/22 Pak 40": {
+            "team": "Axis",
             "class": "Mechanized",
             "type": "Self-Propelled mortar launcher",
             "factions": ["Wehrmacht"],
@@ -980,6 +1053,7 @@
     },
     "canons": {
         "APX 47mm": {
+            "team": "Allies",
             "type": "Anti-Tank Canon",
             "factions": ["1ere Armée"],
             "chapters": ["II"],
@@ -988,6 +1062,7 @@
             }
         },
         "LG40": {
+            "team": "Axis",
             "type": "Heavy Support Weapon",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -996,6 +1071,7 @@
             }
         },
         "7.5cm Ie.IG 18": {
+            "team": "Axis",
             "type": "Anti-Infantry Gun",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -1004,6 +1080,7 @@
             }
         },
         "Pak 36": {
+            "team": "Axis",
             "type": "Anti-Tank Canon",
             "factions": ["Wehrmacht"],
             "chapters": ["II"],
@@ -1012,6 +1089,7 @@
             }
         },
         "Pak 38": {
+            "team": "Axis",
             "type": "Anti-Tank Canon",
             "factions": ["Wehrmacht"],
             "chapters": ["I", "III"],
@@ -1020,6 +1098,7 @@
             }
         },
         "QF. 6 Pounder": {
+            "team": "Allies",
             "type": "Anti-Tank Canon",
             "factions": ["1st Airborne", "Polish Brigade"],
             "chapters": ["I", "III"],
