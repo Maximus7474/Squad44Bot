@@ -3,7 +3,10 @@
         "9.SS-Panzer": {
             "seal": "images/seals/9SSPanzer.png",
             "uniform": "https://cdn.discordapp.com/attachments/1246906037101924462/1246906037706162226/VB_PROMO.0012.png?ex=66abdfbd&is=66aa8e3d&hm=cd596b7e33e7cef190dae873db486674b2dfa02610de55211e86465fa04bd7df&",
-            "description": "A description"
+            "description": "The 9th SS Panzer Division \"Hohenstaufen\" was a German Waffen-SS armored division formed in 1943. It first saw action on the Eastern Front during the Battle of Tarnopol in 1944. Later, it was moved to the Western Front, where it fought in Normandy and the Battle of the Falaise Pocket, suffering heavy losses. Rebuilt, the division participated in the Ardennes Offensive (Battle of the Bulge) but was forced to retreat. In the war's final months, it defended against Allied forces in Germany and Austria, ultimately surrendering in May 1945. The division was also implicated in war crimes, reflecting its ties to the Nazi regime.",
+            "links": [
+                {"name": "Squad 44 Wiki", "link": "https://squad44.fandom.com/wiki/Factions#Axis_Powers"}
+            ]
         }
     },
     "Allies": {
