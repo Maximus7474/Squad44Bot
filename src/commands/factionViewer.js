@@ -95,6 +95,8 @@ module.exports = {
             );
         }
 
+        factionEmbed.setFooter({text: "This data here can be inacurate, to contribute check out my bio."})
+
         return interaction.reply({
             content: ``,
             ephemeral: false,
