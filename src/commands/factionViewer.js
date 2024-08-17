@@ -89,6 +89,12 @@ module.exports = {
             }
         }
 
+        if (factionData.links instanceof Array) {
+            factionEmbed.addFields(
+                { name: "__Links__", value: factionData.links.map(item => `- [${item.name}](${item.link})`).join('\n')}
+            );
+        }
+
         return interaction.reply({
             content: ``,
             ephemeral: false,
