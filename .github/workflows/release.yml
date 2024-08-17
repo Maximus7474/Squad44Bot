@@ -64,7 +64,7 @@ jobs:
         with:
           tag_name: ${{ steps.release_title.outputs.title }}
           release_name: ${{ steps.release_title.outputs.title }}
-          body: null
+          body: ${{ steps.release_notes.outputs.notes }}
           draft: false
           prerelease: false
 
