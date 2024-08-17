@@ -60,32 +60,32 @@ module.exports = {
 
         const factionEmbed = new EmbedBuilder()
             .setTitle(faction)
-            .setDescription(factionData.Description || null)
+            .setDescription(factionData.description || null)
             .setColor(subcommand === 'axis' ? 14160916 : 3163276);
 
-        if (typeof factionData.Seal === 'string') {
-            if (factionData.Seal.includes('images/seals/')) {
-                const imgPath = GetFilePath(factionData.Seal);
+        if (typeof factionData.seal === 'string') {
+            if (factionData.seal.includes('images/seals/')) {
+                const imgPath = GetFilePath(factionData.seal);
                 const attachmentFile = new AttachmentBuilder(imgPath)
                 
                 factionEmbed.setThumbnail(`attachment://${attachmentFile.name}`)
                 attachments.push(attachmentFile)
             } else {
-                factionEmbed.setThumbnail(factionData.Seal)
+                factionEmbed.setThumbnail(factionData.seal)
             }
         } else {
             factionEmbed.setThumbnail(client.user.displayAvatarURL({ dynamic: true, form: 'png', size: 128}));
         }
 
-        if (typeof factionData.Uniforms === 'string') {
-            if (factionData.Uniforms.includes('images/uniforms/')) {
-                const imgPath = GetFilePath(factionData.Uniforms);
+        if (typeof factionData.uniform === 'string') {
+            if (factionData.uniform.includes('images/uniforms/')) {
+                const imgPath = GetFilePath(factionData.uniform);
                 const attachmentFile = new AttachmentBuilder(imgPath)
                 
                 factionEmbed.setThumbnail(`attachment://${attachmentFile.name}`)
                 attachments.push(attachmentFile)
             } else {
-                factionEmbed.setThumbnail(factionData.Uniforms)
+                factionEmbed.setThumbnail(factionData.uniform)
             }
         }
 
