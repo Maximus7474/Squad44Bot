@@ -4,7 +4,7 @@ const { executeQuery } = require('../utils/database/sqliteHandler');
 const log = require('../utils/logger');
 const logger = new log('View Clans');
 
-const locales = require('../locales/localeList.json');
+const locales = require('../../data/localeList.json');
 
 const formatLinks = (jsonstring) => {
     return JSON.parse(jsonstring)
