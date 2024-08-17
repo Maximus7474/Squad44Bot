@@ -91,16 +91,16 @@ module.exports = {
                     .setColor(16316405)
                     .setDescription(refactorPatchnoteText(patchNotes.patchNotes))
                     .setFooter({text: "Built by Maximus, for the Squad 44 (a.k.a PS) community."});
-            
-                const issuesButton = new ButtonBuilder()
-                    .setLabel('Report Issues')
-                    .setStyle(ButtonStyle.Link)
-                    .setURL('https://github.com/Maximus7474/SQ44-Bot/issues');
                 
                 const supportButton = new ButtonBuilder()
                     .setLabel('Support Project')
                     .setStyle(ButtonStyle.Link)
                     .setURL('https://ko-fi.com/maximus_prime');
+            
+                const issuesButton = new ButtonBuilder()
+                    .setLabel('Report Issues')
+                    .setStyle(ButtonStyle.Link)
+                    .setURL('https://github.com/Maximus7474/Squad44Bot/issues');
                 
                 const contributeButton = new ButtonBuilder()
                     .setLabel('Contribute to Project')
