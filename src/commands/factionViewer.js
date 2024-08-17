@@ -1,10 +1,12 @@
 const { EmbedBuilder, AttachmentBuilder, SlashCommandBuilder } = require('discord.js');
-const path = require('path');
 
 const { Allies, Axis } = require('../../data/factions.json');
 
-const GetFilePath = (location) => {
-    return path.join(__dirname, `../../${location}`)
+const getFileName = (filepath) => {
+    if (filepath && filepath.includes('/')) {
+        return filepath.split('/').pop();
+    }
+    return filepath;
 }
 
 module.exports = {
@@ -65,10 +67,9 @@ module.exports = {
 
         if (typeof factionData.seal === 'string') {
             if (factionData.seal.includes('images/seals/')) {
-                const imgPath = GetFilePath(factionData.seal);
-                const attachmentFile = new AttachmentBuilder(imgPath)
-                
-                factionEmbed.setThumbnail(`attachment://${attachmentFile.name}`)
+                const attachmentFile = new AttachmentBuilder(`./${factionData.seal}`, {name: getFileName(factionData.seal), description: `The seal used by ${faction}`})
+
+                factionEmbed.setThumbnail(`attachment://${getFileName(factionData.seal)}`)
                 attachments.push(attachmentFile)
             } else {
                 factionEmbed.setThumbnail(factionData.seal)
@@ -79,13 +80,12 @@ module.exports = {
 
         if (typeof factionData.uniform === 'string') {
             if (factionData.uniform.includes('images/uniforms/')) {
-                const imgPath = GetFilePath(factionData.uniform);
-                const attachmentFile = new AttachmentBuilder(imgPath)
+                const attachmentFile = new AttachmentBuilder(`./${factionData.uniform}`, {name: getFileName(factionData.uniform), description: `The uniforms used by ${faction}`});
                 
-                factionEmbed.setThumbnail(`attachment://${attachmentFile.name}`)
+                factionEmbed.setImage(`attachment://${attachmentFile.name}`)
                 attachments.push(attachmentFile)
             } else {
-                factionEmbed.setThumbnail(factionData.uniform)
+                factionEmbed.setImage(factionData.uniform)
             }
         }
 
@@ -93,7 +93,7 @@ module.exports = {
             content: ``,
             ephemeral: false,
             embeds: [factionEmbed],
-            attachments: attachments
+            files: attachments
         });
     }
 }
