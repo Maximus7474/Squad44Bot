@@ -1,0 +1,22 @@
+{
+    "Axis": {
+        "9.SS-Panzer": {
+            "seal": "images/seals/9SSPanzer.png",
+            "uniform": "https://cdn.discordapp.com/attachments/1246906037101924462/1246906037706162226/VB_PROMO.0012.png?ex=66abdfbd&is=66aa8e3d&hm=cd596b7e33e7cef190dae873db486674b2dfa02610de55211e86465fa04bd7df&",
+            "description": "The 9th SS Panzer Division \"Hohenstaufen\" was a German Waffen-SS armored division formed in 1943. It first saw action on the Eastern Front during the Battle of Tarnopol in 1944. Later, it was moved to the Western Front, where it fought in Normandy and the Battle of the Falaise Pocket, suffering heavy losses. Rebuilt, the division participated in the Ardennes Offensive (Battle of the Bulge) but was forced to retreat. In the war's final months, it defended against Allied forces in Germany and Austria, ultimately surrendering in May 1945. The division was also implicated in war crimes, reflecting its ties to the Nazi regime.",
+            "links": [
+                {"name": "Squad 44 Wiki", "link": "https://squad44.fandom.com/wiki/Factions#Axis_Powers"}
+            ]
+        }
+    },
+    "Allies": {
+        "1st Airborne": {
+            "seal": "images/seals/1stAirborne.png",
+            "uniform": "https://scontent-mrs2-2.xx.fbcdn.net/v/t1.6435-9/35295680_10156465030344834_1690106065183571968_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=2sGkeUEuUfEQ7kNvgFzfXPL&_nc_ht=scontent-mrs2-2.xx&oh=00_AYBwRBPosrpPRi-Jy_afCJWO2DXBoEbRexNpCg578d-y3A&oe=66E8881F",
+            "description": "The 1st Airborne Division was a British Army unit formed in 1941, specializing in airborne assaults. It saw action in North Africa, Sicily, and Italy, but is best known for Operation Market Garden in 1944, where it attempted to capture the Arnhem bridge. The division suffered heavy losses and was ultimately unsuccessful. Following this, it was withdrawn from combat and disbanded in 1945. The division is remembered for its courage, especially during the Arnhem operation.",
+            "links": [
+                {"name": "Squad 44 Wiki", "link": "https://squad44.fandom.com/wiki/Factions#Allied_Powers"}
+            ]
+        }
+    }
+}
