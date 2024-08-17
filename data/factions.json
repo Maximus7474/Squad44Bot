@@ -11,7 +11,12 @@
     },
     "Allies": {
         "1st Airborne": {
-            "Description": "A description"
+            "seal": "images/seals/1stAirborne.png",
+            "uniform": "https://scontent-mrs2-2.xx.fbcdn.net/v/t1.6435-9/35295680_10156465030344834_1690106065183571968_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=2sGkeUEuUfEQ7kNvgFzfXPL&_nc_ht=scontent-mrs2-2.xx&oh=00_AYBwRBPosrpPRi-Jy_afCJWO2DXBoEbRexNpCg578d-y3A&oe=66E8881F",
+            "description": "The 1st Airborne Division was a British Army unit formed in 1941, specializing in airborne assaults. It saw action in North Africa, Sicily, and Italy, but is best known for Operation Market Garden in 1944, where it attempted to capture the Arnhem bridge. The division suffered heavy losses and was ultimately unsuccessful. Following this, it was withdrawn from combat and disbanded in 1945. The division is remembered for its courage, especially during the Arnhem operation.",
+            "links": [
+                {"name": "Squad 44 Wiki", "link": "https://squad44.fandom.com/wiki/Factions#Allied_Powers"}
+            ]
         }
     }
 }
