@@ -55,6 +55,16 @@ function getLatestReleasePatchNotes(callback) {
     req.end();
 }
 
+function refactorPatchnoteText(patchnote) {
+    function formatPRLinks(patchnote) {
+        return patchnote.replace(/(\S+) by (@\S+) in (https:\/\/github.com\/\S+\/pull\/(\d+))/g, (match, action, username, url, prNumber) => {
+            return `${action} by **\`${username.replace('@', '')}\`** in [PR #${prNumber}](${url})`;
+        });
+    }
+
+    return formatPRLinks(patchnote);
+}
+
 module.exports = {
     register_command: new SlashCommandBuilder()
         .setName('patchnote')
@@ -77,9 +87,9 @@ module.exports = {
                         iconURL: 'https://avatars.githubusercontent.com/u/94017712',
                         name: '_maximusprime'
                     })
-                    .setThumbnail('https://assets-prd.ignimgs.com/2023/12/15/squad44-1702600459401.jpg')
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
                     .setColor(16316405)
-                    .setDescription(patchNotes.patchNotes)
+                    .setDescription(refactorPatchnoteText(patchNotes.patchNotes))
                     .setFooter({text: "Built by Maximus, for the Squad 44 (a.k.a PS) community."});
             
                 const issuesButton = new ButtonBuilder()
