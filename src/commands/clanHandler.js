@@ -3,7 +3,7 @@ const { PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, Butt
 
 const { executeStatement, executeQuery } = require('../utils/database/sqliteHandler');
 
-const locales = require('../locales/localeList.json');
+const locales = require('../../data/localeList.json');
 
 const log = new require('../utils/logger.js');
 const logger = new log("Clan Handler");
