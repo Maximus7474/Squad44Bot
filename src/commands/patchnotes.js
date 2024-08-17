@@ -82,12 +82,12 @@ module.exports = {
             } else {
 
                 const patchnoteEmbed = new EmbedBuilder()
-                    .setTitle(`Current Patchnotes v${patchNotes.versionTag}`)
+                    .setTitle(`Latest Patchnote v${patchNotes.versionTag}`)
                     .setAuthor({
                         iconURL: 'https://avatars.githubusercontent.com/u/94017712',
-                        name: '_maximusprime'
+                        name: 'Maximus Prime'
                     })
-                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }))
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 256 }))
                     .setColor(16316405)
                     .setDescription(refactorPatchnoteText(patchNotes.patchNotes))
                     .setFooter({text: "Built by Maximus, for the Squad 44 (a.k.a PS) community."});
