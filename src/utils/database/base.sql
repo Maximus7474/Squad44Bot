@@ -28,7 +28,6 @@ BEGIN
   UPDATE "game-clans" SET `updated` = strftime('%s', 'now') WHERE id = OLD.id;
 END;
 
-DROP TABLE IF EXISTS "server-status-channels";
 CREATE TABLE IF NOT EXISTS "server-status-channels" (
   "id" INTEGER PRIMARY KEY AUTOINCREMENT,
   "guild" TEXT UNIQUE NOT NULL,
