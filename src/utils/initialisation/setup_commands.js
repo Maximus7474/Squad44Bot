@@ -31,6 +31,10 @@ module.exports = (client) => {
             continue
         }
 
+        if (typeof command_loaded.setup_command === 'function') {
+            command_loaded.setup_command(client);
+        }
+
         client.commands[command_loaded.register_command.name] = command_loaded
 
         logger.success(`Successfully loaded ${command} interaction handler`)
