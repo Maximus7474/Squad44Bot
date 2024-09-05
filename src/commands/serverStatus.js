@@ -112,27 +112,13 @@ module.exports = {
 
         setInterval(async () => {
             const queryList = listBMids();
-        
-            const promises = Object.keys(queryList).map(async (identifier) => {
-                try {
-                    let data = await queryBattleMetrics(`servers/${identifier}`);
-                    data = data.data;
-        
-                    if (data.attributes.name.includes('discord')) {
-                        const index = data.attributes.name.toLowerCase().indexOf('discord');
-                        data.attributes.name = index !== -1 ? data.attributes.name.substring(0, index).trim() : data.attributes.name;
-                    } else if (data.attributes.name.includes('gg/')) {
-                        const index = data.attributes.name.toLowerCase().indexOf('gg/');
-                        data.attributes.name = index !== -1 ? data.attributes.name.substring(0, index).trim() : data.attributes.name;
-                    }
-        
-                    queryList[identifier] = serverEmbedAndButtons(identifier, data);
-                } catch (err) {
-                    logger.error(`Error processing ${identifier}:`, err);
-                }
-            });
-        
-            await Promise.all(promises);
+
+            let serverData = await queryBattleMetrics(`servers?filter[game]=postscriptum&sort=rank&page[size]=70`);
+            serverData = serverData.data.filter(data => queryList[data.attributes.id] !== undefined);
+            serverData = serverData.reduce((acc, data) => {
+                acc[data.id] = serverEmbedAndButtons(data.id, data);
+                return acc;
+            }, {});
 
             Object.keys(statusBreakdown).forEach((guild_id) => {
                 const guild = client.guilds.cache.get(guild_id);
@@ -149,15 +135,17 @@ module.exports = {
                         return;
                     }
             
-                    channel.messages.fetch({ limit: 100 })
+                    channel.messages.fetch({ limit: 5 })
                         .then(messages => {
                             const botMessages = messages.filter(msg => msg.author.id === client.user.id);
+
+                            const messageContents = serverData[statusBreakdown[guild_id][channel_id]];
                             
                             if (botMessages.size > 0) {
                                 const lastBotMessage = botMessages.first();
-                                lastBotMessage.edit(queryList[statusBreakdown[guild_id][channel_id]]);
+                                lastBotMessage.edit(messageContents);
                             } else {
-                                channel.send(queryList[statusBreakdown[guild_id][channel_id]]);
+                                channel.send(messageContents);
                             }
                         })
                         .catch(err => {
