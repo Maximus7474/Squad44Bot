@@ -192,7 +192,7 @@ module.exports = {
 
         if (subcommand === 'add') {
             const bmId = extractBMId(interaction.options.getString('server'));
-            const channel = interaction.options.getString('channel')
+            const channel = interaction.options.getChannel('channel')
             
             if (typeof bmId !== 'string') {
                 const embed = new EmbedBuilder()
@@ -278,7 +278,7 @@ module.exports = {
                 return interaction.editReply({embeds:[Embed], ephemeral: true})
             })
         } else if (subcommand === 'remove') {
-            const channel = interaction.options.getString('channel')
+            const channel = interaction.options.getChannel('channel')
 
             if (statusBreakdown[guild.id] && statusBreakdown[guild.id][channel.id] === undefined) {
                 const embed = new EmbedBuilder()
