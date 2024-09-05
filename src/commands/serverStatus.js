@@ -97,6 +97,13 @@ module.exports = {
                 .addStringOption(option =>
                     option.setName('server').setDescription('The battlemetrics ID or link of the server').setRequired(true)
                 )
+        )
+        .addSubcommand(subcommand =>
+            subcommand.setName("remove")
+                .setDescription("Remove the server display from a channel")
+                .addChannelOption(option =>
+                    option.setName('channel').setDescription('Then channel where it\'s shown').setRequired(true)
+                )
         ),
     async setup_command(client) {
         const DBbreakdown = await executeQuery('SELECT `guild`, `channels` FROM `server-status-channels`;', [], 'all');
@@ -160,7 +167,7 @@ module.exports = {
         const subcommand = interaction.options._subcommand;
         const { user, guild } = interaction;
 
-        const DBentry = await executeQuery('SELECT * FROM `server-status-channels` WHERE `guild` = ?;', [guild.id]);
+        const DBentry = await executeQuery('SELECT `channels`, `limit` FROM `server-status-channels` WHERE `guild` = ?;', [guild.id]);
 
         if (DBentry === undefined) {
             const embed = new EmbedBuilder()
@@ -270,6 +277,10 @@ module.exports = {
                     );
                 return interaction.editReply({embeds:[Embed], ephemeral: true})
             })
+        } else if (subcommand === 'remove') {
+            const channel = interaction.options.getString('channel')
+
+
         }
     }
 }
