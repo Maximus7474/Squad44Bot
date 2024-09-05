@@ -280,7 +280,29 @@ module.exports = {
         } else if (subcommand === 'remove') {
             const channel = interaction.options.getString('channel')
 
+            if (statusBreakdown[guild.id] && statusBreakdown[guild.id][channel.id] === undefined) {
+                const embed = new EmbedBuilder()
+                    .setTitle('Impossible')
+                    .setDescription(`${channel.mention} isn't referenced in the database`)
+                    .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 128 }));
+                
+                return interaction.reply({
+                    embeds: [embed],
+                    ephemeral: false
+                });
+            }
 
+            setStatusBreakdown(guild.id, channel.id, null);
+
+            const embed = new EmbedBuilder()
+                .setAuthor({name: guild.name, iconURL: guild.iconURL()})
+                .setTitle('Success')
+                .setColor(16316405)
+                .setDescription(
+                    `The server status has been removed from ${channel.mention}`
+                );
+
+            return interaction.editReply({embeds :[embed], ephemeral :true});
         }
     }
 }
