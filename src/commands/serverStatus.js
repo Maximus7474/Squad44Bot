@@ -254,17 +254,27 @@ module.exports = {
                     return interaction.editReply({content: `Invalid Server ID, game is different: ${data.relationships.game.data.id}`, ephemeral :true});
                 }
 
-                setStatusBreakdown(guild.id, channel.id, bmId);
+                const newChannels = JSON.parse(DBentry.channels);
+                newChannels[channel.id] = bmId;
 
-                const embed = new EmbedBuilder()
-                    .setAuthor({name: guild.name, iconURL: guild.iconURL()})
-                    .setTitle('Success')
-                    .setColor(16316405)
-                    .setDescription(
-                        `The server \`${data.attributes.name}\` has been added to the status system and will be show in ${channel.mention}`
-                    );
+                executeStatement('UPDATE `server-status-channels` SET `channels` = ? WHERE `guild` = ?;', [JSON.stringify(newChannels), guild.id])
+                .then(response => {
 
-                return interaction.editReply({embeds :[embed], ephemeral :true});
+                    setStatusBreakdown(guild.id, channel.id, bmId);
+
+                    const embed = new EmbedBuilder()
+                        .setAuthor({name: guild.name, iconURL: guild.iconURL()})
+                        .setTitle('Success')
+                        .setColor(16316405)
+                        .setDescription(
+                            `The server \`${data.attributes.name}\` has been added to the status system and will be show in <#${channel.id}>\n-# Response: \`${response}\``
+                        );
+    
+                    return interaction.editReply({embeds: [embed], ephemeral: true});
+                })
+                .catch(err => {
+                    return interaction.editReply({content: `Unable to save the selection\n\`\`\`\n${err}\n\`\`\`\n-# If this repeats please contact the developers with this error code and detail what was inputted into the command.`, ephemeral: true});
+                });
             })
             .catch((error) => {
                 logger.error("Couldn't execute query callback", error)
@@ -292,17 +302,29 @@ module.exports = {
                 });
             }
 
-            setStatusBreakdown(guild.id, channel.id, null);
+            await interaction.deferReply();
 
-            const embed = new EmbedBuilder()
-                .setAuthor({name: guild.name, iconURL: guild.iconURL()})
-                .setTitle('Success')
-                .setColor(16316405)
-                .setDescription(
-                    `The server status has been removed from ${channel.mention}`
-                );
+            const newChannels = JSON.parse(DBentry.channels);
+            delete newChannels[channel.id];
 
-            return interaction.editReply({embeds :[embed], ephemeral :true});
+            executeStatement('UPDATE `server-status-channels` SET `channels` = ? WHERE `guild` = ?;', [JSON.stringify(newChannels), guild.id])
+            .then(response => {
+
+                setStatusBreakdown(guild.id, channel.id, null);
+
+                const embed = new EmbedBuilder()
+                    .setAuthor({name: guild.name, iconURL: guild.iconURL()})
+                    .setTitle('Success')
+                    .setColor(16316405)
+                    .setDescription(
+                        `The server status has been removed from <#${channel.id}>\n-# Response: \`${response}\``
+                    );
+    
+                return interaction.editReply({embeds :[embed], ephemeral :true});
+            })
+            .catch(err => {
+                return interaction.editReply({content: `Unable to update the settings\n\`\`\`\n${err}\n\`\`\`\n-# If this repeats please contact the developers with this error code and detail what was inputted into the command.`, ephemeral: true});
+            });
         }
     }
 }
