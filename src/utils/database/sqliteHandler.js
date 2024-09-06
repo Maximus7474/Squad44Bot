@@ -27,6 +27,7 @@ const initializeDatabase = () => {
     db.close();
 };
 
+// Promise to execute to wait until the DB is intialized
 const waitForInitialization = () => {
     return new Promise((resolve) => {
         const checkInterval = setInterval(() => {
@@ -39,7 +40,9 @@ const waitForInitialization = () => {
 };
 
 // Function to execute a single SQL statement
-const executeStatement = (sql, params = []) => {
+const executeStatement = async (sql, params = []) => {
+    if (!initialized) await waitForInitialization();
+    
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database(`./data.db`);
         db.run(sql, params, function (err) {
@@ -56,7 +59,9 @@ const executeStatement = (sql, params = []) => {
 };
 
 // Function to execute multiple SQL statements in a transaction
-const executeTransaction = (statements) => {
+const executeTransaction = async (statements) => {
+    if (!initialized) await waitForInitialization();
+
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database(`./data.db`);
         db.serialize(() => {
@@ -87,7 +92,9 @@ const executeTransaction = (statements) => {
 };
 
 // Execute a simple query and return the wanted data
-const executeQuery = (sql, params = [], type = 'get') => {
+const executeQuery = async (sql, params = [], type = 'get') => {
+    if (!initialized) await waitForInitialization();
+
     if (type !== 'get' && type !== 'all') return logger.warn('Incorrect argument for executeQuery type argument');
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database(`./data.db`);
