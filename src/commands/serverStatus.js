@@ -104,6 +104,10 @@ module.exports = {
                 .addChannelOption(option =>
                     option.setName('channel').setDescription('Then channel where it\'s shown').setRequired(true)
                 )
+        )
+        .addSubcommand(subcommand =>
+            subcommand.setName("list")
+                .setDescription("Display the current channels with server statuses")
         ),
     async setup_command(client) {
         const DBbreakdown = await executeQuery('SELECT `guild`, `channels` FROM `server-status-channels`;', [], 'all');
@@ -325,6 +329,29 @@ module.exports = {
             .catch(err => {
                 return interaction.editReply({content: `Unable to update the settings\n\`\`\`\n${err}\n\`\`\`\n-# If this repeats please contact the developers with this error code and detail what was inputted into the command.`, ephemeral: true});
             });
+        } else if (subcommand === 'list') {
+            const channels = JSON.parse(DBentry.channels);
+            let description = '';
+
+            if (Object.keys(channels).length === 0) {
+                description += 'No channels currently have a setup status.\n'
+            } else {
+                description += `Current Server Statuses:\n${Object.entries(channels).map(([key, value]) => `- <#${key}> - [${value}](https://www.battlemetrics.com/servers/postscriptum/${value})`).join('\n')}\n`
+            }
+
+            description += `\nCurrent channel limit: ${DBentry.limit}`;
+
+            const embed = new EmbedBuilder()
+                .setTitle('Server Status Messages')
+                .setDescription(description)
+                .setColor(16316405)
+                .setThumbnail(guild.iconURL())
+                .setAuthor({name: user.username, iconURL: user.displayAvatarURL({ dynamic: true, format: 'png', size: 64 })});
+
+            return interaction.reply({
+                embeds: [embed],
+                ephemeral: false
+            })
         }
     }
 }
