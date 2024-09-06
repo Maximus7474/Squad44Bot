@@ -2,7 +2,9 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 
 const log = new require('../logger.js')
-const logger = new log("sqlite") 
+const logger = new log("sqlite")
+
+let initialized = false;
 
 // Function to initialize the database
 const initializeDatabase = () => {
@@ -15,6 +17,7 @@ const initializeDatabase = () => {
             if (err) {
                 logger.error('Error initializing database:', err.message);
             } else {
+                initialized = true;
                 logger.info('Database initialized.');
             }
         });
@@ -22,6 +25,17 @@ const initializeDatabase = () => {
 
     // Close the database connection
     db.close();
+};
+
+const waitForInitialization = () => {
+    return new Promise((resolve) => {
+        const checkInterval = setInterval(() => {
+            if (initialized) {
+                clearInterval(checkInterval);
+                resolve();
+            }
+        }, 100);
+    });
 };
 
 // Function to execute a single SQL statement
