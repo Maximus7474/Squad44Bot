@@ -25,9 +25,6 @@
     },
     "homepage": "https://github.com/Maximus7474/SQ44-Bot#readme",
     "dependencies": {
-        "assert": "^2.0.0",
-        "chai": "^5.1.1",
-        "colors": "^1.4.0",
         "discord.js": "^14.8.0",
         "dotenv": "^16.0.3",
         "fs": "^0.0.1-security",
