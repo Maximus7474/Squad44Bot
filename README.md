@@ -1,5 +1,6 @@
 # Squad 44 Bot
 
+![Discord](https://img.shields.io/discord/1267893589707587718?style=flat&logo=discord&logoColor=%237289da&label=Discord%20Guild&color=%23287e29)
 ![](https://img.shields.io/github/v/release/Maximus7474/Squad44Bot?logo=github)
 
 ## Contributing
