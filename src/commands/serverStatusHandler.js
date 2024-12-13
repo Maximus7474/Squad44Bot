@@ -1,5 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { PermissionsBitField, EmbedBuilder } = require('discord.js');
+const { PermissionsBitField, EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 
 const { executeStatement, executeQuery } = require('../utils/database/sqliteHandler');
 

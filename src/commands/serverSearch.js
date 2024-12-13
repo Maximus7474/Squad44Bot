@@ -1,6 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { queryBattleMetrics } = require('../utils/query/battlemetricsQuery');
-const { EmbedBuilder } = require('discord.js');
 
 const { getOrdinalSuffix, emojiForStatus, capitalizeFirstLetter } = require('../utils/functions');
 

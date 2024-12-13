@@ -1,7 +1,6 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 const VehicleData = require('../../data/vehicleInfo.json');
-const { EmbedBuilder } = require('discord.js');
 
 const thumbnailImage = (team) => {
     if (team === "Allies") return "https://r2.fivemanage.com/pub/ngxgy4wfhtv7.png";

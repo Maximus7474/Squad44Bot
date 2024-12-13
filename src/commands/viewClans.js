@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder, EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require('discord.js');
 
 const { executeQuery } = require('../utils/database/sqliteHandler');
 const log = require('../utils/logger');

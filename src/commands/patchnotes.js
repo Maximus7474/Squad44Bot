@@ -1,5 +1,4 @@
-const { ButtonStyle } = require('discord.js');
-const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ActionRowBuilder } = require('@discordjs/builders');
+const { ButtonStyle, SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ActionRowBuilder } = require('discord.js');
 const https = require('https');
 const assert = require('assert');
 
