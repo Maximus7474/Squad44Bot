@@ -54,14 +54,25 @@ function getLatestReleasePatchNotes(callback) {
     req.end();
 }
 
-function refactorPatchnoteText(patchnote) {
-    function formatPRLinks(patchnote) {
-        return patchnote.replace(/(\S+) by (@\S+) in (https:\/\/github.com\/\S+\/pull\/(\d+))/g, (match, action, username, url, prNumber) => {
-            return `${action} by **\`${username.replace('@', '')}\`** in [PR #${prNumber}](${url})`;
-        });
-    }
+function refactorPatchnoteText(patchnote, version) {
 
-    return formatPRLinks(patchnote);
+    patchnote = `${patchnote}\n\n${patchnote}\n\n${patchnote}`;
+
+    const formattedPatchnote = patchnote
+        .replace(/\n\n##/g, '\n##')
+        .replace(/- \*\*(.+?)\*\*: (.+?) \(\[([\w\d]+?)\]\((https:\/\/github.com\/.+?)\)\)/g, (match, scope, description, commit, url) => {
+            return `- **${scope}**: ${description} ([${commit}](${url}))`;
+        })
+        .replace(/- (.+?) \(\[([\w\d]+?)\]\((https:\/\/github.com\/.+?)\)\)/g, (match, description, commit, url) => {
+            return `- ${description} ([${commit}](${url}))`;
+        });
+
+    const link = `...\n\n> View [Full Changelog](https://github.com/Maximus7474/Squad44Bot/releases/tag/${version})`;
+
+    if (formattedPatchnote.length <= 2048) return formattedPatchnote;
+
+    const truncatedPatchnote = formattedPatchnote.slice(0, 2048 - (link.length + 1));
+    return truncatedPatchnote.slice(0, truncatedPatchnote.lastIndexOf('##')) + link;
 }
 
 module.exports = {
@@ -81,14 +92,15 @@ module.exports = {
             } else {
 
                 const patchnoteEmbed = new EmbedBuilder()
-                    .setTitle(`Latest Patchnote v${patchNotes.versionTag}`)
+                    .setTitle(`Latest Patchnote ${patchNotes.versionTag}`)
+                    .setURL('https://github.com/Maximus7474/Squad44Bot')
                     .setAuthor({
                         iconURL: 'https://avatars.githubusercontent.com/u/94017712',
                         name: 'Maximus Prime'
                     })
                     .setThumbnail(client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 256 }))
                     .setColor(16316405)
-                    .setDescription(refactorPatchnoteText(patchNotes.patchNotes))
+                    .setDescription(refactorPatchnoteText(patchNotes.patchNotes, patchNotes.versionTag))
                     .setFooter({text: "Built by Maximus, for the Squad 44 (a.k.a PS) community."});
                 
                 const supportButton = new ButtonBuilder()
