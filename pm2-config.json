@@ -3,6 +3,6 @@
         "name": "Squad 44 Comunity Bot",
         "cwd": "./",
         "script": "pnpm run start",
-        "log_date_format": "YYY-MM-DD HH:mm Z"
+        "log_date_format": ""
     }]
 }
