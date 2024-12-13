@@ -29,8 +29,8 @@ jobs:
         with:
           version: 9
       
-      - name: Verify pnpm-lock.yaml
-        run: ls -al | grep pnpm-lock.yaml
+      - name: Run pnpm install
+        run: pnpm install
 
       - name: Get variables
         id: get_vars
