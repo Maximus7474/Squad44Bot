@@ -56,8 +56,6 @@ function getLatestReleasePatchNotes(callback) {
 
 function refactorPatchnoteText(patchnote, version) {
 
-    patchnote = `${patchnote}\n\n${patchnote}\n\n${patchnote}`;
-
     const formattedPatchnote = patchnote
         .replace(/\n\n##/g, '\n##')
         .replace(/- \*\*(.+?)\*\*: (.+?) \(\[([\w\d]+?)\]\((https:\/\/github.com\/.+?)\)\)/g, (match, scope, description, commit, url) => {
