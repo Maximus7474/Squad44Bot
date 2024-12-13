@@ -28,6 +28,9 @@ jobs:
         uses: pnpm/action-setup@v4.0.0
         with:
           version: 9
+      
+      - name: Verify pnpm-lock.yaml
+        run: ls -al | grep pnpm-lock.yaml
 
       - name: Get variables
         id: get_vars
