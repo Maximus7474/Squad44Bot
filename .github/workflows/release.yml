@@ -1,4 +1,4 @@
-name: Release on Version Bump
+name: Release
 
 on:
   push:
@@ -6,8 +6,12 @@ on:
       - 'v*.*.*'
 
 jobs:
-  release:
+  create-release:
+    name: Build and Create Tagged release
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
 
