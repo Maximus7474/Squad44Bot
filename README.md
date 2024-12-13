@@ -17,8 +17,8 @@ TOKEN=INSERT_YOUR_TOKEN_HERE
 3. Setup the roles and channels in `config.json`, remember set each id as a string not a number.
   - You need to setup language and guild id manually if not it won't work.
   - It is also possible to setup the roles and channels through slash commands as long as you're the administrator on the server.
-4. Run `npm install` to install the dependancies
-5. Run `npm run start` to start the bot
+4. Run `pnpm install` to install the dependancies
+5. Run `pnpm run start` to start the bot
 
 
 ## Security Tip
