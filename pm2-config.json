@@ -1,8 +1,8 @@
 {
     "apps": [{
-            "name": "Squad 44 Comunity Bot",
-            "cwd": "./",
-            "script": "npm run start",
-            "log_date_format": "YYY-MM-DD HH:mm Z"
+        "name": "Squad 44 Comunity Bot",
+        "cwd": "./",
+        "script": "pnpm run start",
+        "log_date_format": "YYY-MM-DD HH:mm Z"
     }]
 }
