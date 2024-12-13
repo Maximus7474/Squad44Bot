@@ -32,7 +32,7 @@ Welcome to the Squad 44 Community Bot repository! We appreciate your interest in
    ```
 3. **Make Your Changes**: Implement your changes. Ensure you write clear and concise commit messages.
 4. **Test Your Changes**: Run tests to verify that your changes work as expected and do not break existing functionality.
-5. **Commit Your Changes**: Commit your changes with a descriptive message:
+5. **Commit Your Changes**: Commit your changes with a descriptive message, following [git conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13):
    ```bash
    git add .
    git commit -m "Add a descriptive message about your changes"
